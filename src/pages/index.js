@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Navbar } from '@/components/common';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Button } from '@/components/ui/button';
+import React, { useState } from "react";
+import { Navbar } from "@/components/common";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -13,7 +13,7 @@ export default function Home() {
 
   const handleDecrement = () => {
     if (count === 0) {
-      toast.error('You cannot decrement below 0.');
+      toast.error("You cannot decrement below 0.");
     } else {
       setCount((prev) => prev - 1);
     }
