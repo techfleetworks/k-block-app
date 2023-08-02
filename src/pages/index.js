@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Navbar } from '@/components/ui';
+import { Navbar } from '@/components/common';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -26,9 +27,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold ">Welcome to the K-Block world!</h1>
           <p className="animate-pulse">Coming Soon!</p>
           <section className="flex items-center gap-4 font-semibold">
-            <Button variant="primary" onClick={handleIncrement}>
-              📈
-            </Button>
+            <Button onClick={handleIncrement}>📈</Button>
             <p>{count}</p>
             <Button variant="secondary" onClick={handleDecrement}>
               📉

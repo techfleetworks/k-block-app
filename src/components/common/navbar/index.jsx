@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui';
+import { Button } from '@/components/common';
 import Image from 'next/image';
 import Logo from '@/assets/logo.svg';
 
