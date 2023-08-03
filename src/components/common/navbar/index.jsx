@@ -1,4 +1,3 @@
-import { Button } from "@/components/common";
 import Image from "next/image";
 import Logo from "@/assets/logo.svg";
 import {
@@ -8,7 +7,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -24,44 +25,58 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Blockchain &or;
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Tokens</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Tokens &or;
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>NFTs</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    NFTs &or;
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Resources &or;
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <Button variant="outline">Sign In</Button>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Sign In
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
