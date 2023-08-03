@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Navbar } from "@/components/common";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Button } from "@/components/ui/button";
+import React, { useState } from 'react';
+import { Navbar } from '@/components/common';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function Home() {
+  const { toast } = useToast();
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
@@ -13,7 +13,11 @@ export default function Home() {
 
   const handleDecrement = () => {
     if (count === 0) {
-      toast.error("You cannot decrement below 0.");
+      toast({
+        variant: 'destructive',
+        title: 'Uh oh!',
+        description: 'You cannot decrement below 0.',
+      });
     } else {
       setCount((prev) => prev - 1);
     }
