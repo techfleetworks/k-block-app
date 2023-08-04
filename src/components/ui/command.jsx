@@ -11,7 +11,7 @@ const Command = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
     className={cn(
-      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
+      "flex h-full  w-fit rounded-[9.756px] flex-col overflow-hidden bg-neutral-n-0 text-popover-foreground",
       className
     )}
     {...props}
@@ -32,16 +32,27 @@ const CommandDialog = ({ children, ...props }) => {
 }
 
 const CommandInput = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
+  <div className="  w-fit  flex items-center border-b px-3" cmdk-input-wrapper="">
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        "flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
+        " border-yellow-500 border-2 flex  w-fit rounded-md bg-transparent py-2 text-sm outline-none  placeholder:text-neutral-n-500 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
     />
-    <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+    {/* <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50 text-semantic-b-300" /> */}
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+<g clip-path="url(#clip0_650_8282)">
+<path d="M16.7987 16.5063L21.9572 21.6649" stroke="#0068B2" stroke-width="1.71951" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="12.5" cy="12.2073" r="6.01829" stroke="#0068B2" stroke-width="1.71951" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_650_8282">
+<rect width="27.5122" height="27.5122" fill="white" transform="translate(0.463379 0.170898)"/>
+</clipPath>
+</defs>
+</svg>
 
   </div>
 ))
