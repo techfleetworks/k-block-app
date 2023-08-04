@@ -3,6 +3,8 @@ import * as React from "react"
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons"
 import { Command as CommandPrimitive } from "cmdk"
 
+import Search_magnifying_glass from "./search_magnifying_glass"
+
 import { cn } from "src/utils/"
 
 import { Dialog, DialogContent } from "@/components/ui/dialog"
@@ -42,18 +44,8 @@ const CommandInput = React.forwardRef(({ className, ...props }, ref) => (
       {...props}
     />
     {/* <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50 text-semantic-b-300" /> */}
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <g clip-path="url(#clip0_650_8282)">
-        <path d="M16.7987 16.5063L21.9572 21.6649" stroke="#0068B2" stroke-width="1.71951" stroke-linecap="round" stroke-linejoin="round" />
-        <circle cx="12.5" cy="12.2073" r="6.01829" stroke="#0068B2" stroke-width="1.71951" stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-      <defs>
-        <clipPath id="clip0_650_8282">
-          <rect width="27.5122" height="27.5122" fill="white" transform="translate(0.463379 0.170898)" />
-        </clipPath>
-      </defs>
-    </svg>
 
+    <Search_magnifying_glass className="stroke-semantic-b-300"/>
   </div>
 ))
 
