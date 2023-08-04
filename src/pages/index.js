@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/common';
+import { Searchbar } from '@/components/common';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -29,6 +30,7 @@ export default function Home() {
       <div className="flex justify-between gap-4 my-4">
         <div className="flex flex-col gap-8">
           <h1 className="text-4xl font-bold ">Welcome to the K-Block world!</h1>
+          <Searchbar />
           <p className="animate-pulse">Coming Soon!</p>
           <section className="flex items-center gap-4 font-semibold">
             <Button onClick={handleIncrement}>📈</Button>
