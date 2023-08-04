@@ -3,7 +3,7 @@ import * as React from "react"
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons"
 import { Command as CommandPrimitive } from "cmdk"
 
-import Search_magnifying_glass from "./search_magnifying_glass"
+import Search_magnifying_glass from "./search_magnifying_glass-icon"
 
 import { cn } from "src/utils/"
 
@@ -34,18 +34,18 @@ const CommandDialog = ({ children, ...props }) => {
 }
 
 const CommandInput = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="   flex items-center px-3" cmdk-input-wrapper="">
+  <div className="   flex my-auto items-center px-3" cmdk-input-wrapper="">
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        " flex w-full  rounded-md bg-transparent py-2 text-sm outline-none  placeholder:text-neutral-n-500 disabled:cursor-not-allowed disabled:opacity-50",
+        " flex  w-full  rounded-md bg-transparent text-sm outline-none  placeholder:text-neutral-n-500 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
     />
     {/* <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50 text-semantic-b-300" /> */}
 
-    <Search_magnifying_glass className="stroke-semantic-b-300"/>
+    <Search_magnifying_glass className="stroke-semantic-b-300 "/>
   </div>
 ))
 
