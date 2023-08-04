@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
-	],
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -17,19 +17,38 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        // Primary Blues
+        "primary-b-600": "var(--primary-b-600)",
+        "primary-b-500": "var(--primary-b-500)",
+        "primary-b-400": "var(--primary-b-400)",
+        "primary-b-300": "var(--primary-b-300)",
+        "primary-b-200": "var(--primary-b-200)",
+        "primary-b-100": "var(--primary-b-100)",
+
+        // Semantic Colors
+        "semantic-g-500": "var(--semantic-g-500)",
+        "semantic-g-300": "var(--semantic-g-300)",
+
+        "semantic-r-500": "var(--semantic-r-500)",
+        "semantic-r-100": "var(--semantic-r-100)",
+
+        "semantic-b-300": "var(--semantic-b-300)",
+        "semantic-b-100": "var(--semantic-b-100)",
+
+        "semantic-y-500": "var(--semantic-y-500)",
+        "semantic-y-100": "var(--semantic-y-100)",
+
+        // Neutrals
+        "neutral-n-900": "var(--neutral-n-900)",
+        "neutral-n-800": "var(--neutral-n-800)",
+        "neutral-n-500": "var(--neutral-n-500)",
+        "neutral-n-400": "var(--neutral-n-400)",
+        "neutral-n-300": "var(--neutral-n-300)",
+        "neutral-n-200": "var(--neutral-n-200)",
+        "neutral-n-100": "var(--neutral-n-100)",
+        "neutral-n-50": "var(--neutral-n-50)",
+        "neutral-n-0": "var(--neutral-n-0)",
+
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -73,4 +92,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

@@ -4,75 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Primary Colors */
+    --primary-b-600: hsla(198, 76%, 23%, 1);
+    --primary-b-500: hsla(198, 76%, 31%, 1);
+    --primary-b-400: hsla(198, 100%, 35%, 1);
+    --primary-b-300: hsla(205, 100%, 40%, 1);
+    --primary-b-200: hsla(198, 73%, 87%, 1);
+    --primary-b-100: hsla(198, 56%, 92%, 1);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Semantic Colors */
+    --semantic-g-500: hsla(155, 62%, 32%, 1);
+    --semantic-g-300: hsla(127, 68%, 76%, 1);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --semantic-r-500: hsla(7, 72%, 46%, 1);
+    --semantic-r-100: hsla(0, 66%, 92%, 1);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --semantic-b-300: hsla(205, 100%, 40%, 1);
+    --semantic-b-100: hsla(198, 56%, 92%, 1);
+    --semantic-y-500: hsla(40, 100%, 50%, 1);
+    --semantic-y-100: hsla(46, 100%, 93%, 1);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-
-    --ring: 217.2 32.6% 17.5%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+    /* Neutral Colors */
+    --neutral-n-900: hsla(240, 16%, 10%, 1);
+    --neutral-n-800: hsla(199, 16%, 20%, 1);
+    --neutral-n-500: hsla(197, 8%, 42%, 1);
+    --neutral-n-400: hsla(197, 8%, 58%, 1);
+    --neutral-n-300: hsla(197, 8%, 58%, 1);
+    --neutral-n-200: hsla(200, 36%, 95%, 1);
+    --neutral-n-100: hsla(0, 0%, 83%, 1);
+    --neutral-n-50: hsla(0, 0%, 83%, 1);
+    --neutral-n-0: hsla(0, 0%, 100%, 1);
   }
 }
