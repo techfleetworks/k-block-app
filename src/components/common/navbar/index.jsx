@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Logo from "@/assets/logo.svg";
+import Image from 'next/image';
+import Logo from '@/assets/logo.svg';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,61 +8,55 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import Link from "next/link";
+} from '@/components/ui/navigation-menu';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-between items-center mt-[20px]">
+      <nav className="flex justify-between items-center">
         <div className="flex gap-4 items-center ">
-          <Image src={Logo} width={38} height={42} alt="logo" />{" "}
-          <span className="text-3xl font-bold bg-gradient-to-r from-[#87EAD8] to-[#187DA8] bg-clip-text text-transparent">
-            K-Block
-          </span>
+          <Image src={Logo} width={38} height={42} alt="logo" />{' '}
+          <span className="text-xl font-medium text-white">K-Block</span>
         </div>
-        <div className="flex">
+        <div className="md:flex text-white hidden">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/docs" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Blockchain &or;
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
+                <NavigationMenuContent className="p-2">
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/docs" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Tokens &or;
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger>Tokens</NavigationMenuTrigger>
+                <NavigationMenuContent className="p-2">
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/docs" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    NFTs &or;
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger>NFTs</NavigationMenuTrigger>
+                <NavigationMenuContent className="p-2">
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/docs" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Resources &or;
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                <NavigationMenuContent className="p-2">
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -80,10 +74,22 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="mx-[10px] rounded-[6px] border border-solid border-[#999999] pl-3.5 pr-[10px] py-[4px]">
-                  Mainnett
+                <NavigationMenuTrigger className="rounded-[6px] bg-white text-black ml-7">
+                  Mainnet
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="p-2">
+                  <NavigationMenuLink>Link</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="rounded-[6px] bg-white text-black opacity-50 ml-7">
+                  USD
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="p-2">
                   <NavigationMenuLink>Link</NavigationMenuLink>
                 </NavigationMenuContent>
               </NavigationMenuItem>
