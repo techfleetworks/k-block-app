@@ -11,6 +11,7 @@
     --primary-b-300: hsla(205, 100%, 40%, 1);
     --primary-b-200: hsla(198, 73%, 87%, 1);
     --primary-b-100: hsla(198, 56%, 92%, 1);
+    --primary-b-50: hsl(193, 26%, 93%, 1);
 
     /* Semantic Colors */
     --semantic-g-500: hsla(155, 62%, 32%, 1);

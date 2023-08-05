@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="px-12 py-4">
       <Badge
         variant="outline"
-        className="mb-4 rounded-[6px] px-3 py-2 flex w-fit gap-1 bg-primary-b-100"
+        className="mb-4 rounded-[6px] px-3 py-2 flex w-fit gap-1 bg-primary-b-50"
       >
         <span className="text-neutral-n-500"> KDA: </span>
         <span className="text-primary-b-500"> $0.563824 </span>
