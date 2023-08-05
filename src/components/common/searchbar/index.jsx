@@ -13,7 +13,7 @@ const SearchBar = () => {
         width={320}
         height={320}
         alt="boxes"
-        className="absolute left-0 top-0 overflow-hidden"
+        className="absolute left-0 top-0"
       />
       <div className="flex flex-col w-full md:w-2/4 justify-center items-center gap-4 z-10">
         <Label
@@ -31,8 +31,8 @@ const SearchBar = () => {
           />
           <Image
             src={Search}
-            width={25}
-            height={25}
+            width={27}
+            height={27}
             alt="search"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
           />
