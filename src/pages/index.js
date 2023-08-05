@@ -1,11 +1,12 @@
-import { Navbar, Searchbar, InfoBar } from '@/components/common';
+import { Navbar, Searchbar, InfoBar, Footer } from '@/components/common';
 
 export default function Home() {
   return (
-    <main className="h-[100vh] bg-neutral-n-50">
+    <main className="">
       <Navbar />
       <Searchbar />
       <InfoBar />
+      <Footer />
     </main>
   );
 }

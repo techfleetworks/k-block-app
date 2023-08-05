@@ -28,7 +28,7 @@ const NavbarLink = ({ href, text }) => (
 
 const Navbar = () => {
   return (
-    <header className="px-12 py-4">
+    <header className="px-3 md:px-12 py-4">
       <Badge
         variant="outline"
         className="mb-4 rounded-[6px] px-3 py-2 flex w-fit gap-1 bg-primary-b-50"

@@ -38,3 +38,7 @@
     --neutral-n-0: hsla(0, 0%, 100%, 1);
   }
 }
+
+body {
+  background-color: var(--neutral-n-50);
+}

@@ -32,8 +32,8 @@ const InfoItem = ({ label, value, tooltipText }) => (
 
 const InfoBar = () => {
   return (
-    <div className="px-12 my-7">
-      <div className="flex justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-[8px]">
+    <div className="px-3 md:px-12 my-7">
+      <div className="flex flex-wrap justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-[8px]">
         <InfoItem
           label="Total Difficulty"
           value="5.6 Eh"
