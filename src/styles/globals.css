@@ -33,7 +33,7 @@
     --neutral-n-300: hsla(208, 17%, 80%, 1);
     --neutral-n-200: hsla(200, 36%, 95%, 1);
     --neutral-n-100: hsla(204, 33%, 97%, 1);
-    --neutral-n-50: hsla(210, 33%, 99%, 1);
+    --neutral-n-50: hsl(180, 11%, 96%, 1);
     --neutral-n-0: hsla(0, 0%, 100%, 1);
   }
 }
