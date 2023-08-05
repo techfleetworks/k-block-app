@@ -27,12 +27,13 @@
     /* Neutral Colors */
     --neutral-n-900: hsla(240, 16%, 10%, 1);
     --neutral-n-800: hsla(199, 16%, 20%, 1);
+    --neutral-n-700: hsla(201, 12%, 27%, 1);
     --neutral-n-500: hsla(197, 8%, 42%, 1);
     --neutral-n-400: hsla(197, 8%, 58%, 1);
-    --neutral-n-300: hsla(197, 8%, 58%, 1);
+    --neutral-n-300: hsla(208, 17%, 80%, 1);
     --neutral-n-200: hsla(200, 36%, 95%, 1);
-    --neutral-n-100: hsla(0, 0%, 83%, 1);
-    --neutral-n-50: hsla(0, 0%, 83%, 1);
+    --neutral-n-100: hsla(204, 33%, 97%, 1);
+    --neutral-n-50: hsla(210, 33%, 99%, 1);
     --neutral-n-0: hsla(0, 0%, 100%, 1);
   }
 }
