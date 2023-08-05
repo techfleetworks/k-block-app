@@ -10,13 +10,13 @@ import QuestionMark from '@/assets/question-mark.svg';
 
 const InfoItem = ({ label, value, tooltipText }) => (
   <div className="flex justify-between gap-1 px-5 py-3">
-    <TooltipProvider>
+    <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger className="flex items-center gap-1">
           <Image
             src={QuestionMark}
-            width={11}
-            height={11}
+            width={20}
+            height={20}
             alt="question mark"
           />
           <p>{label}:</p>

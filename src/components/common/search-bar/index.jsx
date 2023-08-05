@@ -31,8 +31,8 @@ const SearchBar = () => {
           />
           <Image
             src={Search}
-            width={27}
-            height={27}
+            width={28}
+            height={28}
             alt="search"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
           />
