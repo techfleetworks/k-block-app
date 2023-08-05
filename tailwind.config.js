@@ -19,6 +19,7 @@ module.exports = {
         'primary-b-300': 'var(--primary-b-300)',
         'primary-b-200': 'var(--primary-b-200)',
         'primary-b-100': 'var(--primary-b-100)',
+        'primary-b-50': 'var(--primary-b-50)',
 
         // Semantic Colors
         'semantic-g-500': 'var(--semantic-g-500)',
