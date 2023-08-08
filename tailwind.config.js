@@ -45,6 +45,9 @@ module.exports = {
         'neutral-n-50': 'var(--neutral-n-50)',
         'neutral-n-0': 'var(--neutral-n-0)',
 
+        // Neutral Table Border Color
+        "neutral-table-border": "var(--neutral-table-border)",
+
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
@@ -67,9 +70,13 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        DEFAULT: "0.25rem",
+        none: "0",
+        sm: "0.125rem",
+        rounded: "0.25rem",
+        md: "0.375rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
       },
       keyframes: {
         'accordion-down': {

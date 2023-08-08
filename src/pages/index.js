@@ -6,6 +6,13 @@ import {
   CurrentPrice,
   TotalTransactions,
   TransactionHistory,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+  NftCollections,
 } from '@/components/common';
 
 export default function Home() {
@@ -19,6 +26,7 @@ export default function Home() {
         <TotalTransactions />
         <TransactionHistory />
       </div>
+      <NftCollections />
       <Footer />
     </main>
   );
