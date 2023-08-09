@@ -44,8 +44,8 @@ const LatestBlocks = () => {
           View all blocks
         </a>
       </div>
-      <div className="rounded-xl border-neutral-n-200 border overflow-hidden">
-        <Table>
+      <div className="rounded-xl border overflow-hidden">
+        <Table className="border-neutral-table-border ">
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
               <TableHead>
