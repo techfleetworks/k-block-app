@@ -9,7 +9,7 @@ import Image from 'next/image';
 import QuestionMark from '@/assets/question-mark.svg';
 
 const InfoItem = ({ label, value, tooltipText }) => (
-  <div className="flex justify-between gap-1 px-5 py-3">
+  <div className="flex flex-wrap justify-between gap-1 px-5 py-3">
     <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger className="flex items-center gap-1">
