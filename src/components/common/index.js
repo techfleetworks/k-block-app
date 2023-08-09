@@ -1,5 +1,3 @@
-import NftCollections from './nft-collections';
-
 export { default as Button } from './button';
 export { default as Navbar } from './navbar';
 export { default as Searchbar } from './search-bar';
