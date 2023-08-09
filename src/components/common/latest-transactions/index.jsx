@@ -44,8 +44,8 @@ const LatestTransactions = () => {
         <Button className="mt-[15px] mb-[9px]"
           variant="secondary">View all blocks</Button>
       </div>
-      <div className="rounded-xl border-neutral-n-200 border    ">
-        <Table className="">
+      <div className="rounded-xl border-neutral-n-200 border  overflow-hidden">
+        <Table >
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
               <TableHead>
@@ -74,7 +74,7 @@ const LatestTransactions = () => {
               </TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody className="">
+          <TableBody >
 
             <TableRow className="border-neutral-n-200 border-y ">
               <TableCell>
@@ -86,31 +86,57 @@ const LatestTransactions = () => {
               <TableCell>0.07 KDA</TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            {/* <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="border-neutral-n-200 border-y ">
               <TableCell>
                 <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
               </TableCell>
-              <TableCell>0xa83abrdgnnt1234wrggesfgtg1297709eq725</TableCell>
+              <TableCell className=" inline-block w-[200px]"><span className='truncate block'>0xa83abrdgnnt1234wrggesfgtg1297709eq725</span>
+                <span>21 secs ago</span>
+              </TableCell>
               <TableCell>0.07 KDA</TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="border-neutral-n-200 border-y ">
               <TableCell>
-                <Image src={TransactionError} width={32} height={32} alt="Transaction Type Error" />
+                <Image src={TransactionError} width={32} height={32} alt="Transaction Type Pending" />
               </TableCell>
-              <TableCell>0xa83abrdgnnt1234wrggesfgtg1297709eq725</TableCell>
+              <TableCell className=" inline-block w-[200px]"><span className='truncate block'>0xa83abrdgnnt1234wrggesfgtg1297709eq725</span>
+                <span>21 secs ago</span>
+              </TableCell>
               <TableCell>0.07 KDA</TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="border-neutral-n-200 border-y ">
               <TableCell>
-                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Pending" />
               </TableCell>
-              <TableCell>0xa83abrdgnnt1234wrggesfgtg1297709eq725</TableCell>
+              <TableCell className=" inline-block w-[200px]"><span className='truncate block'>0xa83abrdgnnt1234wrggesfgtg1297709eq725</span>
+                <span>21 secs ago</span>
+              </TableCell>
               <TableCell>0.07 KDA</TableCell>
               <TableCell>0</TableCell>
-            </TableRow> */}
+            </TableRow>
+            <TableRow className="border-neutral-n-200 border-y ">
+              <TableCell>
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Pending" />
+              </TableCell>
+              <TableCell className=" inline-block w-[200px]"><span className='truncate block'>0xa83abrdgnnt1234wrggesfgtg1297709eq725</span>
+                <span>21 secs ago</span>
+              </TableCell>
+              <TableCell>0.07 KDA</TableCell>
+              <TableCell>0</TableCell>
+            </TableRow>
+            <TableRow className="border-neutral-n-200 border-y ">
+              <TableCell>
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Pending" />
+              </TableCell>
+              <TableCell className=" inline-block w-[200px]"><span className='truncate block'>0xa83abrdgnnt1234wrggesfgtg1297709eq725</span>
+                <span>21 secs ago</span>
+              </TableCell>
+              <TableCell>0.07 KDA</TableCell>
+              <TableCell>0</TableCell>
+            </TableRow>
+           
           </TableBody>
         </Table>
       </div>
