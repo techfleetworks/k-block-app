@@ -1,20 +1,14 @@
 import {
-  Navbar,
-  Searchbar,
-  InfoBar,
-  Footer,
   CurrentPrice,
-  TotalTransactions,
-  TransactionHistory,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-  NftCollections,
+  Footer,
+  InfoBar,
   LatestBlocks,
   LatestTransactions,
+  Navbar,
+  NftCollections,
+  Searchbar,
+  TotalTransactions,
+  TransactionHistory,
 } from '@/components/common';
 
 export default function Home() {
