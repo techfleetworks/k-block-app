@@ -15,11 +15,11 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import QuestionMark from '@/assets/question-mark.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg'; 
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg'; 
-import TransactionError from '@/assets/transaction-type-error.svg'; 
+import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
+import TransactionError from '@/assets/transaction-type-error.svg';
 import Image from 'next/image';
-
+import Button from '@/components/common/button'
 
 const Help = ({ label, tooltipText }) => (
   <TooltipProvider delayDuration={100}>
@@ -39,7 +39,11 @@ const Help = ({ label, tooltipText }) => (
 const LatestBlocks = () => {
   return (
     <div className="bg-neutral-n-0 w-fit px-5 pb-[21px] rounded-xl	">
-      <h2 className="py-[18px]">Latest Blocks</h2>
+      <div className="flex justify-between">
+        <h2 className="my-[18px]">Latest Blocks</h2>
+        <Button className="mt-[15px] mb-[9px]"
+          variant="secondary">View all blocks</Button>
+      </div>
       <div className="rounded-xl border-neutral-n-200 border overflow-hidden">
         <Table>
           <TableHeader>
@@ -79,7 +83,7 @@ const LatestBlocks = () => {
           <TableBody >
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-              <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -88,7 +92,7 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-              <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
+                <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -97,7 +101,35 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-              <Image src={TransactionError} width={32} height={32} alt="Transaction Type Error" />
+                <Image src={TransactionError} width={32} height={32} alt="Transaction Type Error" />
+              </TableCell>
+              <TableCell>394402</TableCell>
+              <TableCell>12</TableCell>
+              <TableCell>7</TableCell>
+              <TableCell>12 sec ago</TableCell>
+            </TableRow>
+           
+            <TableRow className="border-neutral-n-200 border-y">
+              <TableCell>
+                <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
+              </TableCell>
+              <TableCell>394402</TableCell>
+              <TableCell>12</TableCell>
+              <TableCell>7</TableCell>
+              <TableCell>12 sec ago</TableCell>
+            </TableRow>
+            <TableRow className="border-neutral-n-200 border-y">
+              <TableCell>
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+              </TableCell>
+              <TableCell>394402</TableCell>
+              <TableCell>12</TableCell>
+              <TableCell>7</TableCell>
+              <TableCell>12 sec ago</TableCell>
+            </TableRow>
+            <TableRow className="border-neutral-n-200 border-y">
+              <TableCell>
+                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
