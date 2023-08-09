@@ -48,9 +48,9 @@ const Navbar = () => {
             type="text"
             id="search"
             placeholder="Search by Address / Request Key / Account / Block / Token"
-            className="pl-4 pr-10 py-2 text-neutral-n-400 text-xs bg-primary-b-50 rounded-l-lg rounded-r-none border-none h-8"
+            className="text-neutral-n-400 text-xs bg-primary-b-50 rounded-lg border-none h-8"
           />
-          <Search className="cursor-pointer bg-primary-b-500 text-white py-2 w-[45px] h-8 rounded-r-lg" />
+          <Search className="absolute right-10 top-1/2 transform -translate-y-1/2 cursor-pointer bg-primary-b-500 text-white py-2 w-[45px] h-8 rounded-r-lg" />
           <div className="bg-white p-2 shadow-sm rounded-md ml-2 cursor-pointer">
             <Image src={Sun} width={20} height={20} alt="sun" />
           </div>
