@@ -38,7 +38,7 @@ const Help = ({ label, tooltipText }) => (
 
 const LatestBlocks = () => {
   return (
-    <div className="bg-neutral-n-0 w-fit px-5 pb-[21px] rounded-xl	">
+    <div className="bg-neutral-n-0 overflow-auto px-5 pb-[21px] rounded-xl	">
       <div className="flex justify-between">
         <h2 className="my-[18px]">Latest Blocks</h2>
         <Button className="mt-[15px] mb-[9px]"

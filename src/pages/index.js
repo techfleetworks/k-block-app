@@ -28,9 +28,9 @@ export default function Home() {
         <TotalTransactions />
         <TransactionHistory />
       </div>
-      <div className="flex flex-wrap gap-4 justify-start sm:justify-between px-3 md:px-12 my-7">
-        <LatestBlocks />
-        <LatestTransactions />
+      <div className="grid md:grid-cols-2 gap-7  mx-3 md:mx-12 my-7">
+        <LatestBlocks className=""/>
+        <LatestTransactions className=""/>
       </div>
       <NftCollections />
       <Footer />
