@@ -22,6 +22,7 @@
 
     --semantic-b-300: hsla(205, 100%, 40%, 1);
     --semantic-b-100: hsla(198, 56%, 92%, 1);
+
     --semantic-y-500: hsla(40, 100%, 50%, 1);
     --semantic-y-100: hsla(46, 100%, 93%, 1);
 
@@ -36,6 +37,9 @@
     --neutral-n-100: hsla(204, 33%, 97%, 1);
     --neutral-n-50: hsl(180, 11%, 96%, 1);
     --neutral-n-0: hsla(0, 0%, 100%, 1);
+
+    /* Neutral Table Border Color */
+    --neutral-table-border: hsla(200, 17%, 90%, 1);
   }
 }
 

@@ -6,6 +6,13 @@ import {
   CurrentPrice,
   TotalTransactions,
   TransactionHistory,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+  NftCollections,
 } from '@/components/common';
 
 export default function Home() {
@@ -14,11 +21,12 @@ export default function Home() {
       <Navbar />
       <Searchbar />
       <InfoBar />
-      <div className="flex flex-wrap gap-4 justify-start sm:justify-between px-3 md:px-12 my-7">
+      <div className="flex flex-wrap gap-7 justify-start sm:justify-between px-3 md:px-12 my-7">
         <CurrentPrice />
         <TotalTransactions />
         <TransactionHistory />
       </div>
+      <NftCollections />
       <Footer />
     </main>
   );
