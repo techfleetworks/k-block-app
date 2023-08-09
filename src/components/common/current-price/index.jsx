@@ -1,11 +1,11 @@
-import React from 'react';
-import KDA from '@/assets/kda.svg';
-import Image from 'next/image';
-import { ChevronUpIcon } from 'lucide-react';
+import React from "react";
+import KDA from "@/assets/kda.svg";
+import Image from "next/image";
+import { ChevronUpIcon } from "lucide-react";
 
 const CurrentPrice = () => {
   return (
-    <div className="bg-neutral-n-0 flex-1 p-5 rounded-xl">
+    <div className="bg-neutral-n-0 flex-1 p-5 rounded-xl drop-shadow-md">
       <div className="flex justify-between">
         <div className="flex gap-3 items-center">
           <Image width={44} height={44} src={KDA} alt="KDA Logo" />

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const TotalTransactions = () => {
   return (
-    <div className="bg-neutral-n-0 p-5 rounded-xl flex-1">
+    <div className="bg-neutral-n-0 p-5 rounded-xl flex-1 drop-shadow-md">
       <h1 className="text-sm font-medium">Total Transactions</h1>
       <p className="text-xl font-bold">32647070</p>
       <div className="bg-neutral-n-100 mt-11 p-5 rounded-lg">
