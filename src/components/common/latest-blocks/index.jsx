@@ -1,25 +1,22 @@
-import React from 'react'
+import QuestionMark from '@/assets/question-mark.svg';
+import TransactionError from '@/assets/transaction-type-error.svg';
+import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
+import TransactionSuccess from '@/assets/transaction-type-success.svg';
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from '@/components/ui/table';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import QuestionMark from '@/assets/question-mark.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
 import Image from 'next/image';
-import Button from '@/components/common/button'
 
 const Help = ({ label, tooltipText }) => (
   <TooltipProvider delayDuration={100}>
@@ -35,55 +32,48 @@ const Help = ({ label, tooltipText }) => (
   </TooltipProvider>
 );
 
-
 const LatestBlocks = () => {
   return (
-    <div className="bg-neutral-n-0 overflow-auto px-5 pb-[21px] rounded-xl	">
-      <div className="flex justify-between">
-        <h2 className="my-[18px]">Latest Blocks</h2>
-        <Button className="mt-[15px] mb-[9px]"
-          variant="secondary">View all blocks</Button>
+    <div className="bg-neutral-n-0 overflow-auto p-5 rounded-xl">
+      <div className="flex flex-wrap justify-between pb-5">
+        <h2 className="text-xl font-semibold leading-normal">Latest Blocks</h2>
+        <a
+          className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
+          href="#"
+        >
+          View all blocks
+        </a>
       </div>
       <div className="rounded-xl border-neutral-n-200 border overflow-hidden">
         <Table>
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
               <TableHead>
-                <Help
-                  label="Status"
-                  tooltipText="Some tooltip"
-                />
+                <Help label="Status" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help
-                  label="Height"
-                  tooltipText="Some tooltip"
-                />
+                <Help label="Height" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help
-                  label="Chain"
-                  tooltipText="Some tooltip"
-                />
+                <Help label="Chain" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help
-                  label="Transaction"
-                  tooltipText="Some tooltip"
-                />
+                <Help label="Transaction" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help
-                  label="Time"
-                  tooltipText="Some tooltip"
-                />
+                <Help label="Time" tooltipText="Some tooltip" />
               </TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody >
+          <TableBody>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+                <Image
+                  src={TransactionSuccess}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Success"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -92,7 +82,12 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
+                <Image
+                  src={TransactionPending}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Pending"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -101,17 +96,27 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionError} width={32} height={32} alt="Transaction Type Error" />
+                <Image
+                  src={TransactionError}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Error"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-           
+
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionPending} width={32} height={32} alt="Transaction Type Pending" />
+                <Image
+                  src={TransactionPending}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Pending"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -120,7 +125,12 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+                <Image
+                  src={TransactionSuccess}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Success"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -129,7 +139,12 @@ const LatestBlocks = () => {
             </TableRow>
             <TableRow className="border-neutral-n-200 border-y">
               <TableCell>
-                <Image src={TransactionSuccess} width={32} height={32} alt="Transaction Type Success" />
+                <Image
+                  src={TransactionSuccess}
+                  width={32}
+                  height={32}
+                  alt="Transaction Type Success"
+                />
               </TableCell>
               <TableCell>394402</TableCell>
               <TableCell>12</TableCell>
@@ -140,7 +155,7 @@ const LatestBlocks = () => {
         </Table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LatestBlocks
+export default LatestBlocks;
