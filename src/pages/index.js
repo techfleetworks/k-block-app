@@ -13,6 +13,8 @@ import {
   TableHeader,
   TableRow,
   NftCollections,
+  LatestBlocks,
+  LatestTransactions,
 } from '@/components/common';
 
 export default function Home() {
@@ -25,6 +27,10 @@ export default function Home() {
         <CurrentPrice />
         <TotalTransactions />
         <TransactionHistory />
+      </div>
+      <div className="grid md:grid-cols-2 gap-7  px-3 md:px-12 my-7">
+        <LatestBlocks />
+        <LatestTransactions />
       </div>
       <NftCollections />
       <Footer />
