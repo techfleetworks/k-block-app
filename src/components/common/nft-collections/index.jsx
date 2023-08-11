@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,30 +6,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import Image from 'next/image';
-import QuestionMark from '@/assets/question-mark.svg';
-import Nft from '@/assets/nft.svg';
-
-const Help = ({ label, tooltipText }) => (
-  <TooltipProvider delayDuration={100}>
-    <Tooltip>
-      <TooltipTrigger className="flex items-center gap-2">
-        <Image src={QuestionMark} width={13} height={13} alt="question mark" />
-        <p>{label}</p>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{tooltipText}</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
-);
+} from "@/components/ui/table";
+import Image from "next/image";
+import Nft from "@/assets/nft.svg";
+import Help from "@/components/common/help";
 
 const NftCollections = () => {
   return (
@@ -54,7 +34,17 @@ const NftCollections = () => {
             <TableHeader>
               <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
                 <TableHead className="pl-5">
-                  <Help label="Collections" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Collections"
+                    tooltipText={
+                      <>
+                        Tooltip text here.{" "}
+                        <a className="underline" href="http://example.com/">
+                          Learn more.
+                        </a>
+                      </>
+                    }
+                  />
                 </TableHead>
                 <TableHead>
                   <Help label="Items" tooltipText="Tooltip text here" />
