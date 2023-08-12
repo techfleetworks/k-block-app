@@ -1,7 +1,7 @@
-import Logo from '@/assets/logo.svg';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import Logo from "@/assets/logo.svg";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -9,10 +9,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import Image from 'next/image';
-import Link from 'next/link';
-import Sun from '@/assets/sun.svg';
+} from "@/components/ui/navigation-menu";
+import Image from "next/image";
+import Link from "next/link";
+import Sun from "@/assets/sun.svg";
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>
@@ -32,7 +32,7 @@ const NavbarLink = ({ href, text }) => (
 
 const Navbar = () => {
   return (
-    <header className="px-3 md:px-12 py-4">
+    <header className="md:px-12 py-4 bg-neutral-n-0 px-12">
       <div className="flex justify-between">
         <Badge
           variant="outline"

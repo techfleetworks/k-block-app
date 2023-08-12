@@ -22,7 +22,7 @@ const NftCollections = () => {
           </h2>
           <a
             className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-            href="#"
+            href="/nfts"
           >
             View NFT dashboard
           </a>

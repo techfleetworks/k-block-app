@@ -97,6 +97,7 @@ module.exports = {
       },
       dropShadow: {
         md: "4px 4px 10px hsla(208, 17%, 80%, 0.25)",
+        low: "2px 2px hsla(208, 17%, 80%, 0.25) blur-[14px]",
       },
     },
   },
