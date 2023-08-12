@@ -17,20 +17,8 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import Image from 'next/image';
+import Help from "@/components/common/help";
 
-const Help = ({ label, tooltipText }) => (
-  <TooltipProvider delayDuration={100}>
-    <Tooltip>
-      <TooltipTrigger className="flex items-center gap-2">
-        <Image src={QuestionMark} width={13} height={13} alt="question mark" />
-        <p>{label}</p>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{tooltipText}</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
-);
 
 const LatestBlocks = () => {
   return (
