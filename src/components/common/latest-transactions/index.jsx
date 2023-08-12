@@ -63,12 +63,14 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="truncate ">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs ">21 secs ago</p>
               </TableCell>
-              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -81,12 +83,14 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2 ">
-                <p className="truncate ">
+              <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -99,12 +103,14 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="truncate ">
+              <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -117,12 +123,14 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="truncate ">
+              <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -135,12 +143,14 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="truncate ">
+              <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -153,14 +163,16 @@ const LatestTransactions = () => {
                 />
               </TableCell>
               <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="truncate ">
+              <p className="text-primary-b-500 truncate">
+                  <a a href="" >
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                </a>
                 </p>
-                <p>21 secs ago</p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
               <TableCell className="">
                 <p>0.07 KDA</p>
-              <p>0.30 USD</p></TableCell>
+              <p className="text-neutral-n-500 text-xs">0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
           </TableBody>

@@ -54,7 +54,7 @@ const LatestBlocks = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -63,12 +63,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -77,12 +77,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionError}
@@ -91,13 +91,13 @@ const LatestBlocks = () => {
                   alt="Transaction Type Error"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
 
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -106,12 +106,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -120,12 +120,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -134,7 +134,7 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
