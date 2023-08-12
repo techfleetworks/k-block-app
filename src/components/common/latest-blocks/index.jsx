@@ -33,9 +33,9 @@ const LatestBlocks = () => {
         </a>
       </div>
       <div className="rounded-xl border overflow-hidden">
-        <Table className="border-neutral-table-border ">
+        <Table className="border-neutral-table-border">
           <TableHeader>
-            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
+            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
                 <Help label="Status" tooltipText="Some tooltip" />
               </TableHead>
@@ -54,7 +54,7 @@ const LatestBlocks = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -68,7 +68,7 @@ const LatestBlocks = () => {
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -82,7 +82,7 @@ const LatestBlocks = () => {
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionError}
@@ -97,7 +97,7 @@ const LatestBlocks = () => {
               <TableCell>12 sec ago</TableCell>
             </TableRow>
 
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -111,7 +111,7 @@ const LatestBlocks = () => {
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -125,7 +125,7 @@ const LatestBlocks = () => {
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}

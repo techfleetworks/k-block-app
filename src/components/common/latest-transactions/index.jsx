@@ -37,23 +37,23 @@ const LatestTransactions = () => {
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
-            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
+            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
                 <Help label="Status" tooltipText="Some tooltip" />
               </TableHead>
-              <TableHead>
+              <TableHead className="w-[200px]">
                 <Help label="Request Key" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
                 <Help label="Amount" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help label="Chain " tooltipText="Some tooltip" />
+                <Help label="Chain" tooltipText="Some tooltip" />
               </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -62,16 +62,16 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -80,16 +80,16 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionError}
@@ -98,16 +98,16 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -116,16 +116,16 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -134,16 +134,16 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -152,13 +152,15 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
+              <TableCell className="w-[200px] inline-block">
+                <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+                </p>
+                <p>21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="">
+                <p>0.07 KDA</p>
+              <p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
           </TableBody>
