@@ -62,13 +62,13 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
                 <p>21 secs ago</p>
               </TableCell>
-              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -80,13 +80,13 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2 ">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
                 <p>21 secs ago</p>
               </TableCell>
-              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -98,13 +98,13 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
                 <p>21 secs ago</p>
               </TableCell>
-              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -116,13 +116,13 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
                 <p>21 secs ago</p>
               </TableCell>
-              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -134,13 +134,13 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
                 <p>21 secs ago</p>
               </TableCell>
-              <TableCell className=""><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
+              <TableCell className="space-y-2"><p>0.07 KDA</p><p>0.30 USD</p></TableCell>
               <TableCell>0</TableCell>
             </TableRow>
             <TableRow className="">
@@ -152,7 +152,7 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className="w-[200px] inline-block">
+              <TableCell className="w-[200px] inline-block space-y-2">
                 <p className="truncate ">
                   0xa83abrdgnnt1234wrggesfgtg1297709eq725
                 </p>
