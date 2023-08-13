@@ -11,3 +11,4 @@ export { default as LatestBlocks } from "./latest-blocks";
 export { default as LatestTransactions } from "./latest-transactions";
 export { default as Help } from "./help";
 export { default as Address } from "./address";
+export { default as PortfolioBreakdown } from "./portfolio-breakdown";
