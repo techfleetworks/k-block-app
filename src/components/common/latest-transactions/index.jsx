@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/tooltip";
 import Image from "next/image";
 import Help from "@/components/common/help";
+import Link from "next/link";
 
 const LatestTransactions = () => {
   return (
@@ -26,12 +27,12 @@ const LatestTransactions = () => {
         <h2 className="text-xl font-semibold leading-normal">
           Latest Transactions
         </h2>
-        <a
+        <Link
           className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
           href="/wallet-overview"
         >
           View all transactions
-        </a>
+        </Link>
       </div>
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
