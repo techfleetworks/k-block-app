@@ -20,7 +20,7 @@ export default function WalletOverview() {
           <WalletValue />
         </div>
       </div>
-      <Tabs defaultValue="account" className="mt-12 px-3 md:px-12 ">
+      <Tabs defaultValue="transactions" className="mt-12 px-3 md:px-12 ">
         <TabsList>
           <TabsTrigger value="transactions">Transactions</TabsTrigger>
           <TabsTrigger value="tokens">Tokens</TabsTrigger>
