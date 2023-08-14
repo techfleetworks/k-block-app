@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import Nft from "@/assets/nft.svg";
 import Help from "@/components/common/help";
+import Link from "next/link";
 
 const NftCollections = () => {
   return (
@@ -20,12 +21,12 @@ const NftCollections = () => {
           <h2 className="text-xl font-semibold leading-normal">
             Top NFT Collections
           </h2>
-          <a
+          <Link
             className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
             href="/nfts"
           >
             View NFT dashboard
-          </a>
+          </Link>
         </div>
 
         {/* NFT Collections Table - Statically coded each NFT to match design, but will dynamically fetch when connected with API */}
