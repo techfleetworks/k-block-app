@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Banner from "@/assets/banner.png";
 import DashboardCard from "@/components/common/dashboard-card";
+import DashboardTabs from "@/components/common/dashboard-tabs/dashboard-tabs";
 
 export default function NFTDashboard() {
   return (
@@ -14,6 +15,8 @@ export default function NFTDashboard() {
         <h1 className="text-[32px] leading-[44px] font-bold mt-12 mb-12">
           NFT Dashboard
         </h1>
+      </section>
+      <section className="px-12">
         <div className="flex flex-wrap">
           <div className="h-[208px]">
             <div className="flex flex-wrap">
@@ -61,6 +64,9 @@ export default function NFTDashboard() {
             />
           </div>
         </div>
+      </section>
+      <section>
+        <DashboardTabs />
       </section>
     </div>
   );
