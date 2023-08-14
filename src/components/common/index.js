@@ -13,3 +13,4 @@ export { default as Help } from "./help";
 export { default as Address } from "./address";
 export { default as PortfolioBreakdown } from "./portfolio-breakdown";
 export { default as WalletValue } from "./wallet-value";
+export { default as WalletTabs } from "./wallet-tabs";
