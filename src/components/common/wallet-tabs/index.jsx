@@ -9,8 +9,13 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
-import Nft from "@/assets/nft.svg";
 import Help from "@/components/common/help";
+import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionPendingIncoming from "@/assets/transaction-type-pending-incoming.svg";
+import Kadena from "@/assets/kadena.svg";
+import Hypercent from "@/assets/hypercent.svg";
+import HeartGlassesNft from "@/assets/heartglassesnft.svg";
+import KittyWarriorNft from "@/assets/kittywarriornft.svg";
 
 const WalletTabs = () => {
   return (
@@ -24,12 +29,15 @@ const WalletTabs = () => {
         </TabsList>
 
         {/* Transactions Tab */}
-        <TabsContent value="transactions">
+        <TabsContent
+          className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none"
+          value="transactions"
+        >
           Transactions
-          <div className="rounded-xl border overflow-hidden">
+          <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
-                <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
+                <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-4 p">
                   <TableHead className="pl-5">Status</TableHead>
                   <TableHead>
                     <Help
@@ -92,174 +100,92 @@ const WalletTabs = () => {
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="pl-5 py-4">
                     <Image
-                      src={Nft}
-                      width={44}
-                      height={44}
-                      alt="NFT placeholder image"
+                      src={TransactionPending}
+                      width={32}
+                      height={32}
+                      alt="Transaction type: pending outgoing"
                     />
-                    Kawaii K9
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
+                  <TableCell className="table-link">kl9OW...72kxw</TableCell>
+                  <TableCell>
+                    <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
+                      Approve
+                    </span>
+                  </TableCell>
+                  <TableCell className="table-link">3206130</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="md-muted-table-text">From </span>
+                      <span className="table-text">k:0x18...bb13</span>
+                    </p>
+                    <p>
+                      <span className="md-muted-table-text">To </span>
+                      <span className="table-link">k:565a...6101</span>
+                    </p>
+                  </TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="table-text">0.02 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">0.30 USD</span>
+                    </p>
+                  </TableCell>
+                  <TableCell className="table-text">1 second ago</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="table-text">0.02 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">0.30 USD</span>
+                    </p>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="pl-5 py-4">
                     <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
+                      src={TransactionPendingIncoming}
+                      width={32}
+                      height={32}
+                      alt="Transaction type: pending incoming"
                     />
-                    Kawaii K9
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell className="table-link">FTodZ...w9Glc</TableCell>
+                  <TableCell>
+                    <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
+                      Transfer
+                    </span>
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell className="table-link">3206102</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="md-muted-table-text">From </span>
+                      <span className="table-text">k:0x18...bb13</span>
+                    </p>
+                    <p>
+                      <span className="md-muted-table-text">To </span>
+                      <span className="table-link">k:565a...6101</span>
+                    </p>
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell>
+                    <p>
+                      <span className="table-text">200.23 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">0.30 USD</span>
+                    </p>
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell className="table-text">2 minutes ago</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="table-text">200.23 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">0.30 USD</span>
+                    </p>
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                  <TableCell>00</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -267,9 +193,12 @@ const WalletTabs = () => {
         </TabsContent>
 
         {/* Tokens Tab */}
-        <TabsContent value="tokens">
+        <TabsContent
+          className="leading-normal text-neutral-n-700 text-xl font-semibold"
+          value="tokens"
+        >
           Tokens Holdings
-          <div className="rounded-xl border overflow-hidden">
+          <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
@@ -295,164 +224,40 @@ const WalletTabs = () => {
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
                     <Image
-                      src={Nft}
-                      width={44}
-                      height={44}
-                      alt="NFT placeholder image"
+                      src={Kadena}
+                      width={32}
+                      height={32}
+                      alt="Kadena Token Logo"
                     />
-                    Kawaii K9
+                    Kadena
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
+                  <TableCell className="table-text" s>
+                    KDA
+                  </TableCell>
+                  <TableCell className="table-link">coin</TableCell>
+                  <TableCell className="table-text">10,492</TableCell>
+                  <TableCell className="table-text">$0.57</TableCell>
+                  <TableCell className="table-text">$5,836.23</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
                     <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
+                      src={Hypercent}
+                      width={32}
+                      height={32}
+                      alt="Hypercent Token Logo"
                     />
-                    Kawaii K9
+                    Hypercent
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell className="table-text">HYPE</TableCell>
+                  <TableCell className="table-link">
+                    hypercent.prod-hype-coin
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>00</TableCell>
+                  <TableCell className="table-text">10,492</TableCell>
+                  <TableCell className="table-text">$0.04</TableCell>
+                  <TableCell className="table-text">$5,836.23</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -522,154 +327,48 @@ const WalletTabs = () => {
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5 table-link">
                     <Image
-                      src={Nft}
-                      width={44}
-                      height={44}
-                      alt="NFT placeholder image"
+                      src={HeartGlassesNft}
+                      width={48}
+                      height={48}
+                      alt="NFT of a person wearing heart-shaped glasses"
                     />
-                    Kawaii K9
+                    467
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
+                  <TableCell className="table-link">Kadena Skellies</TableCell>
+                  <TableCell className="table-text">Holding</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="table-text">7.2 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">4.10 USD</span>
+                    </p>
+                  </TableCell>
+                  <TableCell className="table-text">3 days ago</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5">
+                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-2.5 table-link">
                     <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
+                      src={KittyWarriorNft}
+                      width={48}
+                      height={48}
+                      alt="NFT of a cat dressed up as a warrior"
                     />
-                    Kawaii K9
+                    51
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
+                  <TableCell className="table-link">SphynXXX Cats</TableCell>
+                  <TableCell className="table-text">Holding</TableCell>
+                  <TableCell>
+                    <p>
+                      <span className="table-text">4 KDA</span>
+                    </p>
+                    <p>
+                      <span className="sm-muted-table-text">2.28 USD</span>
+                    </p>
                   </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3  pl-5 pr-0 py-2.5">
-                    <Image
-                      src={Nft}
-                      width="2.75rem"
-                      height="2.75rem"
-                      alt="NFT placeholder image"
-                    />
-                    Kawaii K9
-                  </TableCell>
-                  <TableCell>12000</TableCell>
-                  <TableCell>129</TableCell>
-                  <TableCell>12</TableCell>
-                  <TableCell>12</TableCell>
+                  <TableCell className="table-text">5 days ago</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

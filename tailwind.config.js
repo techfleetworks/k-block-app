@@ -37,6 +37,7 @@ module.exports = {
         // Neutrals
         "neutral-n-900": "var(--neutral-n-900)",
         "neutral-n-800": "var(--neutral-n-800)",
+        "neutral-n-700": "var(--neutral-n-700)",
         "neutral-n-500": "var(--neutral-n-500)",
         "neutral-n-400": "var(--neutral-n-400)",
         "neutral-n-300": "var(--neutral-n-300)",
@@ -102,4 +103,31 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  components: {
+    // Table Styles
+    ".table-text": {
+      color: "var(--neutral-n-800)",
+      lineHeight: "1.25",
+      fontWeight: "500",
+      fontSize: "0.875rem",
+    },
+    ".table-link": {
+      color: "var(--primary-b-500)",
+      lineHeight: "1.25",
+      fontWeight: "500",
+      fontSize: "0.875rem",
+    },
+    ".sm-muted-table-text": {
+      color: "var(--neutral-n-500)",
+      fontSize: "0.75rem",
+      fontWeight: "400",
+      lineHeight: "1",
+    },
+    ".medium-muted-table-text": {
+      color: "var(--neutral-n-500)",
+      fontSize: "0.875rem",
+      fontWeight: "400",
+      lineHeight: "1",
+    },
+  },
 };

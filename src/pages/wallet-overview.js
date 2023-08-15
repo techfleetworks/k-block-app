@@ -18,7 +18,7 @@ export default function WalletOverview() {
         <Address />
         <div className="flex flex-wrap gap-6 bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md">
           <PortfolioBreakdown />
-          <WalletValue />\
+          <WalletValue />
         </div>
       </div>
       <section>
