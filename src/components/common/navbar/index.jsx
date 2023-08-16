@@ -10,6 +10,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -62,11 +64,37 @@ const Navbar = () => {
             <Image src={Logo} width={140} height={140} alt="logo" />
           </div>
         </Link>
-        <div className="md:flex md:gap-11 hidden">
-          <NavbarLink href="/" text="Blockchain" />
+        <div className="md:flex md:gap-9 hidden">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Transaction</Link>
+                  </div>
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Blocks</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <NavbarLink href="/" text="Tokens" />
           <NavbarLink href="/nfts" text="NFTs" />
           <NavbarLink href="/" text="Resources" />
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Testnet</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
       </nav>
     </header>
