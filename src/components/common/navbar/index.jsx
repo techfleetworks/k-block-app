@@ -1,18 +1,18 @@
-import Logo from "@/assets/logo.svg";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import Logo from '@/assets/logo.svg';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Search } from 'lucide-react';
 
+import Sun from '@/assets/sun.svg';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import Image from "next/image";
-import Link from "next/link";
-import Sun from "@/assets/sun.svg";
+} from '@/components/ui/navigation-menu';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>
@@ -57,13 +57,15 @@ const Navbar = () => {
         </div>
       </div>
       <nav className="flex justify-between items-center">
-        <div className="flex gap-4 items-center ">
-          <Image src={Logo} width={140} height={140} alt="logo" />
-        </div>
+        <Link href="/">
+          <div className="flex gap-4 items-center ">
+            <Image src={Logo} width={140} height={140} alt="logo" />
+          </div>
+        </Link>
         <div className="md:flex md:gap-11 hidden">
           <NavbarLink href="/" text="Blockchain" />
           <NavbarLink href="/" text="Tokens" />
-          <NavbarLink href="/" text="NFTs" />
+          <NavbarLink href="/nfts" text="NFTs" />
           <NavbarLink href="/" text="Resources" />
         </div>
       </nav>
