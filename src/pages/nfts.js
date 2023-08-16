@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Banner from "@/assets/banner.png";
 import DashboardCard from "@/components/common/dashboard-card";
-import Tabs from "@/components/common/tabs/board-tabs";
+import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
 
 export default function NFTDashboard() {
   return (
@@ -59,6 +59,7 @@ export default function NFTDashboard() {
               src={Banner}
               width={474}
               height={208}
+              alt="Banner"
               className="rounded-[12px] shadow-md"
               //   the shadow needs to be corrected
             />
@@ -66,14 +67,7 @@ export default function NFTDashboard() {
         </div>
       </section>
       <section>
-        <Tabs
-          category1="Trending"
-          category2="Upcoming"
-          category3="Top"
-          content1="Trending NFT Collections"
-          content2="Upcoming NFTs"
-          content3="Top NFT Collections"
-        />
+        <Tabs category1="Trending" category2="Upcoming" category3="Top" />
       </section>
     </div>
   );
