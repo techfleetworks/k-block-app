@@ -37,7 +37,7 @@ const WalletTabs = () => {
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
-                <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-4 p">
+                <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">
                   <TableHead className="pl-5">Status</TableHead>
                   <TableHead>
                     <Help
@@ -108,13 +108,17 @@ const WalletTabs = () => {
                       alt="Transaction type: pending outgoing"
                     />
                   </TableCell>
-                  <TableCell className="table-link">kl9OW...72kxw</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">kl9OW...72kxw</a>
+                  </TableCell>
                   <TableCell>
                     <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
                       Approve
                     </span>
                   </TableCell>
-                  <TableCell className="table-link">3206130</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">3206130</a>
+                  </TableCell>
                   <TableCell>
                     <p>
                       <span className="md-muted-table-text">From </span>
@@ -122,7 +126,9 @@ const WalletTabs = () => {
                     </p>
                     <p>
                       <span className="md-muted-table-text">To </span>
-                      <span className="table-link">k:565a...6101</span>
+                      <a href="#" className="table-link">
+                        k:565a...6101
+                      </a>
                     </p>
                   </TableCell>
                   <TableCell>
@@ -152,13 +158,17 @@ const WalletTabs = () => {
                       alt="Transaction type: pending incoming"
                     />
                   </TableCell>
-                  <TableCell className="table-link">FTodZ...w9Glc</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">FTodZ...w9Glc</a>
+                  </TableCell>
                   <TableCell>
                     <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
                       Transfer
                     </span>
                   </TableCell>
-                  <TableCell className="table-link">3206102</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">3206102</a>
+                  </TableCell>
                   <TableCell>
                     <p>
                       <span className="md-muted-table-text">From </span>
@@ -166,7 +176,9 @@ const WalletTabs = () => {
                     </p>
                     <p>
                       <span className="md-muted-table-text">To </span>
-                      <span className="table-link">k:565a...6101</span>
+                      <a href="#" className="table-link">
+                        k:565a...6101
+                      </a>
                     </p>
                   </TableCell>
                   <TableCell>
@@ -231,12 +243,14 @@ const WalletTabs = () => {
                       height={32}
                       alt="Kadena Token Logo"
                     />
-                    Kadena
+                    <a href="#">Kadena</a>
                   </TableCell>
                   <TableCell className="table-text" s>
                     KDA
                   </TableCell>
-                  <TableCell className="table-link">coin</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">coin</a>
+                  </TableCell>
                   <TableCell className="table-text">10,492</TableCell>
                   <TableCell className="table-text">$0.57</TableCell>
                   <TableCell className="table-text">$5,836.23</TableCell>
@@ -249,11 +263,11 @@ const WalletTabs = () => {
                       height={32}
                       alt="Hypercent Token Logo"
                     />
-                    Hypercent
+                    <a href="#">Hypercent</a>
                   </TableCell>
                   <TableCell className="table-text">HYPE</TableCell>
                   <TableCell className="table-link">
-                    hypercent.prod-hype-coin
+                    <a href="#">hypercent.prod-hype-coin</a>
                   </TableCell>
                   <TableCell className="table-text">10,492</TableCell>
                   <TableCell className="table-text">$0.04</TableCell>
@@ -269,7 +283,7 @@ const WalletTabs = () => {
           <div className="rounded-xl border overflow-hidden">
             <Table className="border-neutral-table-border">
               <TableHeader>
-                <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
+                <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">
                   <TableHead className="pl-5">
                     <Help
                       label="Asset ID"
@@ -334,9 +348,11 @@ const WalletTabs = () => {
                       height={48}
                       alt="NFT of a person wearing heart-shaped glasses"
                     />
-                    467
+                    <a href="#">467</a>
                   </TableCell>
-                  <TableCell className="table-link">Kadena Skellies</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">Kadena Skellies</a>
+                  </TableCell>
                   <TableCell className="table-text">Holding</TableCell>
                   <TableCell>
                     <p>
@@ -356,9 +372,11 @@ const WalletTabs = () => {
                       height={48}
                       alt="NFT of a cat dressed up as a warrior"
                     />
-                    51
+                    <a href="#">51</a>
                   </TableCell>
-                  <TableCell className="table-link">SphynXXX Cats</TableCell>
+                  <TableCell className="table-link">
+                    <a href="#">SphynXXX Cats</a>
+                  </TableCell>
                   <TableCell className="table-text">Holding</TableCell>
                   <TableCell>
                     <p>
