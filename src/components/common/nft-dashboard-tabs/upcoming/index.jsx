@@ -11,14 +11,20 @@ import Boxing from "@/assets/boxing.svg";
 import OwlGIF from "@/assets/high-owls.gif";
 import Verified from "@/assets/verified.svg";
 
+import { GridIcon, ListBulletIcon } from "@radix-ui/react-icons";
+
 export default function Upcoming(props) {
   return (
     <>
-      <h2 className="mb-5 text-xl leading-[24px] font-semibold">
-        {props.title}
-      </h2>
+      <div className="flex justify-between">
+        <h2 className="mb-5 text-xl leading-6 font-semibold">{props.title}</h2>
+        <div className="flex">
+          <GridIcon width={32} height={32} className="p-1" />
+          <ListBulletIcon width={32} height={32} className="p-1" />
+        </div>
+      </div>
       <div>
-        <div className="flex mb-7">
+        <div className="flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
           <PictureCard
             image={LargeApe}
             alt="Large Apes 123"
@@ -43,7 +49,7 @@ export default function Upcoming(props) {
             id="Tokenize IT"
           />
         </div>
-        <div className="flex">
+        <div className="flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
           <PictureCard
             image={LegendKadena}
             alt="Legend Kadena"

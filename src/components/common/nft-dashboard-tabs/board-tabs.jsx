@@ -9,7 +9,7 @@ import TopNFTCollections from "./top-nft-collection";
 
 export default function BoardTabs(props) {
   return (
-    <Tabs defaultValue="transactions" className="mt-12 px-5 md:px-12">
+    <Tabs defaultValue="transactions" className="mt-12 px-3 md:px-12 ">
       <TabsList>
         <TabsTrigger value="transactions">{props.category1}</TabsTrigger>
         <TabsTrigger value="tokens">{props.category2}</TabsTrigger>

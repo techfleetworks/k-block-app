@@ -40,7 +40,7 @@ export default function NFTDashboard() {
           </div>
           <div className="xl:mt-0 md:mt-[280px] sm:mt-[508px] mt-[508px]">
             <div className="absolute flex">
-              <div className="w-[173.71px] h-[46px] bg-[#E9F0F2CC] opacity-80 mt-5 ml-5 pt-2 pl-4 pr-4 pb-2 rounded-[12px]">
+              <div className="w-[173.71px] h-[46px] bg-[#E9F0F2CC] opacity-80 mt-5 ml-5 pt-2 pl-4 pr-4 pb-2 rounded-xl">
                 <h1 className="text-sm font-600 text-neutral-n-700 leading-[18px]">
                   Space Walking
                 </h1>
@@ -60,7 +60,7 @@ export default function NFTDashboard() {
               width={474}
               height={208}
               alt="Banner"
-              className="rounded-[12px] shadow-md"
+              className="rounded-xl shadow-md"
               //   the shadow needs to be corrected
             />
           </div>

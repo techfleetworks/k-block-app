@@ -17,15 +17,12 @@ import Verified from "@/assets/verified.svg";
 import UToken from "@/assets/orange-m-token.svg";
 import BlackUToken from "@/assets/black-u-token.svg";
 import BlackMEToken from "@/assets/black-me-token.svg";
-import Background from "@/assets/grey-circle.svg";
 import Blue from "@/assets/round-blue.svg";
 
 export default function TopNFTCollections(props) {
   return (
     <>
-      <h2 className="mb-5 text-xl leading-[24px] font-semibold">
-        {props.title}
-      </h2>
+      <h2 className="mb-5 text-xl leading-6 font-semibold">{props.title}</h2>
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
@@ -74,7 +71,7 @@ export default function TopNFTCollections(props) {
                   width={44}
                   height={44}
                   alt="Large Kawaii"
-                  className="rounded-[8px]"
+                  className="rounded-lg"
                 />
                 <div className="flex items-center">
                   <p className="table-link">Kawaii</p>
@@ -103,13 +100,13 @@ export default function TopNFTCollections(props) {
               <TableCell label="Volume 24H">
                 <div>
                   <p className="table-text mb-1">10,000 KDA</p>
-                  <p className="text-semantic-g-500 text-[12px] font-[400] leading-3">
+                  <p className="text-semantic-g-500 text-xs font-normal leading-3">
                     + 0.48%
                   </p>
                 </div>
               </TableCell>
               <TableCell label="Traded On">
-                <div className="flex items-center">
+                <div className="flex flex-wrap xl:flex:no-wrap lg:flex-nowrap items-center justify-center xl:justify-start">
                   <Image
                     src={UToken}
                     alt="Orange Token"
@@ -128,12 +125,12 @@ export default function TopNFTCollections(props) {
                     width={32}
                     height={32}
                   />
-                  <p className="sm-muted-table-text ml-1">+ 2 more</p>
+                  <p className="sm-muted-table-text ml-1 mt-1">+ 2 more</p>
                 </div>
               </TableCell>
               <TableCell
                 label="Confidence"
-                className="text-semantic-g-500 text-[0.875rem] font-[500] leading-[18px]"
+                className="text-semantic-g-500 text-sm font-medium leading-[18px]"
               >
                 High
               </TableCell>
@@ -145,7 +142,7 @@ export default function TopNFTCollections(props) {
                   width={44}
                   height={44}
                   alt="Boxing Badger"
-                  className="rounded-[8px]"
+                  className="rounded-lg"
                 />
                 <p className="table-link">Boxing Badger</p>
               </TableCell>
@@ -164,40 +161,31 @@ export default function TopNFTCollections(props) {
               <TableCell label="Volume 24H">
                 <div>
                   <p className="table-text mb-1">10,000 KDA</p>
-                  <p className="text-semantic-r-500 text-[12px] font-[400] leading-3">
+                  <p className="text-semantic-r-500 text-sm font-normal leading-3">
                     - 0.56%
                   </p>
                 </div>
               </TableCell>
               <TableCell label="Traded On">
-                <div className="flex items-center">
+                <div className="flex">
                   <Image
                     src={UToken}
                     alt="Orange Token"
                     width={32}
                     height={32}
+                    className="mr-1"
                   />
-                  <div className="mt-[-28px] ml-1">
-                    <Image
-                      src={Background}
-                      alt="Background-grey"
-                      width={32}
-                      height={32}
-                      className="absolute"
-                    />
-                    <Image
-                      src={Blue}
-                      alt="Blue Circle"
-                      width={32}
-                      height={32}
-                      className="absolute"
-                    />
-                  </div>
+                  <Image
+                    src={Blue}
+                    alt="Blue Circle Token"
+                    width={32}
+                    height={32}
+                  />
                 </div>
               </TableCell>
               <TableCell
                 label="Confidence"
-                className="text-semantic-r-500 text-[0.875rem] font-[500] leading-[18px]"
+                className="text-semantic-r-500 text-sm font-medium leading-[18px]"
               >
                 Low
               </TableCell>

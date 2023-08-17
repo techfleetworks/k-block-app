@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function PictureCard(props) {
   return (
-    <div className="w-[305px] h-[404px] rounded-xl p-5 border mr-7">
+    <div className="rounded-xl p-5 border mr-7 mb-7">
       <Image
         src={props.image ? props.image : <p></p>}
         alt={props.alt ? props.alt : null}
@@ -24,16 +24,16 @@ export default function PictureCard(props) {
       </div>
       <div className="flex justify-between">
         <div>
-          <p className="text-neutral-n-500 text-xs font-[400] leading-3">
+          <p className="text-neutral-n-500 text-xs font-normal leading-3">
             Attributes
           </p>
-          <p className="text-neutral-n-700 text-xl font-[700] leading-6">10</p>
+          <p className="text-neutral-n-700 text-xl font-bold leading-6">10</p>
         </div>
         <div>
-          <p className="text-neutral-n-500 text-xs font-[400] leading-3">
+          <p className="text-neutral-n-500 text-xs font-normal leading-3">
             Created Time
           </p>
-          <p className="text-neutral-n-700 text-xl font-[700] leading-6">
+          <p className="text-neutral-n-700 text-xl font-bold leading-6">
             12/10/2023
           </p>
         </div>
