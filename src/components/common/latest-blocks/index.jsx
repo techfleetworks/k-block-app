@@ -17,20 +17,8 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import Image from 'next/image';
+import Help from "@/components/common/help";
 
-const Help = ({ label, tooltipText }) => (
-  <TooltipProvider delayDuration={100}>
-    <Tooltip>
-      <TooltipTrigger className="flex items-center gap-2">
-        <Image src={QuestionMark} width={13} height={13} alt="question mark" />
-        <p>{label}</p>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{tooltipText}</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
-);
 
 const LatestBlocks = () => {
   return (
@@ -45,9 +33,9 @@ const LatestBlocks = () => {
         </a>
       </div>
       <div className="rounded-xl border overflow-hidden">
-        <Table className="border-neutral-table-border ">
+        <Table className="border-neutral-table-border">
           <TableHeader>
-            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
+            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
                 <Help label="Status" tooltipText="Some tooltip" />
               </TableHead>
@@ -66,7 +54,7 @@ const LatestBlocks = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -75,12 +63,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -89,12 +77,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionError}
@@ -103,13 +91,13 @@ const LatestBlocks = () => {
                   alt="Transaction Type Error"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
 
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -118,12 +106,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -132,12 +120,12 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y">
+            <TableRow>
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -146,7 +134,7 @@ const LatestBlocks = () => {
                   alt="Transaction Type Success"
                 />
               </TableCell>
-              <TableCell>394402</TableCell>
+              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
               <TableCell>12</TableCell>
               <TableCell>7</TableCell>
               <TableCell>12 sec ago</TableCell>

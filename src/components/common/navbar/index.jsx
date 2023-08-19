@@ -3,16 +3,18 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 
+import Sun from '@/assets/sun.svg';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
 import Link from 'next/link';
-import Sun from '@/assets/sun.svg';
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>
@@ -32,7 +34,7 @@ const NavbarLink = ({ href, text }) => (
 
 const Navbar = () => {
   return (
-    <header className="px-3 md:px-12 py-4">
+    <header className="md:px-12 py-4 bg-neutral-n-0 px-12">
       <div className="flex justify-between">
         <Badge
           variant="outline"
@@ -57,14 +59,42 @@ const Navbar = () => {
         </div>
       </div>
       <nav className="flex justify-between items-center">
-        <div className="flex gap-4 items-center ">
-          <Image src={Logo} width={140} height={140} alt="logo" />
-        </div>
-        <div className="md:flex md:gap-11 hidden">
-          <NavbarLink href="/" text="Blockchain" />
+        <Link href="/">
+          <div className="flex gap-4 items-center ">
+            <Image src={Logo} width={140} height={140} alt="logo" />
+          </div>
+        </Link>
+        <div className="md:flex md:gap-9 hidden">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Transaction</Link>
+                  </div>
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Blocks</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <NavbarLink href="/" text="Tokens" />
-          <NavbarLink href="/" text="NFTs" />
+          <NavbarLink href="/nfts" text="NFTs" />
           <NavbarLink href="/" text="Resources" />
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                    <Link href="/">Testnet</Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
       </nav>
     </header>

@@ -1,7 +1,7 @@
-import QuestionMark from '@/assets/question-mark.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import QuestionMark from "@/assets/question-mark.svg";
+import TransactionError from "@/assets/transaction-type-error.svg";
+import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionSuccess from "@/assets/transaction-type-success.svg";
 import {
   Table,
   TableBody,
@@ -9,28 +9,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from "@/components/ui/table";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
-import Image from 'next/image';
-
-const Help = ({ label, tooltipText }) => (
-  <TooltipProvider delayDuration={100}>
-    <Tooltip>
-      <TooltipTrigger className="flex items-center gap-2">
-        <Image src={QuestionMark} width={13} height={13} alt="question mark" />
-        <p>{label}</p>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{tooltipText}</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
-);
+} from "@/components/ui/tooltip";
+import Image from "next/image";
+import Help from "@/components/common/help";
+import Link from "next/link";
 
 const LatestTransactions = () => {
   return (
@@ -39,33 +27,33 @@ const LatestTransactions = () => {
         <h2 className="text-xl font-semibold leading-normal">
           Latest Transactions
         </h2>
-        <a
+        <Link
           className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-          href="#"
+          href="/wallet-overview"
         >
           View all transactions
-        </a>
+        </Link>
       </div>
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
-            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 border-neutral-n-200 border-b">
+            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
                 <Help label="Status" tooltipText="Some tooltip" />
               </TableHead>
-              <TableHead>
+              <TableHead className="w-[200px]">
                 <Help label="Request Key" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
                 <Help label="Amount" tooltipText="Some tooltip" />
               </TableHead>
               <TableHead>
-                <Help label="Chain " tooltipText="Some tooltip" />
+                <Help label="Chain" tooltipText="Some tooltip" />
               </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -74,16 +62,21 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs ">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="space-y-2">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionPending}
@@ -92,16 +85,21 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2 ">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="space-y-2">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionError}
@@ -110,16 +108,21 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="space-y-2">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -128,16 +131,21 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="space-y-2">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -146,16 +154,21 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="space-y-2">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
-            <TableRow className="border-neutral-n-200 border-y ">
+            <TableRow className="">
               <TableCell>
                 <Image
                   src={TransactionSuccess}
@@ -164,13 +177,18 @@ const LatestTransactions = () => {
                   alt="Transaction Type Pending"
                 />
               </TableCell>
-              <TableCell className=" inline-block w-[200px]">
-                <span className="truncate block">
-                  0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                </span>
-                <span>21 secs ago</span>
+              <TableCell className="w-[200px] inline-block space-y-2">
+                <p className="text-primary-b-500 truncate">
+                  <a a href="">
+                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
+                  </a>
+                </p>
+                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
               </TableCell>
-              <TableCell>0.07 KDA</TableCell>
+              <TableCell className="">
+                <p>0.07 KDA</p>
+                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
+              </TableCell>
               <TableCell>0</TableCell>
             </TableRow>
           </TableBody>
