@@ -16,6 +16,7 @@ import Kadena from "@/assets/kadena.svg";
 import Hypercent from "@/assets/hypercent.svg";
 import HeartGlassesNft from "@/assets/heartglassesnft.svg";
 import KittyWarriorNft from "@/assets/kittywarriornft.svg";
+import Link from "next/link";
 
 const WalletTabs = () => {
   return (
@@ -45,7 +46,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -58,7 +62,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -71,9 +78,13 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                            </Link>                        </>
+                          </Link>{" "}
+                        </>
                       }
                     />
                   </TableHead>
@@ -83,7 +94,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -221,7 +235,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -289,7 +306,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -302,7 +322,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -315,7 +338,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
@@ -328,7 +354,10 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <Link className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
                           </Link>
                         </>
