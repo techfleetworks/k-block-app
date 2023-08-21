@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/common";
+import { NftAssetGrid } from "@/components/common";
 
 export default function NftAsset() {
   return (
@@ -7,7 +8,9 @@ export default function NftAsset() {
         <Navbar />
       </header>
       <div>
-        <section>{/* Grid */}</section>
+        <section>
+          <NftAssetGrid />
+        </section>
         <section>{/* Tables */}</section>
         <section>{/* Cards */}</section>
       </div>
