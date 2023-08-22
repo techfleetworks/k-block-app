@@ -4,6 +4,7 @@ import Image from "next/image";
 import Banner from "@/assets/banner.png";
 import DashboardCard from "@/components/common/dashboard-card";
 import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
+import Link from "next/link";
 
 export default function NFTDashboard() {
   return (
@@ -20,7 +21,9 @@ export default function NFTDashboard() {
         <div className="flex flex-wrap">
           <div className="h-[208px]">
             <div className="flex flex-wrap">
-              <DashboardCard title="Collections" numbers="230,347" />
+              <Link href="/nft-asset">
+                <DashboardCard title="Collections" numbers="230,347" />
+              </Link>
               <DashboardCard title="Total NFTs" numbers="31,230,347" />
               <DashboardCard title="Holders" numbers="1,730,562" />
             </div>
