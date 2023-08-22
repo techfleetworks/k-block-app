@@ -24,6 +24,7 @@ module.exports = {
         // Semantic Colors
         "semantic-g-500": "var(--semantic-g-500)",
         "semantic-g-300": "var(--semantic-g-300)",
+        "semantic-g-50": "var(--semantic-g-50)",
 
         "semantic-r-500": "var(--semantic-r-500)",
         "semantic-r-100": "var(--semantic-r-100)",
