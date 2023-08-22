@@ -6,6 +6,9 @@ import Share from "@/assets/share.svg";
 import MagnifyingGlassPlus from "@/assets/magnifying-glass-plus.svg";
 import { NftAssetOverview } from "@/components/common";
 import { NftAssetDescription } from "@/components/common";
+import { NftAssetAttributes } from "@/components/common";
+import NftAssetSales from "../nft-asset-sales";
+import NftAssetPrice from "../nft-asset-price";
 
 const NftAssetGrid = () => {
   return (
@@ -18,20 +21,20 @@ const NftAssetGrid = () => {
           height={564}
           alt="Add alt text dynamically from API"
         />
-        <Image
+        {/* <Image
           className="absolute right-0 top-0"
           src={MagnifyingGlassPlus}
           width={20}
           height={20}
           alt="Zoom In"
-        />
+        /> */}
       </div>
       <div>
         <h1 className="text-neutral-n-700 text-[2rem] font-bold leading-[2.75rem] pb-[0.44rem]">
           Variation Apes #6
         </h1>
         <div className="flex justify-between pb-4 border-b border-neutral-n-300">
-          <div className="flex gap-3 py-[0.62rem]">
+          <div className="flex items-center gap-3 py-[0.62rem]">
             <Image
               src={RainbowApe}
               width={32}
@@ -48,24 +51,17 @@ const NftAssetGrid = () => {
               alt="Verified Checkmark"
             />
           </div>
-          <div className="flex gap-2.5">
-            <p className="text-neutral-n-500 text-sm font-normal align-middle">
-              Share
-            </p>
-            <Image
-              src={Share}
-              width={16}
-              height={16}
-              alt="Verified Checkmark"
-            />
+          <div className="flex items-center gap-2.5">
+            <p className="text-neutral-n-500 text-sm">Share</p>
+            <Image src={Share} width={16} height={16} alt="Share icon" />
           </div>
         </div>
         <NftAssetOverview />
       </div>
       <NftAssetDescription />
-      <h2>Attributes</h2>
-      <h2>Sales Information</h2>
-      <h2>Price History</h2>
+      <NftAssetAttributes />
+      <NftAssetSales />
+      <NftAssetPrice />
     </div>
   );
 };
