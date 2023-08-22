@@ -1,9 +1,9 @@
-import Logo from '@/assets/logo.svg';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import Logo from "@/assets/logo.svg";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
-import Sun from '@/assets/sun.svg';
+import Sun from "@/assets/sun.svg";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -12,9 +12,9 @@ import {
   navigationMenuTriggerStyle,
   NavigationMenuTrigger,
   NavigationMenuContent,
-} from '@/components/ui/navigation-menu';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "@/components/ui/navigation-menu";
+import Image from "next/image";
+import Link from "next/link";
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
                   <div className="hover:bg-neutral-n-200 p-2 rounded-md">
-                    <Link href="/">Transaction</Link>
+                    <Link href="/transactions">Transaction</Link>
                   </div>
                   <div className="hover:bg-neutral-n-200 p-2 rounded-md">
                     <Link href="/">Blocks</Link>

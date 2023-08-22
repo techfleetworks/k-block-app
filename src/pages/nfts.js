@@ -21,9 +21,7 @@ export default function NFTDashboard() {
         <div className="flex flex-wrap">
           <div className="h-[208px]">
             <div className="flex flex-wrap">
-              <Link href="/nft-asset">
-                <DashboardCard title="Collections" numbers="230,347" />
-              </Link>
+              <DashboardCard title="Collections" numbers="230,347" />
               <DashboardCard title="Total NFTs" numbers="31,230,347" />
               <DashboardCard title="Holders" numbers="1,730,562" />
             </div>

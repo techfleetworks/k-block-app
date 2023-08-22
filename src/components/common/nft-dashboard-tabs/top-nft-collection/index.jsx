@@ -18,6 +18,7 @@ import UToken from "@/assets/orange-m-token.svg";
 import BlackUToken from "@/assets/black-u-token.svg";
 import BlackMEToken from "@/assets/black-me-token.svg";
 import Blue from "@/assets/round-blue.svg";
+import Link from "next/link";
 
 export default function TopNFTCollections(props) {
   return (
@@ -74,7 +75,9 @@ export default function TopNFTCollections(props) {
                   className="rounded-lg"
                 />
                 <div className="flex items-center">
-                  <p className="table-link">Kawaii</p>
+                  <Link href="/nft-asset">
+                    <p className="table-link">Kawaii</p>
+                  </Link>
                   <Image
                     src={Verified}
                     alt="Verified"
