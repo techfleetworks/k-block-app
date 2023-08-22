@@ -108,13 +108,13 @@ module.exports = {
     // Table Styles
     ".table-text": {
       color: "var(--neutral-n-800)",
-      lineHeight: "1.25",
+      lineHeight: "1.125",
       fontWeight: "500",
       fontSize: "0.875rem",
     },
     ".table-link": {
       color: "var(--primary-b-500)",
-      lineHeight: "1.25",
+      lineHeight: "1.125",
       fontWeight: "500",
       fontSize: "0.875rem",
     },

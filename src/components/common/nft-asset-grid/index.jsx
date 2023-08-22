@@ -5,6 +5,7 @@ import Verified from "@/assets/verified.svg";
 import Share from "@/assets/share.svg";
 import MagnifyingGlassPlus from "@/assets/magnifying-glass-plus.svg";
 import { NftAssetOverview } from "@/components/common";
+import { NftAssetDescription } from "@/components/common";
 
 const NftAssetGrid = () => {
   return (
@@ -61,7 +62,7 @@ const NftAssetGrid = () => {
         </div>
         <NftAssetOverview />
       </div>
-      <h2>Description</h2>
+      <NftAssetDescription />
       <h2>Attributes</h2>
       <h2>Sales Information</h2>
       <h2>Price History</h2>

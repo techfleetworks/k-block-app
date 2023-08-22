@@ -16,3 +16,4 @@ export { default as WalletValue } from "./wallet-value";
 export { default as WalletTabs } from "./wallet-tabs";
 export { default as NftAssetGrid } from "./nft-asset-grid";
 export { default as NftAssetOverview } from "./nft-asset-overview";
+export { default as NftAssetDescription } from "./nft-asset-description";
