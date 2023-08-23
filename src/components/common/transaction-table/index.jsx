@@ -61,8 +61,8 @@ export default function TransactionsTable() {
     },
   ];
   return (
-    <div>
-      <div className="px-12">
+    <div className="px-12">
+      <div className="bg-white p-5 rounded-xl">
         <div className="rounded-xl border overflow-hidden">
           <Table className="border-neutral-table-border">
             <TableHeader>
