@@ -124,7 +124,10 @@ export default function BlocksTable() {
                   <TableRow key={item.name} className="items-center bg-white">
                     <TableCell>
                       {item.height !== undefined && (
-                        <Link href="" className="text-primary-b-500">
+                        <Link
+                          href="/block-details"
+                          className="text-primary-b-500"
+                        >
                           {item.height}
                         </Link>
                       )}
