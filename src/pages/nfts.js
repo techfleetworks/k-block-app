@@ -4,6 +4,7 @@ import Image from "next/image";
 import Banner from "@/assets/banner.png";
 import DashboardCard from "@/components/common/dashboard-card";
 import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
+import Link from "next/link";
 
 export default function NFTDashboard() {
   return (

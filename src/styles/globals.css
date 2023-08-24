@@ -16,6 +16,7 @@
     /* Semantic Colors */
     --semantic-g-500: hsla(155, 62%, 32%, 1);
     --semantic-g-300: hsla(127, 68%, 76%, 1);
+    --semantic-g-50: hsl(142, 73%, 96%,1);
 
     --semantic-r-500: hsla(7, 72%, 46%, 1);
     --semantic-r-100: hsla(0, 66%, 92%, 1);

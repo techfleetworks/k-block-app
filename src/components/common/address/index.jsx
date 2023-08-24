@@ -13,7 +13,7 @@ const Address = () => {
         <Image width={24} height={24} src={copy} alt="copy icon" className="border neutral-n-300 rounded-md p-1 mr-2" />
         <Image width={24} height={24} src={qrcode} alt="QR code icon" />
       </div>
-      <div className="bg-neutral-n-100 mt-5 mb-2 p-2 rounded-md space-y-2">
+      <div className="bg-neutral-n-100 mt-5 mb-2 py-2 px-4 rounded-md space-y-2">
         <div className="flex justify-between">
           <p className="text-neutral-n-500 text-xs font-normal py-[10px]">Total Assets</p>
           <div className="text-right self-center ">
@@ -36,7 +36,7 @@ const Address = () => {
           </div>
         </div>
       </div>
-      <div className="bg-neutral-n-100  p-2 rounded-md space-y-2">
+      <div className="bg-neutral-n-100 py-2 px-4 rounded-md space-y-2">
         <div className="flex justify-between">
           <p className="text-neutral-n-500 text-xs font-normal py-[10px]">Total Received</p>
           <div className="text-right self-center">

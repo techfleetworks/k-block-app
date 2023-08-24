@@ -16,6 +16,7 @@ import Kadena from "@/assets/kadena.svg";
 import Hypercent from "@/assets/hypercent.svg";
 import HeartGlassesNft from "@/assets/heartglassesnft.svg";
 import KittyWarriorNft from "@/assets/kittywarriornft.svg";
+import Link from "next/link";
 
 const WalletTabs = () => {
   return (
@@ -45,9 +46,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -58,9 +62,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -71,9 +78,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>{" "}
                         </>
                       }
                     />
@@ -84,9 +94,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -109,7 +122,7 @@ const WalletTabs = () => {
                     />
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">kl9OW...72kxw</a>
+                    <Link href="#">kl9OW...72kxw</Link>
                   </TableCell>
                   <TableCell>
                     <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
@@ -117,7 +130,7 @@ const WalletTabs = () => {
                     </span>
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">3206130</a>
+                    <Link href="#">3206130</Link>
                   </TableCell>
                   <TableCell>
                     <p>
@@ -126,9 +139,9 @@ const WalletTabs = () => {
                     </p>
                     <p>
                       <span className="md-muted-table-text">To </span>
-                      <a href="#" className="table-link">
+                      <Link href="#" className="table-link">
                         k:565a...6101
-                      </a>
+                      </Link>
                     </p>
                   </TableCell>
                   <TableCell>
@@ -159,7 +172,7 @@ const WalletTabs = () => {
                     />
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">FTodZ...w9Glc</a>
+                    <Link href="#">FTodZ...w9Glc</Link>
                   </TableCell>
                   <TableCell>
                     <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
@@ -167,7 +180,7 @@ const WalletTabs = () => {
                     </span>
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">3206102</a>
+                    <Link href="#">3206102</Link>
                   </TableCell>
                   <TableCell>
                     <p>
@@ -176,9 +189,9 @@ const WalletTabs = () => {
                     </p>
                     <p>
                       <span className="md-muted-table-text">To </span>
-                      <a href="#" className="table-link">
+                      <Link href="#" className="table-link">
                         k:565a...6101
-                      </a>
+                      </Link>
                     </p>
                   </TableCell>
                   <TableCell>
@@ -222,9 +235,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -243,13 +259,13 @@ const WalletTabs = () => {
                       height={32}
                       alt="Kadena Token Logo"
                     />
-                    <a href="#">Kadena</a>
+                    <Link href="#">Kadena</Link>
                   </TableCell>
                   <TableCell className="table-text" s>
                     KDA
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">coin</a>
+                    <Link href="#">coin</Link>
                   </TableCell>
                   <TableCell className="table-text">10,492</TableCell>
                   <TableCell className="table-text">$0.57</TableCell>
@@ -263,11 +279,11 @@ const WalletTabs = () => {
                       height={32}
                       alt="Hypercent Token Logo"
                     />
-                    <a href="#">Hypercent</a>
+                    <Link href="#">Hypercent</Link>
                   </TableCell>
                   <TableCell className="table-text">HYPE</TableCell>
                   <TableCell className="table-link">
-                    <a href="#">hypercent.prod-hype-coin</a>
+                    <Link href="#">hypercent.prod-hype-coin</Link>
                   </TableCell>
                   <TableCell className="table-text">10,492</TableCell>
                   <TableCell className="table-text">$0.04</TableCell>
@@ -290,9 +306,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -303,9 +322,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -316,9 +338,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -329,9 +354,12 @@ const WalletTabs = () => {
                       tooltipText={
                         <>
                           Tooltip text here.{" "}
-                          <a className="underline" href="http://example.com/">
+                          <Link
+                            className="underline"
+                            href="http://example.com/"
+                          >
                             Learn more.
-                          </a>
+                          </Link>
                         </>
                       }
                     />
@@ -348,10 +376,10 @@ const WalletTabs = () => {
                       height={48}
                       alt="NFT of a person wearing heart-shaped glasses"
                     />
-                    <a href="#">467</a>
+                    <Link href="#">467</Link>
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">Kadena Skellies</a>
+                    <Link href="#">Kadena Skellies</Link>
                   </TableCell>
                   <TableCell className="table-text">Holding</TableCell>
                   <TableCell>
@@ -372,10 +400,10 @@ const WalletTabs = () => {
                       height={48}
                       alt="NFT of a cat dressed up as a warrior"
                     />
-                    <a href="#">51</a>
+                    <Link href="#">51</Link>
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">SphynXXX Cats</a>
+                    <Link href="#">SphynXXX Cats</Link>
                   </TableCell>
                   <TableCell className="table-text">Holding</TableCell>
                   <TableCell>

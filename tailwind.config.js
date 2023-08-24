@@ -24,6 +24,7 @@ module.exports = {
         // Semantic Colors
         "semantic-g-500": "var(--semantic-g-500)",
         "semantic-g-300": "var(--semantic-g-300)",
+        "semantic-g-50": "var(--semantic-g-50)",
 
         "semantic-r-500": "var(--semantic-r-500)",
         "semantic-r-100": "var(--semantic-r-100)",
@@ -98,7 +99,7 @@ module.exports = {
       },
       dropShadow: {
         md: "4px 4px 10px hsla(208, 17%, 80%, 0.25)",
-        low: "2px 2px hsla(208, 17%, 80%, 0.25) blur-[14px]",
+        low: "2px 2px 14px hsla(208, 17%, 80%, 0.25)",
       },
     },
   },
@@ -107,13 +108,13 @@ module.exports = {
     // Table Styles
     ".table-text": {
       color: "var(--neutral-n-800)",
-      lineHeight: "1.25",
+      lineHeight: "1.125",
       fontWeight: "500",
       fontSize: "0.875rem",
     },
     ".table-link": {
       color: "var(--primary-b-500)",
-      lineHeight: "1.25",
+      lineHeight: "1.125",
       fontWeight: "500",
       fontSize: "0.875rem",
     },
