@@ -55,26 +55,6 @@ const NftAssetSales = () => {
           <tr className="flex justify-between">
             <th className="font-normal">
               <Help
-                label="Token Contract Address:"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
-              />
-            </th>
-            <td className="table-link">
-              <p className="text-neutral-n-800 text-sm font-normal leading-[1.125rem]">
-                n_df83905bd42ed92e559616bb707f74979a4010e0.bana
-              </p>
-            </td>
-          </tr>
-          <tr className="flex justify-between">
-            <th className="font-normal">
-              <Help
                 label="Marketplaces"
                 tooltipText={
                   <>

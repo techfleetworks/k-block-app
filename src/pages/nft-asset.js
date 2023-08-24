@@ -5,11 +5,11 @@ import Tabs from "@/components/common/nft-asset-tabs/nft-asset-tabs";
 
 export default function NftAsset() {
   return (
-    <div className="bg-inherit">
+    <div>
       <header>
         <Navbar />
       </header>
-      <div>
+      <div className="bg-inherit md:px-12">
         <section>
           <NftAssetGrid />
         </section>

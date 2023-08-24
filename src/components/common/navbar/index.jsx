@@ -74,13 +74,13 @@ const Navbar = () => {
                     <Link href="/transactions">Transaction</Link>
                   </div>
                   <div className="hover:bg-neutral-n-200 p-2 rounded-md">
-                    <Link href="/">Blocks</Link>
+                    <Link href="/blocks">Blocks</Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <NavbarLink href="/" text="Tokens" />
+          <NavbarLink href="/tokens" text="Tokens" />
           <NavbarLink href="/nfts" text="NFTs" />
           <NavbarLink href="/" text="Resources" />
           <NavigationMenu>
