@@ -110,7 +110,7 @@ export default function TransactionsTable() {
               {data.map((item) => {
                 return (
                   <TableRow key={item.name} className="items-center bg-white">
-                    <TableCell className="flex items-center gap-3 px-9">
+                    <TableCell className="flex items-center xl:px-9 px-6 py-8">
                       {item.img !== undefined && (
                         <Image
                           src={item.img}
@@ -166,16 +166,19 @@ export default function TransactionsTable() {
                       label="Confidence"
                       className="text-semantic-g-500 text-sm font-medium leading-[18px]"
                     >
-                      <div>
+                      <div className="-ml-3">
                         {item.value1 !== undefined && (
-                          <Link href="#" className="table-text -ml-4">
+                          <Link href="#" className="table-text xl:-ml-4">
                             {item.value1}
                           </Link>
                         )}
                       </div>
-                      <div>
+                      <div className="-ml-3">
                         {item.value2 !== undefined && (
-                          <Link href="#" className="sm-muted-table-text -ml-4">
+                          <Link
+                            href="#"
+                            className="sm-muted-table-text xl:-ml-4"
+                          >
                             {item.value2}
                           </Link>
                         )}
