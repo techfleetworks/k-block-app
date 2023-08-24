@@ -146,6 +146,7 @@ export default function Transactions(props) {
                   border: "0px 1px 0px 0px",
                   gap: "8px",
                 }}
+                //** placed styles everywhere, the columns have different sizes */
               >
                 <Help
                   label="Asset ID"
