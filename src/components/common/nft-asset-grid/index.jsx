@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SurprisedApe from "@/assets/surprised-ape.png";
+import SurprisedApePng from "@/assets/surprised-ape.png";
 import RainbowApe from "@/assets/rainbow-ape.svg";
 import Verified from "@/assets/verified.svg";
 import Share from "@/assets/share.svg";
@@ -16,7 +16,7 @@ const NftAssetGrid = () => {
       <div className="relative">
         <Image
           className="w-full drop-shadow-low p-0"
-          src={SurprisedApe}
+          src={SurprisedApePng}
           width={564}
           height={564}
           alt="Add alt text dynamically from API"

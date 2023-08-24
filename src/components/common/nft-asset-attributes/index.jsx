@@ -4,7 +4,7 @@ const NftAssetAttributes = () => {
       <h2 className="text-neutral-n-800 text-xl font-bold leading-6 pb-5">
         Attributes(10)
       </h2>
-      <div className="overflow-y-scroll h-[220px]">
+      <div className="overflow-y-scroll h-[220px] rounded-xl">
         <table className="w-full text-left text-sm text-neutral-n-500 bg-neutral-n-100 border-separate rounded-xl drop-shadow-md ">
           <tbody>
             <tr className="flex justify-between border-b p-2">
@@ -71,6 +71,50 @@ const NftAssetAttributes = () => {
               </th>
               <td className="text-neutral-n-500 text-sm font-normal leading-5">
                 1.73%
+              </td>
+            </tr>
+            <tr className="flex justify-between border-b p-2">
+              <th className="text-neutral-n-500 text-xs font-normal">
+                Background
+                <p className="text-neutral-n-900 text-xs font-medium leading-[1.125rem]">
+                  Pink_Yellow
+                </p>
+              </th>
+              <td className="text-neutral-n-500 text-sm font-normal leading-5">
+                3.47%
+              </td>
+            </tr>
+            <tr className="flex justify-between border-b p-2">
+              <th className="text-neutral-n-500 text-xs font-normal">
+                Background
+                <p className="text-neutral-n-900 text-xs font-medium leading-[1.125rem]">
+                  Pink_Yellow
+                </p>
+              </th>
+              <td className="text-neutral-n-500 text-sm font-normal leading-5">
+                3.47%
+              </td>
+            </tr>
+            <tr className="flex justify-between border-b p-2">
+              <th className="text-neutral-n-500 text-xs font-normal">
+                Background
+                <p className="text-neutral-n-900 text-xs font-medium leading-[1.125rem]">
+                  Pink_Yellow
+                </p>
+              </th>
+              <td className="text-neutral-n-500 text-sm font-normal leading-5">
+                3.47%
+              </td>
+            </tr>
+            <tr className="flex justify-between border-b p-2">
+              <th className="text-neutral-n-500 text-xs font-normal">
+                Background
+                <p className="text-neutral-n-900 text-xs font-medium leading-[1.125rem]">
+                  Pink_Yellow
+                </p>
+              </th>
+              <td className="text-neutral-n-500 text-sm font-normal leading-5">
+                3.47%
               </td>
             </tr>
           </tbody>
