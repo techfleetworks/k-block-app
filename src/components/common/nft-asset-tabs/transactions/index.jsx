@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import Help from "@/components/common/help";
 import Image from "next/image";
-import SurprisedApe from "@/assets/surprised-ape.svg";
+import SurprisedApe from "@/assets/surprised-ape.png";
 import Arkade from "@/assets/arkade.svg";
 import Link from "next/link";
 
