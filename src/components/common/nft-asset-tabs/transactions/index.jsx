@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import Help from "@/components/common/help";
 import Image from "next/image";
-import SurprisedApe from "@/assets/surprised-ape.png";
+import SurprisedApe from "@/assets/surprised-ape.svg";
 import Arkade from "@/assets/arkade.svg";
 import Link from "next/link";
 
@@ -136,18 +136,7 @@ export default function Transactions(props) {
         <Table className="border-neutral-table-border">
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-              <TableHead
-                className="py-4 h-[44px]"
-                style={{
-                  width: "180px",
-                  height: "44px",
-                  radius: "6px 0px 0px px",
-                  padding: "24px 16px 24px 16px",
-                  border: "0px 1px 0px 0px",
-                  gap: "8px",
-                }}
-                //** placed styles everywhere, the columns have different sizes */
-              >
+              <TableHead className="py-4 h-[44px]">
                 <Help
                   label="Asset ID"
                   tooltipText={
@@ -160,98 +149,34 @@ export default function Transactions(props) {
                   }
                 />
               </TableHead>
-              <TableHead
-                style={{
-                  width: "180px",
-                  height: "44px",
-                  border: "0px 1px 0px 0px",
-                  padding: "24px 16px 24px 16px",
-                  gap: "8px",
-                }}
-              >
+              <TableHead>
                 <Help label="Action" tooltipText="Tooltip text here" />
               </TableHead>
-              <TableHead
-                style={{
-                  width: "210px",
-                  height: "44px",
-                  border: "0px 1px 0px 0px",
-                  padding: "24px 16px 24px 16px",
-                  gap: "8px",
-                }}
-              >
+              <TableHead>
                 <Help
                   label="Price + Traded On"
                   tooltipText="Tooltip text here"
                 />
               </TableHead>
               <TableHead>
-                <Help
-                  style={{
-                    width: "210px",
-                    height: "44px",
-                    border: "0px 1px 0px 0px",
-                    padding: "24px 16px 24px 16px",
-                    gap: "8px",
-                  }}
-                  label="From"
-                  tooltipText="Tooltip text here"
-                />
+                <Help label="From" tooltipText="Tooltip text here" />
               </TableHead>
-              <TableHead
-                style={{
-                  width: "210px",
-                  height: "44px",
-                  border: "0px 1px 0px 0px",
-                  padding: "24px 16px 24px 16px",
-                  gap: "8px",
-                }}
-              >
+              <TableHead>
                 <Help label="To" tooltipText="Tooltip text here" />
               </TableHead>
-              <TableHead
-                style={{
-                  width: "200px",
-                  height: "44px",
-                  border: "0px 1px 0px 0px",
-                  padding: "24px 16px 24px 16px",
-                  gap: "8px",
-                }}
-              >
+              <TableHead>
                 <Help label="Txn Hash" tooltipText="Tooltip text here" />
               </TableHead>
-              <TableHead
-                style={{
-                  width: "114px",
-                  height: "44px",
-                  radius: "0px 6px 0px 0px",
-                  border: "0px 1px 0px 0px",
-                  padding: "24px 16px 24px 16px",
-                  gap: "8px",
-                }}
-              >
+              <TableHead>
                 <Help label="Time" tooltipText="Tooltip text here" />
               </TableHead>
             </TableRow>
           </TableHeader>
-
           <TableBody>
             {data.map((item, index) => {
               return (
                 <TableRow key={index}>
-                  <TableCell
-                    className="table-text"
-                    style={{
-                      width: "180px",
-                      height: "64px",
-                      padding: "0px 24px",
-                      border: "0px 0px 0px 1px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "24px",
-                    }}
-                    s
-                  >
+                  <TableCell className="flex items-center gap-3 p-4">
                     <Image
                       src={item.assetID}
                       width={44}
@@ -259,21 +184,10 @@ export default function Transactions(props) {
                       alt="Large Apes"
                       className="rounded-lg"
                     />
-                    <div className="flex items-center">
-                      <p className="table-link">{item.assetIDNr}</p>
-                    </div>
-                  </TableCell>
 
-                  <TableCell
-                    label="Action"
-                    className="table-text"
-                    style={{
-                      width: "180px",
-                      height: "64px",
-                      padding: "0px 8px 0px 24px",
-                      border: "0px 0px 0px 1px",
-                    }}
-                  >
+                    <p className="table-link">{item.assetIDNr}</p>
+                  </TableCell>
+                  <TableCell label="Action" className="table-text">
                     <span
                       className={`${
                         item.action === "Sale"
@@ -285,15 +199,7 @@ export default function Transactions(props) {
                     </span>
                   </TableCell>
 
-                  <TableCell
-                    label="Place + Traded On"
-                    style={{
-                      width: "210px",
-                      height: "64px",
-                      padding: "0px 8px 0px 16px",
-                      border: "0px 0px 0px 1px",
-                    }}
-                  >
+                  <TableCell label="Place + Traded On">
                     {item.priceTradedOn && (
                       <div className="flex items-center">
                         <div className="w-[84px] h-[36px]">
@@ -304,7 +210,6 @@ export default function Transactions(props) {
                             {item.priceTradedOnUSD}
                           </p>
                         </div>
-
                         <div className="block">
                           <Image
                             src={Arkade}
@@ -316,29 +221,13 @@ export default function Transactions(props) {
                       </div>
                     )}
                   </TableCell>
-                  <TableCell
-                    label="From"
-                    style={{
-                      width: "208px",
-                      height: "64px",
-                      padding: "0px 8px 0px 16px",
-                      border: "0px 0px 0px 1px",
-                    }}
-                  >
+
+                  <TableCell label="From">
                     <Link href="#" className="table-link">
                       {item.from}
                     </Link>
                   </TableCell>
-
-                  <TableCell
-                    label="To"
-                    style={{
-                      width: "210px",
-                      height: "64px",
-                      padding: "0px 8px 0px 16px",
-                      border: "0px 0px 0px 1px",
-                    }}
-                  >
+                  <TableCell label="To">
                     <Link href="#" className="table-link">
                       {item.to}
                     </Link>
@@ -346,28 +235,12 @@ export default function Transactions(props) {
                   <TableCell
                     label="Txn Hash"
                     className="text-semantic-g-500 text-sm font-medium leading-[18px]"
-                    style={{
-                      width: "200px",
-                      height: "64px",
-                      padding: "0px 8px 0px 16px",
-                      border: "0px 0px 0px 1px",
-                    }}
                   >
                     <Link href="#" className="table-link">
                       {item.txnHash}
                     </Link>
                   </TableCell>
-                  <TableCell
-                    label="Time"
-                    className="table-text"
-                    style={{
-                      width: "116px",
-                      height: "64px",
-                      padding: "24px 16px 24px 16px",
-                      border: "0px 1px 0px 0px",
-                      gap: "8px",
-                    }}
-                  >
+                  <TableCell label="Time" className="table-text">
                     {item.time}
                   </TableCell>
                 </TableRow>
