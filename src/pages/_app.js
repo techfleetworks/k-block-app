@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <main className={`${inter.variable} font-sans`}>
+      <main className={`${inter.variable} font-sans max-w-[1440px] mx-auto`}>
         <Component {...pageProps} />
         <Toaster />
       </main>

@@ -12,7 +12,8 @@ import NftAssetPrice from "../nft-asset-price";
 
 const NftAssetGrid = () => {
   return (
-    <div className="grid lg:grid-cols-[40%_60%] gap-6 px-12 pt-8">
+    // Grid Layout
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 pt-8">
       <div className="relative">
         <Image
           className="w-full drop-shadow-low p-0"
@@ -57,10 +58,12 @@ const NftAssetGrid = () => {
           </div>
         </div>
         <NftAssetOverview />
+        <NftAssetAttributes />
       </div>
-      <NftAssetDescription />
-      <NftAssetAttributes />
-      <NftAssetSales />
+      <div className="flex flex-wrap">
+        <NftAssetDescription />
+        <NftAssetSales />
+      </div>
       <NftAssetPrice />
     </div>
   );

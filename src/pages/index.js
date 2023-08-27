@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <Navbar />
       <Searchbar />
       <InfoBar />
