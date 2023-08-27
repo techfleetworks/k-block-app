@@ -114,7 +114,7 @@ export default function TokensTable() {
                               alt="Check"
                               width={32}
                               height={32}
-                              className="py-1"
+                              className="py-4"
                             />
                           )}
                           {item.name !== undefined && (
@@ -129,17 +129,19 @@ export default function TokensTable() {
                       </TableCell>
                       <TableCell>
                         {item.symbol !== undefined && (
-                          <button className="table-text">{item.symbol}</button>
+                          <button className="table-text px-4">
+                            {item.symbol}
+                          </button>
                         )}
                       </TableCell>
                       <TableCell>
                         {item.price !== undefined && (
-                          <p className="table-text">{item.price}</p>
+                          <p className="table-text px-4">{item.price}</p>
                         )}
                       </TableCell>
                       <TableCell>
                         {item.change24 !== undefined && (
-                          <div className="flex items-center text-red-500">
+                          <div className="flex items-center text-red-500 px-4">
                             <CaretDownIcon width={24} height={24} />
                             <p>{item.change24}</p>
                           </div>
@@ -147,7 +149,7 @@ export default function TokensTable() {
                       </TableCell>
                       <TableCell>
                         {item.change7 !== undefined && (
-                          <div className="flex items-center text-red-500">
+                          <div className="flex items-center text-red-500 px-4">
                             <CaretDownIcon width={24} height={24} />
                             <p>{item.change7}</p>
                           </div>
@@ -155,17 +157,17 @@ export default function TokensTable() {
                       </TableCell>
                       <TableCell>
                         {item.quantity !== undefined && (
-                          <p className="table-text">{item.quantity}</p>
+                          <p className="table-text px-4">{item.quantity}</p>
                         )}
                       </TableCell>
                       <TableCell>
                         {item.market !== undefined && (
-                          <p className="table-text">{item.market}</p>
+                          <p className="table-text px-4">{item.market}</p>
                         )}
                       </TableCell>
                       <TableCell>
                         {item.value !== undefined && (
-                          <p className="table-text">{item.value}</p>
+                          <p className="table-text px-4">{item.value}</p>
                         )}
                       </TableCell>
                     </TableRow>

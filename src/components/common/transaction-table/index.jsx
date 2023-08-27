@@ -67,7 +67,7 @@ export default function TransactionsTable() {
           <Table className="border-neutral-table-border">
             <TableHeader>
               <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-                <TableHead className="py-4 h-[44px]">
+                <TableHead className="py-5">
                   <Help
                     label="Status"
                     tooltipText={
@@ -110,20 +110,19 @@ export default function TransactionsTable() {
               {data.map((item) => {
                 return (
                   <TableRow key={item.name} className="items-center bg-white">
-                    <TableCell className="flex items-center xl:px-9 px-6 py-8">
+                    <TableCell className="flex items-center xl:px-9 px-6 py-4">
                       {item.img !== undefined && (
                         <Image
                           src={item.img}
                           alt="Check"
                           width={32}
                           height={32}
-                          className="py-1"
                         />
                       )}
                     </TableCell>
                     <TableCell
                       label="Items"
-                      className="table-text text-primary-b-500"
+                      className="table-text text-primary-b-500 xl:px-4"
                     >
                       {item.key_name !== undefined && (
                         <Link href="">{item.key_name}</Link>
@@ -138,23 +137,25 @@ export default function TransactionsTable() {
                     </TableCell>
                     <TableCell label="Floor Price">
                       {item.block !== undefined && (
-                        <p className="text-primary-b-500">{item.block}</p>
+                        <p className="text-primary-b-500 px-4">{item.block}</p>
                       )}
                     </TableCell>
                     <TableCell label="Volume 24H">
-                      {item.chain !== undefined && <p>{item.chain}</p>}
+                      {item.chain !== undefined && (
+                        <p className=" px-5">{item.chain}</p>
+                      )}
                     </TableCell>
                     <TableCell label="Traded On">
                       <div className="flex items-center">
-                        <p className="sm-muted-table-text">From</p>
+                        <p className="sm-muted-table-text pl-2">From</p>
                         {item.address1 !== undefined && (
-                          <Link href="#" className="text-primary-b-500 px-1">
+                          <Link href="#" className="text-primary-b-500">
                             {item.address1}
                           </Link>
                         )}
                       </div>
                       <div className="flex items-center">
-                        <p className="sm-muted-table-text">To</p>
+                        <p className="sm-muted-table-text pl-2">To</p>
                         {item.address2 !== undefined && (
                           <Link href="#" className="text-primary-b-500 px-1">
                             {item.address2}
@@ -162,44 +163,38 @@ export default function TransactionsTable() {
                         )}
                       </div>
                     </TableCell>
-                    <TableCell
-                      label="Confidence"
-                      className="text-semantic-g-500 text-sm font-medium leading-[18px]"
-                    >
-                      <div className="-ml-3">
+                    <TableCell label="Confidence">
+                      <div className="text-semantic-g-500 text-sm font-medium leading-[18px]">
                         {item.value1 !== undefined && (
-                          <Link href="#" className="table-text xl:-ml-4">
-                            {item.value1}
-                          </Link>
-                        )}
-                      </div>
-                      <div className="-ml-3">
-                        {item.value2 !== undefined && (
-                          <Link
-                            href="#"
-                            className="sm-muted-table-text xl:-ml-4"
-                          >
-                            {item.value2}
-                          </Link>
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      {item.time !== undefined && <p>{item.time}</p>}
-                    </TableCell>
-                    <TableCell className="text-semantic-g-500 text-sm font-medium leading-[18px]">
-                      <div>
-                        {item.txn1 !== undefined && (
                           <Link href="#" className="table-text">
                             {item.value1}
                           </Link>
                         )}
                       </div>
                       <div>
-                        {item.txn2 !== undefined && (
+                        {item.value2 !== undefined && (
                           <Link href="#" className="sm-muted-table-text">
                             {item.value2}
                           </Link>
+                        )}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      {item.time !== undefined && (
+                        <p className=" px-4">{item.time}</p>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      <div className="text-semantic-g-500 text-sm font-medium leading-[18px] px-4">
+                        {item.txn1 !== undefined && (
+                          <Link href="#" className="table-text">
+                            {item.txn1}
+                          </Link>
+                        )}
+                      </div>
+                      <div className="sm-muted-table-text px-4">
+                        {item.txn2 !== undefined && (
+                          <Link href="#">{item.txn2}</Link>
                         )}
                       </div>
                     </TableCell>
