@@ -1,4 +1,5 @@
 import Banner from "@/assets/banner.png";
+import { Footer } from "@/components/common";
 import DashboardCard from "@/components/common/dashboard-card";
 import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
 import Image from "next/image";
