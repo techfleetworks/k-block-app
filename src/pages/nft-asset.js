@@ -41,8 +41,8 @@ export default function NftAsset() {
             <Tabs category1="Transactions" category2="Metadata" />
           </div>
         </section>
-        <section className="mt-48">
-          <div className="flex flex-col items-center gap-8 mx-auto w-4/5">
+        <section className="my-12">
+          <div className="flex flex-col items-center gap-8 mx-auto">
             <Cards title="More from Variation Apes" data={data} />
           </div>
         </section>

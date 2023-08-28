@@ -5,7 +5,7 @@ import Metadata from "./metadata";
 
 export default function nftAssetTabs(props) {
   return (
-    <Tabs defaultValue="transactions" className="mt-12 px-3 md:px-12 ">
+    <Tabs defaultValue="transactions" className="mt-12 px-3">
       <TabsList>
         <TabsTrigger value="transactions">{props.category1}</TabsTrigger>
         <TabsTrigger value="metadata">{props.category2}</TabsTrigger>
