@@ -3,12 +3,12 @@ import {
   Footer,
   PortfolioBreakdown,
   WalletTabs,
-  WalletValue
-} from '@/components/common';
+  WalletValue,
+} from "@/components/common";
 
 export default function WalletOverview() {
   return (
-    <div className='container'>
+    <div className="container">
       <h2 className="mt-12 mb-7 px-3 md:px-12 text-[32px] font-semibold">
         Wallet Overview
       </h2>
@@ -18,11 +18,11 @@ export default function WalletOverview() {
           <PortfolioBreakdown />
           <WalletValue />
         </div>
-        <section>
-          <WalletTabs />
-        </section>
-        <Footer />
       </div>
+      <section>
+        <WalletTabs />
+      </section>
+      <Footer />
     </div>
   );
 }
