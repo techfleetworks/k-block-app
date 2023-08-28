@@ -7,6 +7,7 @@ import Boxes from '@/assets/boxes.svg';
 
 const SearchBar = () => {
   return (
+    <div>
     <div className="px-3 md:px-12 flex justify-center py-16 bg-primary-b-500 relative">
       <Image
         src={Boxes}
@@ -15,7 +16,7 @@ const SearchBar = () => {
         alt="boxes"
         className="hidden md:block absolute left-0 top-0"
       />
-      <div className="flex flex-col w-full lg:w-2/4 justify-center items-center gap-4 z-10">
+      <div className="flex flex-col w-full lg:w-2/4 justify-center items-center gap-4 ">
         <Label
           htmlFor="search"
           className="text-white text-2xl font-medium self-start"
@@ -45,6 +46,7 @@ const SearchBar = () => {
         alt="boxes"
         className="hidden sm:block absolute right-0 top-0 rotate-180"
       />
+    </div>
     </div>
   );
 };
