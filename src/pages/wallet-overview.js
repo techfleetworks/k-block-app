@@ -1,16 +1,14 @@
 import {
   Address,
   Footer,
-  Navbar,
   PortfolioBreakdown,
-  WalletValue,
   WalletTabs,
+  WalletValue
 } from '@/components/common';
 
 export default function WalletOverview() {
   return (
-<<<<<<< Updated upstream
-    <main>
+    <div className='container'>
       <h2 className="mt-12 mb-7 px-3 md:px-12 text-[32px] font-semibold">
         Wallet Overview
       </h2>
@@ -19,28 +17,12 @@ export default function WalletOverview() {
         <div className="flex flex-wrap gap-6 bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md">
           <PortfolioBreakdown />
           <WalletValue />
-=======
-    <main className="">
-      <header>
-        <Navbar />
-      </header>
-      <div className="container">
-        <h2 className="mt-12 mb-7 px-3 md:px-12 text-[32px] font-semibold">
-          Wallet Overview
-        </h2>
-        <div className="flex flex-wrap gap-7 justify-start sm:justify-between  px-3 md:px-12">
-          <Address />
-          <div className="flex flex-wrap gap-6 bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md">
-            <PortfolioBreakdown />
-            <WalletValue />
-          </div>
->>>>>>> Stashed changes
         </div>
         <section>
           <WalletTabs />
         </section>
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }
