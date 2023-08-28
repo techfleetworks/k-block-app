@@ -156,10 +156,10 @@ const WalletTabs = () => {
 
         {/* Transactions Tab */}
         <TabsContent
-          className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none"
+          className="leading-normal  rounded-tl-none"
           value="transactions"
         >
-          Transactions
+          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Transactions</h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
@@ -344,10 +344,12 @@ const WalletTabs = () => {
 
         {/* Tokens Tab */}
         <TabsContent
-          className="leading-normal text-neutral-n-700 text-xl font-semibold"
+          className="leading-normal "
           value="tokens"
         >
-          Tokens Holdings
+          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Tokens Holdings</h2>
+          
+          
           {/* <div className="rounded-xl border overflow-hidden mt-5"> */}
           {/* <Table className="border-neutral-table-border">
               <TableHeader>
@@ -416,6 +418,9 @@ const WalletTabs = () => {
                 </TableRow>
               </TableBody>
             </Table> */}
+
+
+            
           <DataTable columns={columns} data={data} />
 
 
@@ -424,7 +429,8 @@ const WalletTabs = () => {
 
         {/* NFTs Tab*/}
         <TabsContent value="nfts">
-          <div className="rounded-xl border overflow-hidden">
+        <h2 className="font-semibold text-xl  text-neutral-n-700  ">Assets</h2>
+          <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">
