@@ -14,7 +14,6 @@ import {
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Searchbar />
       <InfoBar />
       <div className="flex flex-wrap gap-7 justify-start sm:justify-between px-3 md:px-12 my-7">

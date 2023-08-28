@@ -1,17 +1,14 @@
-import { Navbar } from "@/components/common";
-import React from "react";
-import Image from "next/image";
-import Banner from "@/assets/banner.png";
-import DashboardCard from "@/components/common/dashboard-card";
-import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
-import Link from "next/link";
+import { Navbar } from '@/components/common';
+import React from 'react';
+import Image from 'next/image';
+import Banner from '@/assets/banner.png';
+import DashboardCard from '@/components/common/dashboard-card';
+import Tabs from '@/components/common/nft-dashboard-tabs/board-tabs';
+import Link from 'next/link';
 
 export default function NFTDashboard() {
   return (
     <div>
-      <header>
-        <Navbar />
-      </header>
       <section className="px-12">
         <h1 className="text-[32px] leading-[44px] font-bold mt-12 mb-12">
           NFT Dashboard
@@ -62,7 +59,7 @@ export default function NFTDashboard() {
               height={208}
               alt="Banner"
               className="rounded-xl shadow-md"
-            //   the shadow needs to be corrected
+              //   the shadow needs to be corrected
             />
           </div>
         </div>
