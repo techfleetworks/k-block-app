@@ -1,21 +1,18 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Cards({ title, data }) {
   return (
     <>
       <div className="header flex justify-between">
-        <h2 className="text-base font-medium">{title}</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
       </div>
 
       <div>
         <div className="card-body flex gap-6 flex-wrap">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-xl p-5 border bg-white"
-            >
+            <div key={index} className="rounded-xl p-5 border bg-white">
               <Image
                 src={item.img}
                 width={200}

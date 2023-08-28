@@ -1,11 +1,11 @@
-import React from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Transactions from "./transactions";
-import Metadata from "./metadata";
+import React from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Transactions from './transactions';
+import Metadata from './metadata';
 
 export default function nftAssetTabs(props) {
   return (
-    <Tabs defaultValue="transactions" className="mt-12 px-3">
+    <Tabs defaultValue="transactions" className="mt-12">
       <TabsList>
         <TabsTrigger value="transactions">{props.category1}</TabsTrigger>
         <TabsTrigger value="metadata">{props.category2}</TabsTrigger>

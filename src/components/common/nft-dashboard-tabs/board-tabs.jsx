@@ -1,15 +1,15 @@
-import React from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import Trending from "./trending";
-import Upcoming from "./upcoming";
-import TopNFTCollections from "./top-nft-collection";
+import Trending from './trending';
+import Upcoming from './upcoming';
+import TopNFTCollections from './top-nft-collection';
 
 // I could not find a better way to tag the pagination only in one place but to use it multiple times.
 
 export default function BoardTabs(props) {
   return (
-    <Tabs defaultValue="transactions" className="mt-12 px-3 md:px-12 ">
+    <Tabs defaultValue="transactions" className="mt-12">
       <TabsList>
         <TabsTrigger value="transactions">{props.category1}</TabsTrigger>
         <TabsTrigger value="tokens">{props.category2}</TabsTrigger>
