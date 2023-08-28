@@ -32,8 +32,10 @@ export default function Trending(props) {
       items: "9780",
       holders: "978",
       floorPrice: "0.07 KDA",
+      floorPriceChange: "0.30 USD",
       volume: "10,000 KDA",
-      tradedOn: "3",
+      volumeChange: "+0.48%",
+      tradedOn: "+ 3 more",
       confidence: "High",
     },
     {
@@ -46,8 +48,10 @@ export default function Trending(props) {
       items: "8,109,780",
       holders: "10,978",
       floorPrice: "0.07 KDA",
+      floorPriceChange: "0.30 USD",
       volume: "10,000 KDA",
-      tradedOn: "2",
+      volumeChange: "+0.48%",
+      tradedOn: "+ 2 more",
       confidence: "Low",
     },
     {
@@ -60,8 +64,10 @@ export default function Trending(props) {
       items: "8,109,780",
       holders: "10,978",
       floorPrice: "0.07 KDA",
+      floorPriceChange: "0.30 USD",
       volume: "10,000 KDA",
-      tradedOn: "2",
+      volumeChange: "+0.48%",
+      tradedOn: "+ 2 more",
       confidence: "Low",
     },
   ];
@@ -114,7 +120,7 @@ export default function Trending(props) {
             {data.map((item) => {
               return (
                 <TableRow key={item.name}>
-                  <TableCell className="flex items-center gap-3 p-4">
+                  <TableCell className="flex flex-wrap xl:flex-nowrap items-center gap-3 p-4">
                     {item.img !== undefined && (
                       <Image
                         src={item.img}
@@ -139,54 +145,72 @@ export default function Trending(props) {
                       )}
                     </div>
                   </TableCell>
-                  <TableCell label="Items" className="table-text">
+                  <TableCell label="Items" className="table-text px-4">
                     9780
                   </TableCell>
-                  <TableCell label="Holders" className="table-text">
+                  <TableCell label="Holders" className="table-text px-4">
                     978
                   </TableCell>
                   <TableCell label="Floor Price">
-                    <div className="block">
-                      <p className="table-text mb-1">0.07 KDA</p>
-                      <p className="sm-muted-table-text">0.30 USD</p>
+                    <div className="block px-4">
+                      <p className="table-text mb-1">
+                        {item.floorPrice ? item.floorPrice : null}
+                      </p>
+                      <p className="sm-muted-table-text">
+                        {item.floorPriceChange ? item.floorPriceChange : null}
+                      </p>
                     </div>
                   </TableCell>
                   <TableCell label="Volume 24H">
                     <div>
-                      <p className="table-text mb-1">10,000 KDA</p>
-                      <p className="text-semantic-g-500 text-xs font-normal leading-3">
-                        + 0.48%
+                      <p className="table-text mb-1 px-4">
+                        {item.volume ? item.volume : null}
+                      </p>
+                      <p className="text-semantic-g-500 text-xs font-normal leading-3 px-4">
+                        {item.volumeChange ? item.volumeChange : null}
                       </p>
                     </div>
                   </TableCell>
-                  <TableCell label="Traded On">
+                  <TableCell label="Traded On" className="px-4">
                     <div className="flex flex-wrap xl:flex:no-wrap lg:flex-nowrap items-center justify-center xl:justify-start">
-                      <Image
-                        src={item.img3}
-                        alt="Orange Token"
-                        width={32}
-                        height={32}
-                      />
-                      <Image
-                        src={item.img4}
-                        alt="Black Token"
-                        width={32}
-                        height={32}
-                      />
-                      <Image
-                        src={item.img5}
-                        alt="Me Token"
-                        width={32}
-                        height={32}
-                      />
-                      <p className="sm-muted-table-text ml-1 mt-1">+ 2 more</p>
+                      <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
+                        <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
+                          <Image
+                            src={item.img3}
+                            alt="Orange Token"
+                            width={32}
+                            height={32}
+                          />
+                          <Image
+                            src={item.img4}
+                            alt="Black Token"
+                            width={32}
+                            height={32}
+                          />
+                        </div>
+                        <Image
+                          src={item.img5}
+                          alt="Me Token"
+                          width={32}
+                          height={32}
+                        />
+                      </div>
+                      <p className="sm-muted-table-text ml-1 mt-1">
+                        {item.tradedOn ? item.tradedOn : null}
+                      </p>
                     </div>
                   </TableCell>
                   <TableCell
                     label="Confidence"
-                    className="text-semantic-g-500 text-sm font-medium leading-[18px]"
+                    className={
+                      item.confidence === "High"
+                        ? "text-semantic-g-500 text-sm font-medium leading-[18px]"
+                        : item.confidence === "Low"
+                        ? "text-[red] text-sm font-medium leading-[18px]"
+                        : null
+                    }
                   >
-                    High
+                    {item.confidence ? item.confidence : null}
                   </TableCell>
                 </TableRow>
               );

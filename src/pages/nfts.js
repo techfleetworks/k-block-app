@@ -62,7 +62,7 @@ export default function NFTDashboard() {
               height={208}
               alt="Banner"
               className="rounded-xl shadow-md"
-              //   the shadow needs to be corrected
+            //   the shadow needs to be corrected
             />
           </div>
         </div>

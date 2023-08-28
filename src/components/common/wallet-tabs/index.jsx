@@ -18,6 +18,131 @@ import HeartGlassesNft from "@/assets/heartglassesnft.svg";
 import KittyWarriorNft from "@/assets/kittywarriornft.svg";
 import Link from "next/link";
 
+
+import { DataTable } from "@/components/ui/table-container";
+import { columns } from "./columns"
+
+const data = [
+  {
+    token_name: {
+      name: "Kadena",
+      nft: Kadena,
+      alt: "Kadena Token Logo",
+    },
+    symbol: "KDA",
+    contactAddress: "coin",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Hypercent",
+      nft: Hypercent,
+      alt: "Hypercent Token Logo",
+    },
+    symbol: "HYPE",
+    contactAddress: "hypercent.prod-hype-coin",
+    quantity: 10492,
+    price: 0.04,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Flux",
+      nft: Kadena,
+      alt: "Flux Token Logo",
+    },
+    symbol: "FLUX",
+    contactAddress: "runonflux.flux",
+    quantity: 10492,
+    price: 0.39,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Kaddex",
+      nft: Hypercent,
+      alt: "Kaddex Token Logo",
+    },
+    symbol: "KDX",
+    contactAddress: "kaddex.kdx",
+    quantity: 10492,
+    price: 0.01,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "ArKade",
+      nft: Kadena,
+      alt: "ArKade Token Logo",
+    },
+    symbol: "ARKD",
+    contactAddress: "arkade.token",
+    quantity: 10492,
+    price: 0.000138,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Timpi",
+      nft: Hypercent,
+      alt: "Timpi Token Logo",
+    },
+    symbol: "TMP",
+    contactAddress: "free.timpi",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "KDLaunch",
+      nft: Kadena,
+      alt: "KDLaunch Token Logo",
+    },
+    symbol: "KDL",
+    contactAddress: "kdlaunch.token",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "KDSwap",
+      nft: Hypercent,
+      alt: "KDSwap Token Logo",
+    },
+    symbol: "KDS",
+    contactAddress: "kdlaunch.kdswap-token",
+    quantity: 10492,
+    price: 0.005,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Anedak",
+      nft: Kadena,
+      alt: "Anedak Token Logo",
+    },
+    symbol: "ADK",
+    contactAddress: "free.anedak",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  }, {
+    token_name: {
+      name: "Babena",
+      nft: Hypercent,
+      alt: "Babena Token Logo",
+    },
+    symbol: "BABE",
+    contactAddress: "free.babena",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  }
+
+
+
+
+]
+
+
+
+
 const WalletTabs = () => {
   return (
     // Tab Headings
@@ -31,10 +156,10 @@ const WalletTabs = () => {
 
         {/* Transactions Tab */}
         <TabsContent
-          className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none"
+          className="leading-normal  rounded-tl-none"
           value="transactions"
         >
-          Transactions
+          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Transactions</h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
@@ -219,12 +344,14 @@ const WalletTabs = () => {
 
         {/* Tokens Tab */}
         <TabsContent
-          className="leading-normal text-neutral-n-700 text-xl font-semibold"
+          className="leading-normal "
           value="tokens"
         >
-          Tokens Holdings
-          <div className="rounded-xl border overflow-hidden mt-5">
-            <Table className="border-neutral-table-border">
+          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Tokens Holdings</h2>
+          
+          
+          {/* <div className="rounded-xl border overflow-hidden mt-5"> */}
+          {/* <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
                   <TableHead>Token Name</TableHead>
@@ -261,7 +388,7 @@ const WalletTabs = () => {
                     />
                     <Link href="#">Kadena</Link>
                   </TableCell>
-                  <TableCell className="table-text" s>
+                  <TableCell className="table-text" >
                     KDA
                   </TableCell>
                   <TableCell className="table-link">
@@ -290,13 +417,20 @@ const WalletTabs = () => {
                   <TableCell className="table-text">$5,836.23</TableCell>
                 </TableRow>
               </TableBody>
-            </Table>
-          </div>
+            </Table> */}
+
+
+            
+          <DataTable columns={columns} data={data} />
+
+
+          {/* </div> */}
         </TabsContent>
 
         {/* NFTs Tab*/}
         <TabsContent value="nfts">
-          <div className="rounded-xl border overflow-hidden">
+        <h2 className="font-semibold text-xl  text-neutral-n-700  ">Assets</h2>
+          <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">

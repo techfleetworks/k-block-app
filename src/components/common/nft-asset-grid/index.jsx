@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SurprisedApe from "@/assets/surprised-ape.svg";
+import SurprisedApePng from "@/assets/surprised-ape.png";
 import RainbowApe from "@/assets/rainbow-ape.svg";
 import Verified from "@/assets/verified.svg";
 import Share from "@/assets/share.svg";
@@ -12,22 +12,23 @@ import NftAssetPrice from "../nft-asset-price";
 
 const NftAssetGrid = () => {
   return (
-    <div className="grid grid-cols-[40%_60%] grid-rows-3 gap-6 px-12 pt-8">
+    // Grid Layout
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 pt-8">
       <div className="relative">
         <Image
-          className="rounded-md drop-shadow-low"
-          src={SurprisedApe}
+          className="w-full drop-shadow-low p-0"
+          src={SurprisedApePng}
           width={564}
           height={564}
           alt="Add alt text dynamically from API"
         />
-        {/* <Image
+        <Image
           className="absolute right-0 top-0"
           src={MagnifyingGlassPlus}
-          width={20}
-          height={20}
+          width={38}
+          height={38}
           alt="Zoom In"
-        /> */}
+        />
       </div>
       <div>
         <h1 className="text-neutral-n-700 text-[2rem] font-bold leading-[2.75rem] pb-[0.44rem]">
@@ -57,10 +58,12 @@ const NftAssetGrid = () => {
           </div>
         </div>
         <NftAssetOverview />
+        <NftAssetAttributes />
       </div>
-      <NftAssetDescription />
-      <NftAssetAttributes />
-      <NftAssetSales />
+      <div className="flex flex-wrap">
+        <NftAssetDescription />
+        <NftAssetSales />
+      </div>
       <NftAssetPrice />
     </div>
   );

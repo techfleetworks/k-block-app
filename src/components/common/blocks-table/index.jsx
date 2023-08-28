@@ -38,7 +38,7 @@ export default function BlocksTable() {
           <Table className="border-neutral-table-border">
             <TableHeader>
               <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-                <TableHead className="py-4 h-[44px]">
+                <TableHead className="py-4 pl-14">
                   <Help
                     label="Block Height"
                     tooltipText={
@@ -122,7 +122,7 @@ export default function BlocksTable() {
               {data.map((item) => {
                 return (
                   <TableRow key={item.name} className="items-center bg-white">
-                    <TableCell>
+                    <TableCell className="pl-14 py-5">
                       {item.height !== undefined && (
                         <Link
                           href="/block-details"
@@ -133,23 +133,29 @@ export default function BlocksTable() {
                       )}
                     </TableCell>
                     <TableCell>
-                      {item.chain !== undefined && <p>{item.chain}</p>}
+                      {item.chain !== undefined && (
+                        <p className="px-4">{item.chain}</p>
+                      )}
                     </TableCell>
                     <TableCell>
-                      {item.txns !== undefined && <p>{item.txns}</p>}
+                      {item.txns !== undefined && (
+                        <p className="px-4">{item.txns}</p>
+                      )}
                     </TableCell>
                     <TableCell>
                       {item.Bhash !== undefined && (
-                        <p className="text-primary-b-500">{item.Bhash}</p>
+                        <p className="text-primary-b-500 px-4">{item.Bhash}</p>
                       )}
                     </TableCell>
                     <TableCell>
                       {item.Phash !== undefined && (
-                        <p className="text-primary-b-500">{item.Phash}</p>
+                        <p className="text-primary-b-500 px-4">{item.Phash}</p>
                       )}
                     </TableCell>
                     <TableCell>
-                      {item.time !== undefined && <p>{item.time}</p>}
+                      {item.time !== undefined && (
+                        <p className="px-4">{item.time}</p>
+                      )}
                     </TableCell>
                   </TableRow>
                 );
