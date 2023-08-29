@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function PictureCard(props) {
   return (
-    <div className="rounded-xl p-5 border mr-7 mb-7">
+    <div className="rounded-xl p-5 border ml-7 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-0 mr-7 mb-7">
       <Image
         src={props.image ? props.image : <p></p>}
         alt={props.alt ? props.alt : null}

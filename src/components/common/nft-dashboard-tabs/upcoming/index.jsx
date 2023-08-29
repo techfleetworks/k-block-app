@@ -13,6 +13,7 @@ import Verified from "@/assets/verified.svg";
 
 import { GridIcon, ListBulletIcon } from "@radix-ui/react-icons";
 import Trending from "../trending";
+// import { DataTablePagination } from "@/components/ui/table-pagination";
 
 export default function Upcoming(props) {
   const [isGrid, setIsGrid] = useState(true);
@@ -24,13 +25,13 @@ export default function Upcoming(props) {
           <GridIcon
             width={32}
             height={32}
-            className="p-1"
+            className="p-1 cursor-pointer"
             onClick={() => setIsGrid(true)}
           />
           <ListBulletIcon
             width={32}
             height={32}
-            className="p-1"
+            className="p-1 cursor-pointer"
             onClick={() => setIsGrid(false)}
           />
         </div>
@@ -90,6 +91,7 @@ export default function Upcoming(props) {
       ) : (
         <Trending />
       )}
+      {/* <DataTablePagination /> */}
     </>
   );
 }

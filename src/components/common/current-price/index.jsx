@@ -10,8 +10,8 @@ const CurrentPrice = () => {
         <div className="flex gap-3 items-center">
           <Image width={44} height={44} src={KDA} alt="KDA Logo" />
           <div className="flex flex-col justify-start items-start">
-            <h4 className="text-sm ">KDA</h4>
-            <p className="text-xl font-bold">$1.054</p>
+            <h4 className="text-sm text-neutral-n-700 font-medium">KDA</h4>
+            <p className="text-xl text-neutral-n-700 font-bold">$1.054</p>
           </div>
         </div>
         <div>
@@ -34,8 +34,8 @@ const CurrentPrice = () => {
             Circulating Supply
           </h4>
           <div className="flex text-xl font-semibold gap-1">
-            <p className="text-neutral-n-700">230,000,400</p>
-            <p className="text-neutral-n-400">(22.3%)</p>
+            <p className="text-neutral-n-700 font-semibold">230,000,400</p>
+            <p className="text-neutral-n-400 font-[635]">(22.3%)</p>
           </div>
         </div>
         <div className="mt-8">
