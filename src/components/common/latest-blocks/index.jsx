@@ -1,7 +1,4 @@
-import QuestionMark from '@/assets/question-mark.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import React from 'react';
 import {
   Table,
   TableBody,
@@ -10,15 +7,58 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 import Image from 'next/image';
-import Help from "@/components/common/help";
+import Help from '@/components/common/help';
 
+import TransactionError from '@/assets/transaction-type-error.svg';
+import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
+import TransactionSuccess from '@/assets/transaction-type-success.svg';
+
+const data = [
+  {
+    statusIcon: TransactionSuccess,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '12 sec ago',
+  },
+  {
+    statusIcon: TransactionPending,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '124 sec ago',
+  },
+  {
+    statusIcon: TransactionError,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '112 sec ago',
+  },
+  {
+    statusIcon: TransactionSuccess,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '12 sec ago',
+  },
+  {
+    statusIcon: TransactionPending,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '124 sec ago',
+  },
+  {
+    statusIcon: TransactionError,
+    height: 394402,
+    chain: 12,
+    transaction: 7,
+    time: '112 sec ago',
+  },
+  // Add more data entries as needed
+];
 
 const LatestBlocks = () => {
   return (
@@ -54,91 +94,38 @@ const LatestBlocks = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Success"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionPending}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionError}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Error"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionPending}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Success"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Success"
-                />
-              </TableCell>
-              <TableCell><a href="" className="text-primary-b-500">394402</a></TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>12 sec ago</TableCell>
-            </TableRow>
+            {data.map((block, index) => (
+              <TableRow key={index}>
+                <TableCell className="p-6">
+                  <Image
+                    src={block.statusIcon}
+                    width={32}
+                    height={32}
+                    alt="Transaction Type"
+                  />
+                </TableCell>
+                <TableCell className="p-6">
+                  <a href="" className="text-primary-b-500 text-sm font-medium">
+                    {block.height}
+                  </a>
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-sm font-medium text-neutral-n-700">
+                    {block.chain}
+                  </p>
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-sm font-medium text-neutral-n-700">
+                    {block.transaction}
+                  </p>
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-sm font-medium text-neutral-n-700">
+                    {block.time}
+                  </p>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </div>

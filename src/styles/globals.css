@@ -66,6 +66,9 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
 
     /* Neutral Table Border Color */
     --neutral-table-border: hsla(200, 17%, 90%, 1);
+
+    /* Global Container Padding */
+    --container-padding: calc(1rem, 1vw, 3rem);
   }
 }
 

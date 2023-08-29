@@ -16,13 +16,13 @@ const NftCollections = () => {
   return (
     // Table Heading and Button
     <div className="px-3 md:px-12">
-      <div className="bg-neutral-n-0 p-5 border-solid drop-shadow-md rounded-xl">
+      <div className="bg-neutral-n-0 text-neutral-n-700 p-5 border-solid drop-shadow-md rounded-xl">
         <div className="flex flex-wrap justify-between pb-5">
-          <h2 className="text-xl font-semibold leading-normal">
+          <h2 className="text-xl font-semibold">
             Top NFT Collections
           </h2>
           <Link
-            className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
+            className="text-primary-b-500 border border-primary-b-500 text-sm font-medium px-4 py-1 rounded-md border-solid"
             href="/nfts"
           >
             View NFT dashboard
@@ -47,22 +47,22 @@ const NftCollections = () => {
                     }
                   />
                 </TableHead>
-                <TableHead>
+                <TableHead className="pl-0">
                   <Help label="Items" tooltipText="Tooltip text here" />
                 </TableHead>
-                <TableHead>
+                <TableHead className="pl-0">
                   <Help label="Holders" tooltipText="Tooltip text here" />
                 </TableHead>
-                <TableHead>
+                <TableHead className="pl-0">
                   <Help
                     label="Floor Price (KDA)"
                     tooltipText="Tooltip text here"
                   />
                 </TableHead>
-                <TableHead>
+                <TableHead className="pl-0">
                   <Help label="Volume 24h" tooltipText="Tooltip text here" />
                 </TableHead>
-                <TableHead>
+                <TableHead className="pl-0">
                   <Help label="Sales" tooltipText="Tooltip text here" />
                 </TableHead>
                 <TableHead className="p-0">

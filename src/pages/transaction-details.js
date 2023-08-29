@@ -1,4 +1,4 @@
-import { Footer, Help } from '@/components/common';
+import { Help } from '@/components/common';
 import Image from 'next/image';
 import copy from '@/assets/copy.svg';
 import CircleBigCheck from '@/assets/circle-big-check.svg';
@@ -271,7 +271,6 @@ const TransactionDetails = () => {
           </tbody>
         </table>
       </div>
-      <Footer />
     </div>
   );
 };

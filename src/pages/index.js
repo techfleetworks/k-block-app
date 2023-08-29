@@ -1,15 +1,13 @@
 import {
   CurrentPrice,
-  Footer,
   InfoBar,
   LatestBlocks,
   LatestTransactions,
-  Navbar,
   NftCollections,
   Searchbar,
   TotalTransactions,
   TransactionHistory,
-} from "@/components/common";
+} from '@/components/common';
 
 export default function Home() {
   return (
@@ -27,7 +25,6 @@ export default function Home() {
           <LatestTransactions />
         </div>
         <NftCollections />
-        <Footer />
       </div>
     </main>
   );
