@@ -1,7 +1,4 @@
-import QuestionMark from "@/assets/question-mark.svg";
-import TransactionError from "@/assets/transaction-type-error.svg";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
-import TransactionSuccess from "@/assets/transaction-type-success.svg";
+import React from 'react';
 import {
   Table,
   TableBody,
@@ -9,16 +6,67 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Image from "next/image";
-import Help from "@/components/common/help";
-import Link from "next/link";
+} from '@/components/ui/table';
+import Image from 'next/image';
+import Help from '@/components/common/help';
+import Link from 'next/link';
+
+import QuestionMark from '@/assets/question-mark.svg';
+import TransactionError from '@/assets/transaction-type-error.svg';
+import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
+import TransactionSuccess from '@/assets/transaction-type-success.svg';
+
+const data = [
+  {
+    statusIcon: TransactionPending,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  {
+    statusIcon: TransactionPending,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  {
+    statusIcon: TransactionError,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  {
+    statusIcon: TransactionSuccess,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  {
+    statusIcon: TransactionSuccess,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  {
+    statusIcon: TransactionSuccess,
+    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
+    time: '21 secs ago',
+    amountKDA: '0.07 KDA',
+    amountUSD: '0.30 USD',
+    chain: 0,
+  },
+  // Add more data entries as needed
+];
 
 const LatestTransactions = () => {
   return (
@@ -53,144 +101,39 @@ const LatestTransactions = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionPending}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs ">21 secs ago</p>
-              </TableCell>
-              <TableCell className="space-y-2">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionPending}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2 ">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
-              </TableCell>
-              <TableCell className="space-y-2">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionError}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
-              </TableCell>
-              <TableCell className="space-y-2">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
-              </TableCell>
-              <TableCell className="space-y-2">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
-              </TableCell>
-              <TableCell className="space-y-2">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow className="">
-              <TableCell>
-                <Image
-                  src={TransactionSuccess}
-                  width={32}
-                  height={32}
-                  alt="Transaction Type Pending"
-                />
-              </TableCell>
-              <TableCell className="w-[200px] inline-block space-y-2">
-                <p className="text-primary-b-500 truncate">
-                  <a a href="">
-                    0xa83abrdgnnt1234wrggesfgtg1297709eq725
-                  </a>
-                </p>
-                <p className="text-neutral-n-500 text-xs">21 secs ago</p>
-              </TableCell>
-              <TableCell className="">
-                <p>0.07 KDA</p>
-                <p className="text-neutral-n-500 text-xs">0.30 USD</p>
-              </TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
+            {data.map((transaction, index) => (
+              <TableRow key={index} className="">
+                <TableCell className="p-6">
+                  <Image
+                    src={transaction.statusIcon}
+                    width={32}
+                    height={32}
+                    alt="Transaction Type"
+                  />
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-primary-b-500 truncate font-medium text-sm max-w-[15ch]">
+                    <a href="">{transaction.requestKey}</a>
+                  </p>
+                  <p className="text-neutral-n-500 text-xs ">
+                    {transaction.time}
+                  </p>
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-sm font-medium text-neutral-n-700">
+                    {transaction.amountKDA}
+                  </p>
+                  <p className="text-neutral-n-500 text-xs">
+                    {transaction.amountUSD}
+                  </p>
+                </TableCell>
+                <TableCell className="p-6">
+                  <p className="text-sm font-medium text-neutral-n-700">
+                    {transaction.chain}
+                  </p>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </div>
