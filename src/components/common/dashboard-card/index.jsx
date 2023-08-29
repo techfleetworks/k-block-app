@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 // PLEASE NOTE: THE SHADOW NEEDS TO BE CORRECTED
 
 export default function DashboardCard(props) {
   return (
-    <div className="bg-neutral-n-0 rounded-xl p-5 drop-shadow-md xl:w-[262px] md:w-[40vw] w-[80.5vw]">
+    <div className="bg-neutral-n-0 rounded-xl p-5 drop-shadow-md xl:w-[262px] md:w-[40vw] w-[80.5vw] mr-7 mb-7">
       {props.title ? (
         <h1 className="text-sm text-neutral-n-500  font-medium mb-2">
           {props.title}
