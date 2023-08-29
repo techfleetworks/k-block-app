@@ -34,7 +34,7 @@ const NavbarLink = ({ href, text }) => (
 
 const Navbar = () => {
   return (
-    <header className="md:px-12 py-4 bg-neutral-n-0 px-12">
+    <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
       <nav className="flex justify-between items-center gap-4">
         <div className="flex justify-between items-center gap-5">
           <Link href="/">

@@ -1,10 +1,9 @@
 import {
   Address,
-  Footer,
   PortfolioBreakdown,
   WalletTabs,
   WalletValue,
-} from "@/components/common";
+} from '@/components/common';
 
 export default function WalletOverview() {
   return (
@@ -22,7 +21,6 @@ export default function WalletOverview() {
       <section>
         <WalletTabs />
       </section>
-      <Footer />
     </div>
   );
 }
