@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Custom404() {
   return (
     <div className="container">
-      <div className="flex justify-between my-12">
+      <div className="flex flex-wrap justify-between my-12">
         <div className="flex flex-col max-w-[60ch] gap-4">
           <h1 className="text-[32px] font-bold">Search Not Found</h1>
           <p className="text-sm text-neutral-n-500">
