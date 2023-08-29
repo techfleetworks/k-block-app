@@ -1,12 +1,12 @@
-import Help from "@/components/common/help";
-import Image from "next/image";
-import Hypercent from "@/assets/hypercent.svg";
-import Arkade from "@/assets/arkade.svg";
-import Link from "next/link";
+import Help from '@/components/common/help';
+import Image from 'next/image';
+import Hypercent from '@/assets/hypercent.svg';
+import Arkade from '@/assets/arkade.svg';
+import Link from 'next/link';
 
 const NftAssetSales = () => {
   return (
-    <div className="bg-neutral-n-0 p-5 border-solid drop-shadow-md rounded-md mt-6">
+    <div className="bg-neutral-n-0 p-5 border-solid drop-shadow-md rounded-md mt-6 w-full">
       <h2 className="text-neutral-n-800 text-xl font-bold leading-6">
         Sales Information
       </h2>
@@ -18,7 +18,7 @@ const NftAssetSales = () => {
                 label="Last Sold For:"
                 tooltipText={
                   <>
-                    Tooltip text here.{" "}
+                    Tooltip text here.{' '}
                     <a className="underline" href="http://example.com/">
                       Learn more.
                     </a>
@@ -38,7 +38,7 @@ const NftAssetSales = () => {
                 label="Minimum Price (24hr):"
                 tooltipText={
                   <>
-                    Tooltip text here.{" "}
+                    Tooltip text here.{' '}
                     <a className="underline" href="http://example.com/">
                       Learn more.
                     </a>
@@ -58,7 +58,7 @@ const NftAssetSales = () => {
                 label="Marketplaces"
                 tooltipText={
                   <>
-                    Tooltip text here.{" "}
+                    Tooltip text here.{' '}
                     <a className="underline" href="http://example.com/">
                       Learn more.
                     </a>

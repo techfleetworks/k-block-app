@@ -3,14 +3,15 @@ module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
+      container: {
+        center: true,
+        padding: "3rem",
+        screens: {
+          "2xl": "1440px",
+        },
+      },
+
       colors: {
         // Primary Blues
         "primary-b-600": "var(--primary-b-600)",

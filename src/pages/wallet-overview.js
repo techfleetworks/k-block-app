@@ -1,16 +1,14 @@
 import {
   Address,
   Footer,
-  Navbar,
   PortfolioBreakdown,
-  WalletValue,
   WalletTabs,
+  WalletValue,
 } from "@/components/common";
 
 export default function WalletOverview() {
   return (
-    <main className="">
-      <Navbar />
+    <div className="container">
       <h2 className="mt-12 mb-7 px-3 md:px-12 text-[32px] font-semibold">
         Wallet Overview
       </h2>
@@ -25,6 +23,6 @@ export default function WalletOverview() {
         <WalletTabs />
       </section>
       <Footer />
-    </main>
+    </div>
   );
 }

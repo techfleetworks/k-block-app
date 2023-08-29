@@ -1,31 +1,28 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Cards({ title, data }) {
   return (
     <>
       <div className="header flex justify-between">
-        <h2 className="text-xl leading-6 font-semibold">{title}</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
       </div>
 
       <div>
-        <div className="card-body flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
+        <div className="card-body flex gap-6 flex-wrap">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-xl p-4 border mx-6 mb-8 bg-white"
-            >
+            <div key={index} className="rounded-xl p-5 border bg-white">
               <Image
                 src={item.img}
-                width={264.9}
-                height={264.9}
+                width={200}
+                height={200}
                 alt="Variation Apes"
-                className="rounded-xl mb-2"
+                className="rounded-md mb-2"
               />
 
               <div className="flex items-center">
-                <p className="text-xl text-primary-b-500 leading-6 font-semibold">
+                <p className="text-base text-primary-b-500 font-medium">
                   {item.assetID}
                 </p>
                 <Image

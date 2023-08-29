@@ -146,7 +146,7 @@ const data = [
 const WalletTabs = () => {
   return (
     // Tab Headings
-    <div className="px-12 xl:px-0 lg:px-0 md:px-0 mb-7">
+    <div className="xl:px-0 lg:px-0 md:px-0 mb-7">
       <Tabs defaultValue="transactions" className="mt-12 px-3 md:px-12 ">
         <TabsList>
           <TabsTrigger value="transactions">Transactions</TabsTrigger>

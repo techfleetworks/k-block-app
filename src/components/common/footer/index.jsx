@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className="flex gap-4 flex-wrap justify-between items-center px-3 md:px-12 py-7">
+    <div className="flex gap-4 flex-wrap justify-between items-center mt-[8.125rem] py-7">
       <div>
         <Image src={Logo} width={140} height={140} alt="logo" />
       </div>

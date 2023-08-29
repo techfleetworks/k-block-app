@@ -4,9 +4,9 @@ import React from "react";
 
 export default function DashboardCard(props) {
   return (
-    <div className="bg-neutral-n-0 rounded-[12px] p-5 drop-shadow-md xl:w-[262px] md:w-[40vw] w-[80.5vw] mr-7 mb-7">
+    <div className="bg-neutral-n-0 rounded-xl p-5 drop-shadow-md xl:w-[262px] md:w-[40vw] w-[80.5vw] mr-7 mb-7">
       {props.title ? (
-        <h1 className="text-[14px] text-neutral-n-500 leading-[18px] font-500 mb-2">
+        <h1 className="text-sm text-neutral-n-500  font-medium mb-2">
           {props.title}
         </h1>
       ) : (
@@ -14,7 +14,7 @@ export default function DashboardCard(props) {
       )}
       <div className="flex items-center">
         {props.numbers ? (
-          <p className="text-[20px] text-neutral-n-700 leading-[24px] font-bold">
+          <p className="text-xl text-neutral-n-700  font-bold">
             {props.numbers}
           </p>
         ) : (
