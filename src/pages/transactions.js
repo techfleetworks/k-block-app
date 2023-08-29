@@ -3,9 +3,7 @@ import TransactionsTable from '@/components/common/transaction-table';
 export default function Transactions() {
   return (
     <div className="container">
-      <h1 className="mt-8 mb-7 text-xl leading-6 font-semibold">
-        Transactions
-      </h1>
+      <h1 className="my-8 text-[32px] font-bold">Transactions</h1>
       <TransactionsTable />
     </div>
   );

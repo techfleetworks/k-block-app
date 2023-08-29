@@ -124,7 +124,7 @@ export default function TransactionsTable() {
                     className="table-text text-primary-b-500 xl:px-4"
                   >
                     {item.key_name !== undefined && (
-                      <Link href="">{item.key_name}</Link>
+                      <Link href="/transaction-details">{item.key_name}</Link>
                     )}
                   </TableCell>
                   <TableCell label="Holders">
