@@ -18,9 +18,8 @@ import HeartGlassesNft from "@/assets/heartglassesnft.svg";
 import KittyWarriorNft from "@/assets/kittywarriornft.svg";
 import Link from "next/link";
 
-
 import { DataTable } from "@/components/ui/table-container";
-import { columns } from "./columns"
+import { columns } from "./columns";
 
 const data = [
   {
@@ -34,7 +33,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Hypercent",
       nft: Hypercent,
@@ -45,7 +45,8 @@ const data = [
     quantity: 10492,
     price: 0.04,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Flux",
       nft: Kadena,
@@ -56,7 +57,8 @@ const data = [
     quantity: 10492,
     price: 0.39,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Kaddex",
       nft: Hypercent,
@@ -67,7 +69,8 @@ const data = [
     quantity: 10492,
     price: 0.01,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "ArKade",
       nft: Kadena,
@@ -78,7 +81,8 @@ const data = [
     quantity: 10492,
     price: 0.000138,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Timpi",
       nft: Hypercent,
@@ -89,7 +93,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "KDLaunch",
       nft: Kadena,
@@ -100,7 +105,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "KDSwap",
       nft: Hypercent,
@@ -111,7 +117,8 @@ const data = [
     quantity: 10492,
     price: 0.005,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Anedak",
       nft: Kadena,
@@ -122,7 +129,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Babena",
       nft: Hypercent,
@@ -133,15 +141,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }
-
-
-
-
-]
-
-
-
+  },
+];
 
 const WalletTabs = () => {
   return (
@@ -156,16 +157,20 @@ const WalletTabs = () => {
 
         {/* Transactions Tab */}
         <TabsContent
-          className="leading-normal  rounded-tl-none"
+          className="leading-normal rounded-tl-none"
           value="transactions"
         >
-          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Transactions</h2>
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">
+            Transactions
+          </h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">
-                  <TableHead className="pl-5">Status</TableHead>
-                  <TableHead>
+                  <TableHead className="text-neutral-n-800 pl-5">
+                    Status
+                  </TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Txn Hash"
                       tooltipText={
@@ -181,7 +186,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Method"
                       tooltipText={
@@ -197,7 +202,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Block Height"
                       tooltipText={
@@ -213,7 +218,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Addresses"
                       tooltipText={
@@ -229,8 +234,12 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>Value</TableHead>
-                  <TableHead>Time</TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    Value
+                  </TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    Time
+                  </TableHead>
                   <TableHead className="p-0">
                     <Help label="Txn Fee" tooltipText="Tooltip text here" />
                   </TableHead>
@@ -343,93 +352,17 @@ const WalletTabs = () => {
         </TabsContent>
 
         {/* Tokens Tab */}
-        <TabsContent
-          className="leading-normal "
-          value="tokens"
-        >
-          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Tokens Holdings</h2>
-          
-          
-          {/* <div className="rounded-xl border overflow-hidden mt-5"> */}
-          {/* <Table className="border-neutral-table-border">
-              <TableHeader>
-                <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-                  <TableHead>Token Name</TableHead>
-                  <TableHead>Symbols</TableHead>
-                  <TableHead className="pl-5">
-                    <Help
-                      label="Contract Address"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
-                    />
-                  </TableHead>
-                  <TableHead>Quantity</TableHead>
-                  <TableHead>Price</TableHead>
-                  <TableHead>Value</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
-                    <Image
-                      src={Kadena}
-                      width={32}
-                      height={32}
-                      alt="Kadena Token Logo"
-                    />
-                    <Link href="#">Kadena</Link>
-                  </TableCell>
-                  <TableCell className="table-text" >
-                    KDA
-                  </TableCell>
-                  <TableCell className="table-link">
-                    <Link href="#">coin</Link>
-                  </TableCell>
-                  <TableCell className="table-text">10,492</TableCell>
-                  <TableCell className="table-text">$0.57</TableCell>
-                  <TableCell className="table-text">$5,836.23</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
-                    <Image
-                      src={Hypercent}
-                      width={32}
-                      height={32}
-                      alt="Hypercent Token Logo"
-                    />
-                    <Link href="#">Hypercent</Link>
-                  </TableCell>
-                  <TableCell className="table-text">HYPE</TableCell>
-                  <TableCell className="table-link">
-                    <Link href="#">hypercent.prod-hype-coin</Link>
-                  </TableCell>
-                  <TableCell className="table-text">10,492</TableCell>
-                  <TableCell className="table-text">$0.04</TableCell>
-                  <TableCell className="table-text">$5,836.23</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table> */}
+        <TabsContent className="leading-normal " value="tokens">
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">
+            Tokens Holdings
+          </h2>
 
-
-            
           <DataTable columns={columns} data={data} />
-
-
-          {/* </div> */}
         </TabsContent>
 
         {/* NFTs Tab*/}
         <TabsContent value="nfts">
-        <h2 className="font-semibold text-xl  text-neutral-n-700  ">Assets</h2>
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">Assets</h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
@@ -450,7 +383,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Collection"
                       tooltipText={
@@ -466,7 +399,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Status"
                       tooltipText={
@@ -482,7 +415,7 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Collection Floor Price"
                       tooltipText={
@@ -498,7 +431,9 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>Acquired Since</TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    Acquired Since
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
