@@ -5,10 +5,10 @@ import CircleBigCheck from "@/assets/circle-big-check.svg";
 
 const TransactionDetails = () => {
   return (
-    <div className="container">
+    <div className="container md:px-12 px-3">
       <h1 className="my-8 text-[32px] font-bold">Transaction Details</h1>
       {/* Overview Card */}
-      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md mb-4">
+      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md mb-4 overflow-y-auto">
         <h2 className="text-xl font-bold">Overview</h2>
         <table className=" mt-5 text-left text-sm text-neutral-n-800 font-normal">
           <tbody className="space-y-6">
@@ -108,7 +108,7 @@ const TransactionDetails = () => {
         </table>
       </div>
       {/* Transactions Card */}
-      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md mb-4">
+      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md mb-4 overflow-y-auto">
         <h2 className="text-xl font-bold">Transactions</h2>
         <table className=" mt-5 text-left text-sm text-neutral-n-800 font-normal">
           <tbody className="space-y-6">
@@ -156,7 +156,7 @@ const TransactionDetails = () => {
         </table>
       </div>
       {/* Other Information Card */}
-      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md ">
+      <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md overflow-y-auto">
         <h2 className="text-xl font-bold">Other Information</h2>
         <table className=" mt-5 text-left text-sm text-neutral-n-800 font-normal">
           <tbody className="space-y-6">

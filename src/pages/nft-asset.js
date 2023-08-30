@@ -32,7 +32,7 @@ export default function NftAsset() {
   ];
   return (
     <>
-      <div className="container">
+      <div className="container md:px-12 px-3">
         <section>
           <NftAssetGrid />
         </section>
