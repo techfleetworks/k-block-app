@@ -47,6 +47,7 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
     --semantic-r-100: hsla(0, 66%, 92%, 1);
     --semantic-r-50: hsla(0, 100%, 98%, 1);
 
+    --semantic-b-900: hsl(240, 14%, 15%, 1);
     --semantic-b-300: hsla(205, 100%, 40%, 1);
     --semantic-b-100: hsla(198, 56%, 92%, 1);
     --semantic-b-50: hsla(193, 26%, 93%, 0.8);
