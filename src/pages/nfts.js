@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function NFTDashboard() {
   return (
-    <div className="container">
-      <h1 className="text-3xl font-bold my-12 px-12">NFT Dashboard</h1>
-      <div className="flex flex-wrap px-12">
+    <div className="container md:px-12 px-3">
+      <h1 className="text-3xl font-bold my-12">NFT Dashboard</h1>
+      <div className="flex flex-wrap">
         <div>
           <div className="flex flex-wrap">
             <DashboardCard title="Collections" numbers="230,347" />
@@ -53,7 +53,7 @@ export default function NFTDashboard() {
                 2,500 items | 0.045 KDA
               </p>
             </div>
-            <div className="rounded-md p-2 bg-semantic-b-50 flex items-center ml-24 md:ml-44 h-7">
+            <div className="rounded-md p-2 bg-semantic-b-50 flex items-center ml-24 md:ml-40 h-7">
               <div className="bg-semantic-g-500 rounded-full w-[12px] h-[12px]"></div>
               <p className="text-xs text-neutral-n-700 font-normal ml-1">
                 Minting Now
@@ -70,7 +70,7 @@ export default function NFTDashboard() {
           />
         </div>
       </div>
-      <section className="px-12">
+      <section>
         <Tabs category1="Trending" category2="Upcoming" category3="Top" />
       </section>
     </div>

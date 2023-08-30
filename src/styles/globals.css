@@ -30,6 +30,7 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
 @layer base {
   :root {
     /* Primary Colors */
+    --primary-b-900: hsla(240, 15%, 16%, 1);
     --primary-b-600: hsla(198, 76%, 23%, 1);
     --primary-b-500: hsla(198, 76%, 31%, 1);
     --primary-b-400: hsla(198, 100%, 35%, 1);
@@ -52,6 +53,7 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
     --semantic-b-100: hsla(198, 56%, 92%, 1);
     --semantic-b-50: hsla(193, 26%, 93%, 0.8);
 
+    --semantic-y-700: hsla(40, 99%, 38%, 1);
     --semantic-y-500: hsla(40, 100%, 50%, 1);
     --semantic-y-100: hsla(46, 100%, 93%, 1);
 

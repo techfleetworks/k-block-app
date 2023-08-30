@@ -1,9 +1,9 @@
-import Logo from '@/assets/logo.svg';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import Logo from "@/assets/logo.svg";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
-import Sun from '@/assets/sun.svg';
+import Sun from "@/assets/sun.svg";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -12,9 +12,9 @@ import {
   navigationMenuTriggerStyle,
   NavigationMenuTrigger,
   NavigationMenuContent,
-} from '@/components/ui/navigation-menu';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "@/components/ui/navigation-menu";
+import Image from "next/image";
+import Link from "next/link";
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>

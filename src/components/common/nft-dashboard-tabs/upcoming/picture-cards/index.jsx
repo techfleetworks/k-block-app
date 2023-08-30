@@ -24,14 +24,16 @@ export default function PictureCard(props) {
       </div>
       <div className="flex justify-between">
         <div>
-          <p className="text-neutral-n-500 text-xs font-normal leading-3">
-            Attributes
+          <p className="text-neutral-n-500 text-xs font-normal leading-3 pb-1">
+            Supply
           </p>
-          <p className="text-neutral-n-700 text-xl font-bold leading-6">10</p>
+          <p className="text-neutral-n-700 text-xl font-bold leading-6">
+            {props.supply_number}
+          </p>
         </div>
         <div>
-          <p className="text-neutral-n-500 text-xs font-normal leading-3">
-            Created Time
+          <p className="text-neutral-n-500 text-xs font-normal leading-3 pb-1">
+            Starts On
           </p>
           <p className="text-neutral-n-700 text-xl font-bold leading-6">
             12/10/2023
