@@ -1,7 +1,7 @@
-import { Help } from '@/components/common';
-import Image from 'next/image';
-import copy from '@/assets/copy.svg';
-import CircleBigCheck from '@/assets/circle-big-check.svg';
+import { Help } from "@/components/common";
+import Image from "next/image";
+import copy from "@/assets/copy.svg";
+import CircleBigCheck from "@/assets/circle-big-check.svg";
 
 const TransactionDetails = () => {
   return (
@@ -18,7 +18,7 @@ const TransactionDetails = () => {
                   label="Request Key"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -31,7 +31,7 @@ const TransactionDetails = () => {
                   <tbody>
                     <tr>
                       <td className="flex">
-                        {' '}
+                        {" "}
                         xP0Nt2zjJUSQKzxfccpt4ABRx35gVer69BRHRCGSz7o
                         <Image
                           width={16}
@@ -52,7 +52,7 @@ const TransactionDetails = () => {
                   label="Status"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -78,7 +78,7 @@ const TransactionDetails = () => {
                   label="Chain"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -94,7 +94,7 @@ const TransactionDetails = () => {
                   label="Block Height"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -166,7 +166,7 @@ const TransactionDetails = () => {
                   label="Transaction ID"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -190,7 +190,7 @@ const TransactionDetails = () => {
                   label="Gas fee"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -206,7 +206,7 @@ const TransactionDetails = () => {
                   label="Block Hash"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -224,7 +224,7 @@ const TransactionDetails = () => {
                   label="Parent Hash"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -242,7 +242,7 @@ const TransactionDetails = () => {
                   label="Logs"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -258,7 +258,7 @@ const TransactionDetails = () => {
                   label="Gas limit"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>

@@ -18,9 +18,7 @@ const NftCollections = () => {
     <div className="px-3 md:px-12">
       <div className="bg-neutral-n-0 text-neutral-n-700 p-5 border-solid drop-shadow-md rounded-xl">
         <div className="flex flex-wrap justify-between pb-5">
-          <h2 className="text-xl font-semibold">
-            Top NFT Collections
-          </h2>
+          <h2 className="text-xl font-semibold">Top NFT Collections</h2>
           <Link
             className="text-primary-b-500 border border-primary-b-500 text-sm font-medium px-4 py-1 rounded-md border-solid"
             href="/nfts"
@@ -39,7 +37,7 @@ const NftCollections = () => {
                     label="Collections"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
+                        Rare digital assets designed by artist(s).
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>

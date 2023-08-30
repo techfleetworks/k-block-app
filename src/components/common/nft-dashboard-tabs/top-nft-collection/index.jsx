@@ -91,33 +91,51 @@ export default function TopNFTCollections(props) {
               <TableHead className="py-4 h-[44px]">
                 <Help
                   label="Collections"
+                  tooltipText="Rare digital assets designed by artist(s)."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Supply"
+                  tooltipText="The total number of NFTs in this collection."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Holders"
+                  tooltipText="The number of unique NFT owners in this collection."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Floor Price (KDA)"
+                  tooltipText="The lowest listed price for an NFT in this collection."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Volume 24H"
+                  tooltipText="The total trades for this NFT collection in the given period of time."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Traded On"
+                  tooltipText="The platform where the NFTs are being traded on."
+                />
+              </TableHead>
+              <TableHead className="p-0">
+                <Help
+                  label="Confidence"
                   tooltipText={
                     <>
-                      Tooltip text here.{" "}
-                      <a className="underline" href="http://example.com/">
+                      A NFTs trustworthiness score.
+                      <a className="underline pl-1" href="http://example.com/">
                         Learn more.
                       </a>
                     </>
                   }
                 />
-              </TableHead>
-              <TableHead>
-                <Help label="Supply" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
-                <Help label="Holders" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
-                <Help label="Floor Price" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
-                <Help label="Volume 24H" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
-                <Help label="Traded On" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead className="p-0">
-                <Help label="Confidence" tooltipText="Tooltip text here" />
               </TableHead>
             </TableRow>
           </TableHeader>

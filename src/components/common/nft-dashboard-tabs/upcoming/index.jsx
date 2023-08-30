@@ -172,31 +172,43 @@ const UpcomingTable = (props) => {
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
               <TableHead className="py-4 h-[44px]">
                 <Help
-                  label="Collection"
-                  tooltipText={
-                    <>
-                      Tooltip text here.{" "}
-                      <a className="underline" href="http://example.com/">
-                        Learn more.
-                      </a>
-                    </>
-                  }
+                  label="Collections"
+                  tooltipText="Rare digital assets designed by artist(s)."
                 />
               </TableHead>
               <TableHead>
-                <Help label="Supply" tooltipText="Tooltip text here" />
+                <Help
+                  label="Supply"
+                  tooltipText="The total number of NFTs in this collection."
+                />
               </TableHead>
               <TableHead>
-                <Help label="Created By" tooltipText="Tooltip text here" />
+                <Help
+                  label="Created By"
+                  tooltipText="The creator of the NFT collection"
+                />
               </TableHead>
               <TableHead>
                 <p>Socials</p>
               </TableHead>
               <TableHead>
-                <Help label="Starts On" tooltipText="Tooltip text here" />
+                <Help
+                  label="Starts On"
+                  tooltipText="Date when the NFT will be launched."
+                />
               </TableHead>
               <TableHead>
-                <Help label="Confidence" tooltipText="Tooltip text here" />
+                <Help
+                  label="Confidence"
+                  tooltipText={
+                    <>
+                      A NFTs trustworthiness score.
+                      <a className="underline pl-1" href="http://example.com/">
+                        Learn more.
+                      </a>
+                    </>
+                  }
+                />
               </TableHead>
             </TableRow>
           </TableHeader>

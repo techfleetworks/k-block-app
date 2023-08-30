@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
   Tooltip,
+  TooltipArrow,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
-import Image from 'next/image';
-import QuestionMark from '@/assets/question-mark.svg';
+} from "@/components/ui/tooltip";
+import Image from "next/image";
+import QuestionMark from "@/assets/question-mark.svg";
 
 const InfoItem = ({ label, value, tooltipText }) => (
   <div className="flex flex-wrap justify-between gap-1 px-5 py-3">
@@ -21,8 +22,9 @@ const InfoItem = ({ label, value, tooltipText }) => (
           />
           <p>{label}:</p>
         </TooltipTrigger>
-        <TooltipContent className="rounded-[4px] shadow-sm">
-          <p>{tooltipText}</p>
+        <TooltipContent className="rounded border-primary-b-900 shadow-sm">
+          <TooltipArrow />
+          <p className="text-neutral-n-0">{tooltipText}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -33,7 +35,7 @@ const InfoItem = ({ label, value, tooltipText }) => (
 const InfoBar = () => {
   return (
     <div className="px-3 md:px-12 my-7">
-      <div className="flex flex-wrap justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-[8px]">
+      <div className="flex flex-wrap justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg">
         <InfoItem
           label="Total Difficulty"
           value="5.6 Eh"

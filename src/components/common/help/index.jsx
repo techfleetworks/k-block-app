@@ -21,7 +21,7 @@ const Help = ({ label, tooltipText }) => (
         />
         <p className="text-neutral-n-800">{label}</p>
       </TooltipTrigger>
-      <TooltipContent className="text-neutral-n-0 border-0 px-3 py-2 rounded-md bg-primary-b-900">
+      <TooltipContent className="text-neutral-n-0 px-3 py-2 rounded-md border-primary-b-900 bg-primary-b-900">
         <TooltipArrow />
         <p className="text-neutral-n-0">{tooltipText}</p>
       </TooltipContent>

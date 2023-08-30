@@ -90,34 +90,56 @@ export default function Trending(props) {
                   label="Collections"
                   tooltipText={
                     <>
-                      Tooltip text here.{" "}
-                      <a className="underline" href="http://example.com/">
+                      Rare digital assets designed by artist(s).
+                      {/* <a className="underline" href="http://example.com/">
                         Learn more.
-                      </a>
+                      </a> */}
                     </>
                   }
                 />
               </TableHead>
               <TableHead>
-                <Help label="Supply" tooltipText="Tooltip text here" />
+                <Help
+                  label="Supply"
+                  tooltipText="The total number of NFTs in this collection."
+                />
               </TableHead>
               <TableHead>
-                <Help label="Holders" tooltipText="Tooltip text here" />
+                <Help
+                  label="Holders"
+                  tooltipText="The number of unique NFT owners in this collection."
+                />
               </TableHead>
               <TableHead>
                 <Help
                   label="Floor Price (KDA)"
-                  tooltipText="Tooltip text here"
+                  tooltipText="The lowest listed price for an NFT in this collection."
                 />
               </TableHead>
               <TableHead>
-                <Help label="Volume 24H" tooltipText="Tooltip text here" />
+                <Help
+                  label="Volume 24H"
+                  tooltipText="The total trades for this NFT collection in the given period of time."
+                />
               </TableHead>
               <TableHead>
-                <Help label="Traded On" tooltipText="Tooltip text here" />
+                <Help
+                  label="Traded On"
+                  tooltipText="The platform where the NFTs are being traded on."
+                />
               </TableHead>
               <TableHead className="p-0">
-                <Help label="Confidence" tooltipText="Tooltip text here" />
+                <Help
+                  label="Confidence"
+                  tooltipText={
+                    <>
+                      A NFTs trustworthiness score.
+                      <a className="underline pl-1" href="http://example.com/">
+                        Learn more.
+                      </a>
+                    </>
+                  }
+                />
               </TableHead>
             </TableRow>
           </TableHeader>
