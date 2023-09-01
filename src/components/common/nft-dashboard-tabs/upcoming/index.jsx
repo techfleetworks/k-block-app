@@ -122,7 +122,7 @@ import Discord from "@/assets/discord-logo.svg";
 import Twitter from "@/assets/twitter-logo.svg";
 import Instagram from "@/assets/instagram-logo.svg";
 
-const UpcomingTable = (props) => {
+const UpcomingTable = () => {
   const data = [
     {
       nft: LargeApe,
