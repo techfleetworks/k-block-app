@@ -7,7 +7,7 @@ import {
   Searchbar,
   TotalTransactions,
   TransactionHistory,
-} from '@/components/common';
+} from "@/components/common";
 
 export default function Home() {
   return (

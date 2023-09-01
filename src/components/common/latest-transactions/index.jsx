@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,63 +6,63 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Image from 'next/image';
-import Help from '@/components/common/help';
-import Link from 'next/link';
+} from "@/components/ui/table";
+import Image from "next/image";
+import Help from "@/components/common/help";
+import Link from "next/link";
 
-import QuestionMark from '@/assets/question-mark.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import QuestionMark from "@/assets/question-mark.svg";
+import TransactionError from "@/assets/transaction-type-error.svg";
+import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionSuccess from "@/assets/transaction-type-success.svg";
 
 const data = [
   {
     statusIcon: TransactionPending,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionPending,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionError,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   // Add more data entries as needed
@@ -77,7 +77,7 @@ const LatestTransactions = () => {
         </h2>
         <Link
           className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-          href="/"
+          href="/txs"
         >
           View all transactions
         </Link>

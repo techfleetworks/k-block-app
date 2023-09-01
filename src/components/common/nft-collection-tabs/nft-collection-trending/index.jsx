@@ -15,7 +15,6 @@ import {
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 import { ChevronDown } from "lucide-react";
-import Card from "./card-collection";
 
 import Verified from "@/assets/verified.svg";
 import AngelApe from "@/assets/angel-ape.svg";
@@ -24,12 +23,6 @@ import Link from "next/link";
 export default function TrendingNFTAssets(props) {
   const [isGrid, setIsGrid] = useState(true);
   const data = [
-    {
-      nft: AngelApe,
-      alt: "Angel Ape",
-      name: "Variation Apes #1",
-      logo: Verified,
-    },
     {
       nft: AngelApe,
       alt: "Angel Ape",
@@ -81,69 +74,32 @@ export default function TrendingNFTAssets(props) {
       </div>
       {isGrid ? (
         <div>
-          {/* I am not sure how to implement data.map in this case */}
-          {/* What I want to do:
-              - I want to let the engine to map over all the items 
-              - I want 5 cards per row
-              - I want 3 columns per page
-              
-              - I thought that making one <Card> component will do the job
-              - as long as I just make more objects in the array 
-              - ...but it is not doing the job 
-              
-              - ... so for now, I rather copied and pasted the <Card> component like 5 times.
-              - but this needs to be changed. 
-              
-              - For the list view, no design came in, so I just pretended that there is one.
-              - this view will be changed later. */}
-          {data.map((item, index) => {
-            if (index % 15 === 0) {
-              return (
-                //   <TableRow key={item.id}>
-                //     <TableCell className="flex flex-wrap xl:flex-nowrap">
-                //       <Card
-                //         nft={item.nft ? item.nft : undefined}
-                //         alt={item.alt ? item.alt : null}
-                //         id={item.name ? item.name : null}
-                //         logo={item.logo ? item.logo : null}
-                //       />
-                //     </TableCell>
-                //   </TableRow>
-                <div className="flex py-6" key={item.id}>
-                  <Card
-                    nft={item.nft ? item.nft : undefined}
-                    alt={item.alt ? item.alt : null}
-                    id={item.name ? item.name : null}
-                    logo={item.logo ? item.logo : null}
-                  />
-                  <Card
-                    nft={item.nft ? item.nft : undefined}
-                    alt={item.alt ? item.alt : null}
-                    id={item.name ? item.name : null}
-                    logo={item.logo ? item.logo : null}
-                  />
-                  <Card
-                    nft={item.nft ? item.nft : undefined}
-                    alt={item.alt ? item.alt : null}
-                    id={item.name ? item.name : null}
-                    logo={item.logo ? item.logo : null}
-                  />
-                  <Card
-                    nft={item.nft ? item.nft : undefined}
-                    alt={item.alt ? item.alt : null}
-                    id={item.name ? item.name : null}
-                    logo={item.logo ? item.logo : null}
-                  />
-                  <Card
-                    nft={item.nft ? item.nft : undefined}
-                    alt={item.alt ? item.alt : null}
-                    id={item.name ? item.name : null}
-                    logo={item.logo ? item.logo : null}
+          <div className="flex py-6">
+            {data.map((item, index) => (
+              <div key={index} className="rounded-xl p-5 border bg-white">
+                <Image
+                  src={item.img}
+                  width={200}
+                  height={200}
+                  alt="Variation Apes"
+                  className="rounded-md mb-2"
+                />
+
+                <div className="flex items-center">
+                  <p className="text-base text-primary-b-500 font-medium">
+                    {item.assetID}
+                  </p>
+                  <Image
+                    src={item.img2}
+                    alt="Verified"
+                    width={20}
+                    height={20}
+                    className="ml-1"
                   />
                 </div>
-              );
-            }
-          })}
+              </div>
+            ))}
+          </div>
         </div>
       ) : (
         <TrendingNFTTable />

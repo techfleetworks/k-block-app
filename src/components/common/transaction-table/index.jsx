@@ -148,7 +148,10 @@ export default function TransactionsTable() {
                     <div className="flex items-center">
                       <p className="sm-muted-table-text pl-2">From</p>
                       {item.address1 !== undefined && (
-                        <Link href="#" className="text-primary-b-500">
+                        <Link
+                          href="/wallet-overview"
+                          className="text-primary-b-500"
+                        >
                           {item.address1}
                         </Link>
                       )}
@@ -156,7 +159,10 @@ export default function TransactionsTable() {
                     <div className="flex items-center">
                       <p className="sm-muted-table-text pl-2">To</p>
                       {item.address2 !== undefined && (
-                        <Link href="#" className="text-primary-b-500 px-1">
+                        <Link
+                          href="/wallet-overview"
+                          className="text-primary-b-500 px-1"
+                        >
                           {item.address2}
                         </Link>
                       )}

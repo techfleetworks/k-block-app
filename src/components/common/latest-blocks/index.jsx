@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,13 +6,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Image from 'next/image';
-import Help from '@/components/common/help';
+} from "@/components/ui/table";
+import Image from "next/image";
+import Help from "@/components/common/help";
 
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import TransactionError from "@/assets/transaction-type-error.svg";
+import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionSuccess from "@/assets/transaction-type-success.svg";
+import Link from "next/link";
 
 const data = [
   {
@@ -20,42 +21,42 @@ const data = [
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '12 sec ago',
+    time: "12 sec ago",
   },
   {
     statusIcon: TransactionPending,
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '124 sec ago',
+    time: "124 sec ago",
   },
   {
     statusIcon: TransactionError,
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '112 sec ago',
+    time: "112 sec ago",
   },
   {
     statusIcon: TransactionSuccess,
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '12 sec ago',
+    time: "12 sec ago",
   },
   {
     statusIcon: TransactionPending,
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '124 sec ago',
+    time: "124 sec ago",
   },
   {
     statusIcon: TransactionError,
     height: 394402,
     chain: 12,
     transaction: 7,
-    time: '112 sec ago',
+    time: "112 sec ago",
   },
   // Add more data entries as needed
 ];
@@ -65,12 +66,12 @@ const LatestBlocks = () => {
     <div className="bg-neutral-n-0 overflow-auto p-5 rounded-xl">
       <div className="flex flex-wrap justify-between pb-5">
         <h2 className="text-xl font-semibold leading-normal">Latest Blocks</h2>
-        <a
+        <Link
           className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-          href="#"
+          href="/blocks"
         >
           View all blocks
-        </a>
+        </Link>
       </div>
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">

@@ -2,6 +2,7 @@ import { Help } from "@/components/common";
 import Image from "next/image";
 import copy from "@/assets/copy.svg";
 import CircleBigCheck from "@/assets/circle-big-check.svg";
+import Link from "next/link";
 
 const TransactionDetails = () => {
   return (
@@ -121,10 +122,14 @@ const TransactionDetails = () => {
                   <tbody>
                     <tr>
                       <td className="flex text-primary-b-500 cursor-pointer">
-                        k:b81799a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                        <Link href="/wallet-overview">
+                          k:b81799a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                        </Link>
                       </td>
                       <td className="flex text-primary-b-500 cursor-pointer">
-                        K:2f0e70d6e0648f30c37ea3b470279585e8c3a5fc10c1c508f79a90d432baacad8
+                        <Link href="/wallet-overview">
+                          K:2f0e70d6e0648f30c37ea3b470279585e8c3a5fc10c1c508f79a90d432baacad8
+                        </Link>
                       </td>
                       <td className="flex">0.0092 KDA</td>
                     </tr>
