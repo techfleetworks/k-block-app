@@ -7,6 +7,12 @@ import Hypercent from "@/assets/hypercent.svg";
 import Share from "@/assets/share.svg";
 import { Help } from "@/components/common";
 
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import TrendingNFTAssets from "../components/common/nft-collection-tabs/nft-collection-trending/index";
+// import NFTCollectionAnalytics from "../components/common/nft-collection-tabs/nft-collection-analytics/index";
+// import NFTCollectionContract from "../components/common/nft-collection-tabs/nft-collection-contract/index";
+import NFTCollectionTabs from "@/components/common/nft-collection-tabs";
+
 export default function NftCollectionsPage() {
   return (
     <div className="container md:px-12 px-3 mt-8 mb-12">
@@ -165,6 +171,9 @@ export default function NftCollectionsPage() {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="mt-12">
+        <NFTCollectionTabs />
       </div>
     </div>
   );

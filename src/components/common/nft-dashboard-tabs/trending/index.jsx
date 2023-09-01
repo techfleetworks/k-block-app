@@ -158,7 +158,7 @@ export default function Trending(props) {
                       />
                     )}
                     <div className="flex items-center">
-                      <Link href="/nft-asset">
+                      <Link href="/nft-collections">
                         <p className="table-link">{item.name}</p>
                       </Link>
                       {item.img2 !== undefined && (
