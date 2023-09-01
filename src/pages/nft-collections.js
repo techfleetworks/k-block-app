@@ -15,7 +15,7 @@ export default function NftCollectionsPage() {
       <div className="flex flex-wrap justify-between">
         <div className="flex gap-4">
           <Image
-            className="drop-shadow-low p-0 rounded-xl h-[168px]"
+            className="drop-shadow-low p-0 rounded-lg h-[168px]"
             src={FunkyApe}
             width={144}
             height={168}
@@ -128,7 +128,7 @@ export default function NftCollectionsPage() {
                     }
                   />
                 </th>
-                <td className="text-neutral-n-800 align-top">10K</td>
+                <td className="text-neutral-n-800">10K</td>
               </tr>
               <tr className="flex justify-between">
                 <th className="font-normal">
