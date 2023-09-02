@@ -32,6 +32,11 @@ const NavbarLink = ({ href, text }) => (
 );
 
 const Navbar = () => {
+  // I wanted to apply the following colour change due to the request from the Design team, but it does not seem possible with how the code is set up.
+  // const [isActive, setIsActive] = useState(false);
+  // const buttonColor = isActive
+  // ? "text-primary-b-500" : "text-neutral-n-700";
+
   return (
     <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
       <nav className="flex justify-between items-center gap-4">
