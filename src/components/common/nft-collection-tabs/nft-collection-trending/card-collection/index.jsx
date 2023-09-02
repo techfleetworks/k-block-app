@@ -6,6 +6,7 @@ import AngelApe from "@/assets/angel-ape.svg";
 import GodApe from "@/assets/ape3.svg";
 import HipApe from "@/assets/ape4.svg";
 import BlueHairApe from "@/assets/ape5.svg";
+import Link from "next/link";
 
 export default function CardBoard() {
   const data = [
@@ -62,9 +63,11 @@ const Card = ({ data }) => {
           />
 
           <div className="flex items-center">
-            <p className="text-base text-primary-b-500 font-medium">
-              {item.assetID}
-            </p>
+            <Link href="/nft-asset">
+              <p className="text-base text-primary-b-500 font-medium">
+                {item.assetID}
+              </p>
+            </Link>
             <Image
               src={item.logo}
               alt="Verified"

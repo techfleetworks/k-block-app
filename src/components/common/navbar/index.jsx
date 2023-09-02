@@ -64,7 +64,7 @@ const Navbar = () => {
           </div> */}
         </div>
 
-        <div className="md:flex md:gap-9 hidden">
+        <div className="md:flex md:px-4 hidden">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>

@@ -16,8 +16,8 @@ const InfoItem = ({ label, value, tooltipText }) => (
         <TooltipTrigger className="flex items-center gap-1">
           <Image
             src={QuestionMark}
-            width={20}
-            height={20}
+            width={13}
+            height={13}
             alt="question mark"
           />
           <p>{label}:</p>
@@ -37,16 +37,6 @@ const InfoBar = () => {
     <div className="px-3 md:px-12 my-7">
       <div className="flex flex-wrap justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg">
         <InfoItem
-          label="Total Difficulty"
-          value="5.6 Eh"
-          tooltipText="Sunny Days Cold Breeze"
-        />
-        <InfoItem
-          label="Est. Network Hash Rate"
-          value="181.2 PH/S"
-          tooltipText="Another Tooltip Text"
-        />
-        <InfoItem
           label="Average Gas Fee"
           value="$0.0005"
           tooltipText="Yet Another Tooltip Text"
@@ -55,6 +45,16 @@ const InfoBar = () => {
           label="Active Miners"
           value="50"
           tooltipText="One More Tooltip Text"
+        />
+        <InfoItem
+          label="Total Difficulty"
+          value="5.6 Eh"
+          tooltipText="Sunny Days Cold Breeze"
+        />
+        <InfoItem
+          label="Est. Network Hash Rate"
+          value="181.2 PH/S"
+          tooltipText="Another Tooltip Text"
         />
       </div>
     </div>

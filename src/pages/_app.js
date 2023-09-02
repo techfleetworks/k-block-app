@@ -7,12 +7,13 @@ import { Footer, Navbar } from "@/components/common";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 import * as React from "react";
+import HomeNavbar from "@/components/common/navbar/home-navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <main className={`${inter.variable} font-sans`}>
-        <Navbar />
+        {Component.name === "Home" ? <HomeNavbar /> : <Navbar />}
         <Component {...pageProps} />
         <Footer />
         <Toaster />

@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Searchbar />
       <div className="container">
         <InfoBar />
@@ -26,6 +26,6 @@ export default function Home() {
         </div>
         <NftCollections />
       </div>
-    </main>
+    </div>
   );
 }
