@@ -46,6 +46,7 @@ module.exports = {
         "neutral-n-800": "var(--neutral-n-800)",
         "neutral-n-700": "var(--neutral-n-700)",
         "neutral-n-500": "var(--neutral-n-500)",
+        "neutral-n-450": "var(--neutral-n-450",
         "neutral-n-400": "var(--neutral-n-400)",
         "neutral-n-300": "var(--neutral-n-300)",
         "neutral-n-250": "var(--neutral-n-250)",

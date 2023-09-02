@@ -51,14 +51,14 @@ const Navbar = () => {
             {/* <span className="text-neutral-n-500"> | MC: $135.15 M</span> */}
           </Badge>
         </div>
-        <div className="relative lg:flex items-center hidden border border-neutral-n-200 rounded-lg flex-grow flex-shrink">
+        <div className="relative lg:flex items-center hidden border border-neutral-n-250 rounded-lg flex-grow flex-shrink">
           <Input
             type="text"
             id="search"
             placeholder="Search by Address / Request Key / Account / Block / Token"
             className="text-neutral-n-400 text-xs rounded-lg border-none h-8"
           />
-          <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-primary-b-500 py-2 w-[45px] h-8" />
+          <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-neutral-n-450 py-2 w-[45px] h-8" />
           {/* <div className="bg-white p-2 shadow-sm rounded-md ml-2 cursor-pointer">
             <Image src={Sun} width={20} height={20} alt="sun" />
           </div> */}
@@ -70,10 +70,10 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                     <Link href="/txs">Transaction</Link>
                   </div>
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                     <Link href="/blocks">Blocks</Link>
                   </div>
                 </NavigationMenuContent>
@@ -88,7 +88,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
+                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                     <Link href="/">Testnet</Link>
                   </div>
                 </NavigationMenuContent>

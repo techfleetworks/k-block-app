@@ -51,13 +51,13 @@ export default function HomeNavbar() {
               <HoverCardContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md w-fit">
                 <Link
                   href="/txs"
-                  className="hover:bg-neutral-n-200 p-2 rounded-md"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
                 >
                   <p>Transactions</p>
                 </Link>
                 <Link
                   href="/blocks"
-                  className="hover:bg-neutral-n-200 p-2 rounded-md"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
                 >
                   <p>Blocks</p>
                 </Link>
@@ -100,7 +100,7 @@ export default function HomeNavbar() {
               <HoverCardContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md w-fit">
                 <Link
                   href="/"
-                  className="hover:bg-neutral-n-200 p-2 rounded-md"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
                 >
                   <p>Testnet</p>
                 </Link>
