@@ -31,7 +31,7 @@ export default function HomeNavbar() {
             </Link>
             <Badge
               variant="outline"
-              className="rounded-md px-3 py-2 flex w-fit gap-1 bg-neutral-n-50"
+              className="rounded-md px-3 py-2 flex w-fit gap-1 bg-[#EEF5F7]"
             >
               <span className="text-neutral-n-500"> KDA: </span>
               <span className="text-primary-b-500"> $0.563824 </span>
