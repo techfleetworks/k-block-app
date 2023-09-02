@@ -146,9 +146,12 @@ export default function Trending(props) {
                   tooltipText={
                     <>
                       A NFTs trustworthiness score.
-                      <a className="underline pl-1" href="http://example.com/">
+                      <Link
+                        className="underline pl-1"
+                        href="http://example.com/"
+                      >
                         Learn more.
-                      </a>
+                      </Link>
                     </>
                   }
                 />

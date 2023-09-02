@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip";
 import Image from "next/image";
 import QuestionMark from "@/assets/question-mark.svg";
+import Link from "next/link";
 
 const InfoItem = ({ label, value, tooltipText }) => (
   <div className="flex flex-wrap justify-between gap-1 px-5 py-3">
@@ -39,22 +40,29 @@ const InfoBar = () => {
         <InfoItem
           label="Average Gas Fee"
           value="$0.0005"
-          tooltipText="Yet Another Tooltip Text"
+          tooltipText="The cost of making a transaction"
         />
         <InfoItem
           label="Active Miners"
           value="50"
-          tooltipText="One More Tooltip Text"
+          tooltipText={
+            <>
+              The total users currently processing and validating transactions
+              <Link className="underline pl-1" href="http://example.com/">
+                Learn more.
+              </Link>
+            </>
+          }
         />
         <InfoItem
           label="Total Difficulty"
           value="5.6 Eh"
-          tooltipText="Sunny Days Cold Breeze"
+          tooltipText="How hard it is for miners to add new blocks to the chain. Varies based on how many people are mining."
         />
         <InfoItem
           label="Est. Network Hash Rate"
           value="181.2 PH/S"
-          tooltipText="Another Tooltip Text"
+          tooltipText="The computing power used while mining for this blockchain"
         />
       </div>
     </div>

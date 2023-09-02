@@ -1,3 +1,34 @@
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const InfoItem = ({ label, value, tooltipText }) => (
+  <div className="flex flex-wrap justify-between gap-1">
+    <TooltipProvider delayDuration={100}>
+      <Tooltip>
+        <TooltipTrigger className="flex items-center gap-1">
+          <Image
+            src={QuestionMark}
+            width={13}
+            height={13}
+            alt="question mark"
+            className="text-neutral-n-500"
+          />
+          <p className="text-sm font-medium text-neutral-n-500">{label}</p>
+        </TooltipTrigger>
+        <TooltipContent className="rounded border-primary-b-900 shadow-sm">
+          <TooltipArrow />
+          <p className="text-neutral-n-0">{tooltipText}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  </div>
+);
+
 import React from "react";
 import KDA from "@/assets/kda.svg";
 import Image from "next/image";
@@ -33,16 +64,10 @@ const CurrentPrice = () => {
         <div>
           {/* The below question mark probably needs to be a tooltip text, but I am not sure how to implement className property if tooltip text is applied properly */}
           <div className="flex items-center">
-            <Image
-              src={QuestionMark}
-              width={13}
-              height={13}
-              alt="question mark"
-              className="text-neutral-n-500 mr-1"
+            <InfoItem
+              label="Circulating Supply"
+              tooltipText="is there any information for this?"
             />
-            <p className="text-sm font-medium text-neutral-n-500">
-              Circulating Supply
-            </p>
           </div>
           <div className="flex text-xl font-semibold gap-1">
             <p className="text-neutral-n-700 font-semibold">230,000,400</p>
@@ -51,14 +76,10 @@ const CurrentPrice = () => {
         </div>
         <div className="mt-8">
           <div className="flex items-center">
-            <Image
-              src={QuestionMark}
-              width={13}
-              height={13}
-              alt="question mark"
-              className="text-neutral-n-500 mr-1"
+            <InfoItem
+              label="Market Cap"
+              tooltipText="is there any information for this?"
             />
-            <p className="text-sm font-medium text-neutral-n-500">Market Cap</p>
           </div>
           <p className="text-neutral-n-700 text-xl font-semibold">
             1,030,000,500
