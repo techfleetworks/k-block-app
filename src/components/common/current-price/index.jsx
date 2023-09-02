@@ -58,9 +58,7 @@ const CurrentPrice = () => {
               alt="question mark"
               className="text-neutral-n-500 mr-1"
             />
-            <p className="text-sm font-medium text-neutral-n-500">
-              Total Supply
-            </p>
+            <p className="text-sm font-medium text-neutral-n-500">Market Cap</p>
           </div>
           <p className="text-neutral-n-700 text-xl font-semibold">
             1,030,000,500

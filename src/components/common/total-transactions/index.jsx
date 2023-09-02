@@ -20,7 +20,7 @@ const TotalTransactions = () => {
               className="text-neutral-n-500 mr-1"
             />
             <p className="text-sm font-medium text-neutral-n-500">
-              Total Assets
+              Total Tokens
             </p>
           </div>
           <p className="text-neutral-n-700 text-xl font-semibold">564</p>
@@ -34,7 +34,7 @@ const TotalTransactions = () => {
               alt="question mark"
               className="text-neutral-n-500 mr-1"
             />
-            <p className="text-sm font-medium text-neutral-n-500">Market Cap</p>
+            <p className="text-sm font-medium text-neutral-n-500">Total NFTs</p>
           </div>
           <p className="text-neutral-n-700 text-xl font-semibold">
             134,490,464
