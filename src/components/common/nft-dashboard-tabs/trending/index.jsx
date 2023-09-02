@@ -30,8 +30,10 @@ export default function Trending(props) {
       img2: Verified,
       supply: "9780",
       holders: "978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.203 KDA",
+      maxPriceChange: "1.30 USD",
       volume: "10,000 KDA",
       volumePositive: "+0.48%",
       volumeNegative: undefined,
@@ -47,8 +49,10 @@ export default function Trending(props) {
       img2: undefined,
       supply: "8,109,780",
       holders: "10,978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.07 KDA",
+      maxPriceChange: "0.30 USD",
       volume: "10,000 KDA",
       volumePositive: undefined,
       volumeNegative: "-0.56%",
@@ -64,8 +68,10 @@ export default function Trending(props) {
       img2: Verified,
       supply: "9780",
       holders: "978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.203 KDA",
+      maxPriceChange: "1.30 USD",
       volume: "10,000 KDA",
       volumePositive: "+0.48%",
       volumeNegative: undefined,
@@ -112,8 +118,14 @@ export default function Trending(props) {
               </TableHead>
               <TableHead>
                 <Help
-                  label="Floor Price (KDA)"
-                  tooltipText="The lowest listed price for an NFT in this collection."
+                  label="Min Price (KDA)"
+                  tooltipText="Information is to be updated."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Max Price (KDA)"
+                  tooltipText="Information is to be updated."
                 />
               </TableHead>
               <TableHead>
@@ -178,13 +190,23 @@ export default function Trending(props) {
                   <TableCell label="Holders" className="table-text px-4">
                     {item.holders}
                   </TableCell>
-                  <TableCell label="Floor Price">
+                  <TableCell label="Min Price 24H">
                     <div className="block px-4">
                       <p className="table-text mb-1">
-                        {item.floorPrice ? item.floorPrice : null}
+                        {item.minPrice ? item.minPrice : null}
                       </p>
                       <p className="sm-muted-table-text">
-                        {item.floorPriceChange ? item.floorPriceChange : null}
+                        {item.minPriceChange ? item.minPriceChange : null}
+                      </p>
+                    </div>
+                  </TableCell>
+                  <TableCell label="Max Price 24H">
+                    <div className="block px-4">
+                      <p className="table-text mb-1">
+                        {item.maxPrice ? item.maxPrice : null}
+                      </p>
+                      <p className="sm-muted-table-text">
+                        {item.maxPriceChange ? item.maxPriceChange : null}
                       </p>
                     </div>
                   </TableCell>
