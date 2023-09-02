@@ -12,24 +12,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-
 import { ChevronDown } from "lucide-react";
-
-import Verified from "@/assets/verified.svg";
-import AngelApe from "@/assets/angel-ape.svg";
-import Link from "next/link";
+import TrendingNFTTable from "./trending-nft-table";
+import CardBoard from "./card-collection";
 
 export default function TrendingNFTAssets(props) {
   const [isGrid, setIsGrid] = useState(true);
-  const data = [
-    {
-      nft: AngelApe,
-      alt: "Angel Ape",
-      name: "Variation Apes #1",
-      logo: Verified,
-    },
-  ];
   return (
     <div>
       <h2 className="leading-normal text-neutral-n-700 text-xl font-semibold mb-9">
@@ -72,89 +60,7 @@ export default function TrendingNFTAssets(props) {
           />
         </div>
       </div>
-      {isGrid ? (
-        <div>
-          <div className="flex py-6">
-            {data.map((item, index) => (
-              <div key={index} className="rounded-xl p-5 border bg-white">
-                <Image
-                  src={item.img}
-                  width={200}
-                  height={200}
-                  alt="Variation Apes"
-                  className="rounded-md mb-2"
-                />
-
-                <div className="flex items-center">
-                  <p className="text-base text-primary-b-500 font-medium">
-                    {item.assetID}
-                  </p>
-                  <Image
-                    src={item.img2}
-                    alt="Verified"
-                    width={20}
-                    height={20}
-                    className="ml-1"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <TrendingNFTTable />
-      )}
+      {isGrid ? <CardBoard /> : <TrendingNFTTable />}
     </div>
   );
 }
-
-const TrendingNFTTable = () => {
-  const data = [
-    {
-      nft: AngelApe,
-      name: "Variation Apes #1",
-      logo: Verified,
-    },
-  ];
-  return (
-    <div>
-      <div className="rounded-xl border overflow-hidden mt-6">
-        <Table className="border-neutral-table-border">
-          <TableBody>
-            {data.map((item) => {
-              return (
-                <TableRow key={item.name}>
-                  <TableCell className="flex flex-wrap xl:flex-nowrap items-center gap-3 p-4">
-                    {item.nft !== undefined && (
-                      <Image
-                        src={item.nft}
-                        width={44}
-                        height={44}
-                        alt="Angel Ape"
-                        className="rounded-lg"
-                      />
-                    )}
-                    <div className="flex items-center">
-                      <Link href="/nft-asset">
-                        <p className="table-link">{item.name}</p>
-                      </Link>
-                      {item.logo !== undefined && (
-                        <Image
-                          src={item.logo}
-                          alt="Verified"
-                          width={20}
-                          height={20}
-                          className="ml-1"
-                        />
-                      )}
-                    </div>
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  );
-};
