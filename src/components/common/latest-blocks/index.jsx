@@ -78,20 +78,18 @@ const LatestBlocks = () => {
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
-                <Help label="Status" tooltipText="Some tooltip" />
+                <Help label="Status" tooltipText="The state of a transaction: failing, pending, or succeeding" />
               </TableHead>
               <TableHead>
-                <Help label="Height" tooltipText="Some tooltip" />
+                <Help label="Height" tooltipText="The identifying number of a block or set of blocks" />
               </TableHead>
               <TableHead>
-                <Help label="Chain" tooltipText="Some tooltip" />
+                <Help label="Chain" tooltipText="This number specifies which chain in the Chainweb a block or transaction is on (Learn more)" />
               </TableHead>
               <TableHead>
-                <Help label="Transaction" tooltipText="Some tooltip" />
+                <Help label="Txns" tooltipText="The total transactions of a specific block" />
               </TableHead>
-              <TableHead>
-                <Help label="Time" tooltipText="Some tooltip" />
-              </TableHead>
+              <TableHead>Time</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
