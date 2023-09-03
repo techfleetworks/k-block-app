@@ -27,7 +27,7 @@ const SearchBar = () => {
           <Input
             type="text"
             id="search"
-            placeholder="Search by Address / Request Key / Account Name / Block / Token / Domain Name"
+            placeholder="Search by Address / Request Key / Block / Token"
             className="pl-4 pr-10 py-2 text-neutral-n-400 rounded-[8px]"
           />
           <Image

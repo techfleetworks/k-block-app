@@ -60,7 +60,7 @@ const Navbar = () => {
           <Input
             type="text"
             id="search"
-            placeholder="Search by Address / Request Key / Account / Block / Token"
+            placeholder="Search by Address / Request Key / Block / Token"
             className="text-neutral-n-400 text-xs rounded-lg border-none h-8"
           />
           <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-neutral-n-450 py-2 w-[45px] h-8" />
