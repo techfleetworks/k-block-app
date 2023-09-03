@@ -10,9 +10,9 @@ import {
 import Image from "next/image";
 import Help from "@/components/common/help";
 
-import TransactionError from "@/assets/transaction-type-error.svg";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
-import TransactionSuccess from "@/assets/transaction-type-success.svg";
+import TransactionError from "@/assets/Error.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
+import TransactionSuccess from "@/assets/Success.svg";
 import Link from "next/link";
 
 const data = [
@@ -84,7 +84,15 @@ const LatestBlocks = () => {
                 <Help label="Height" tooltipText="The identifying number of a block or set of blocks" />
               </TableHead>
               <TableHead>
-                <Help label="Chain" tooltipText="This number specifies which chain in the Chainweb a block or transaction is on (Learn more)" />
+                <Help label="Chain" tooltipText=
+                {
+                  <>
+                    This number specifies which chain in the Chainweb a block or transaction is on ({""}
+                    <a className="underline" href="https://youtu.be/hYvXxFbsN6I">Learn more
+                    </a>).
+                  </>
+                }
+                />
               </TableHead>
               <TableHead>
                 <Help label="Txns" tooltipText="The total transactions of a specific block" />

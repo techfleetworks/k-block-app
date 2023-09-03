@@ -10,7 +10,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Help from "@/components/common/help";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
 import TransactionPendingIncoming from "@/assets/transaction-type-pending-incoming.svg";
 import Kadena from "@/assets/kadena.svg";
 import Hypercent from "@/assets/hypercent.svg";

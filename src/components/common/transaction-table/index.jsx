@@ -11,8 +11,8 @@ import {
 import Help from "@/components/common/help";
 import Image from "next/image";
 
-import TransactionSuccess from "@/assets/transaction-type-success.svg";
-import TransactionError from "@/assets/transaction-type-error.svg";
+import TransactionSuccess from "@/assets/Success.svg";
+import TransactionError from "@/assets/Error.svg";
 import Link from "next/link";
 
 export default function TransactionsTable() {

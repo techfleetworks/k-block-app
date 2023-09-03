@@ -11,9 +11,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Help from "@/components/common/help";
 import copy from "@/assets/copy.svg";
-import TransactionError from "@/assets/transaction-type-error.svg";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
-import TransactionSuccess from "@/assets/transaction-type-success.svg";
+import TransactionError from "@/assets/Error.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
+import TransactionSuccess from "@/assets/Success.svg";
 import CircleBigCheck from "@/assets/circle-big-check.svg";
 import Link from "next/link";
 

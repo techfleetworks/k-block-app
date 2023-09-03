@@ -12,9 +12,9 @@ import Help from "@/components/common/help";
 import Link from "next/link";
 
 import QuestionMark from "@/assets/question-mark.svg";
-import TransactionError from "@/assets/transaction-type-error.svg";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
-import TransactionSuccess from "@/assets/transaction-type-success.svg";
+import TransactionError from "@/assets/Error.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
+import TransactionSuccess from "@/assets/Success.svg";
 
 const data = [
   {
@@ -87,16 +87,24 @@ const LatestTransactions = () => {
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
-                <Help label="Status" tooltipText="Some tooltip" />
+                <Help label="Status" tooltipText="The state of a transaction: failing, pending, or succeeding" />
               </TableHead>
               <TableHead className="w-[200px]">
-                <Help label="Request Key" tooltipText="Some tooltip" />
+                <Help label="Request Key" tooltipText="The code needed to complete a cross-chain transfer" />
               </TableHead>
               <TableHead>
-                <Help label="Amount" tooltipText="Some tooltip" />
+                <Help label="Amount" tooltipText="The value of a specific transaction" />
               </TableHead>
               <TableHead>
-                <Help label="Chain" tooltipText="Some tooltip" />
+              <Help label="Chain" tooltipText=
+                {
+                  <>
+                    This number specifies which chain in the Chainweb a block or transaction is on ({""}
+                    <a className="underline" href="https://youtu.be/hYvXxFbsN6I">Learn more
+                    </a>).
+                  </>
+                }
+                />
               </TableHead>
             </TableRow>
           </TableHeader>
