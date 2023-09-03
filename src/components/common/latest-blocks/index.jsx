@@ -87,9 +87,9 @@ const LatestBlocks = () => {
                 <Help label="Chain" tooltipText=
                 {
                   <>
-                    This number specifies which chain in the Chainweb a block or transaction is on ({""}
-                    <a className="underline" href="https://youtu.be/hYvXxFbsN6I">Learn more
-                    </a>).
+                    This number specifies which chain in the Chainweb a block or transaction is on. {""}
+                    <a className="text-[#30B9F4] " href="https://youtu.be/hYvXxFbsN6I">Learn more
+                    </a>
                   </>
                 }
                 />
