@@ -29,15 +29,15 @@ const TransactionHistory = () => {
     },
   ];
 
-  const [isActive, setIsActive] = useState(false);
-  const bgColor = isActive
-    ? "bg-primary-b-500 border border-neutral-n-250 text-xs text-neutral-n-0 px-2 rounded-sm"
-    : "bg-neutral-n-50 border border-neutral-n-250 text-xs text-n-800 px-2";
+  const [activeButton, setActiveButton] = useState("24H");
+  const activeColor =
+    "bg-primary-b-500 border border-neutral-n-250 text-xs text-neutral-n-0 px-2 rounded-sm";
+  const inActiveColor =
+    "bg-neutral-n-50 border border-neutral-n-250 text-xs text-n-800 px-2";
 
-  const [isNotActive, setIsNotActive] = useState(false);
-  const dateColor = isNotActive
-    ? "bg-neutral-n-50 border border-neutral-n-250 text-xs text-n-800 px-2"
-    : "bg-primary-b-500 border border-neutral-n-250 text-xs text-neutral-n-0 px-2";
+  function toggleActive(id) {
+    setActiveButton(id);
+  }
 
   return (
     <div className="bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md overflow-x-auto md:overflow-auto">
@@ -52,18 +52,27 @@ const TransactionHistory = () => {
         </div>
         <div className="flex -ml-48">
           <button
-            onClick={() => setIsNotActive(true)}
-            className={`${dateColor}`}
+            onClick={() => toggleActive("24H")}
+            className={activeButton === "24H" ? activeColor : inActiveColor}
           >
             24H
           </button>
-          <button onClick={() => setIsActive(true)} className={`${bgColor}`}>
+          <button
+            onClick={() => toggleActive("7D")}
+            className={activeButton === "7D" ? activeColor : inActiveColor}
+          >
             7D
           </button>
-          <button onClick={() => setIsActive(true)} className={`${bgColor}`}>
+          <button
+            onClick={() => toggleActive("14D")}
+            className={activeButton === "14D" ? activeColor : inActiveColor}
+          >
             14D
           </button>
-          <button onClick={() => setIsActive(true)} className={`${bgColor}`}>
+          <button
+            onClick={() => toggleActive("30D")}
+            className={activeButton === "30D" ? activeColor : inActiveColor}
+          >
             30D
           </button>
         </div>
