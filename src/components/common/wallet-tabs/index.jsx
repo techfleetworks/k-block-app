@@ -173,17 +173,7 @@ const WalletTabs = () => {
                   <TableHead className="pl-0">
                     <Help
                       label="Txn Hash"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The unique identifier which validates a particular transaction on the blockchain"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
@@ -205,43 +195,26 @@ const WalletTabs = () => {
                   <TableHead className="pl-0">
                     <Help
                       label="Block Height"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>{" "}
-                        </>
-                      }
+                      tooltipText="A specific location in the blockchain, measured by the number of blocks preceding it"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
                     <Help
                       label="Addresses"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The users involved in a trade"
                     />
                   </TableHead>
                   <TableHead className="pl-0 text-neutral-n-800">
-                    Value
+                    <Help
+                      label="Value"
+                      tooltipText="The amount of the trade in terms of token and USD"
+                    />
                   </TableHead>
                   <TableHead className="pl-0 text-neutral-n-800">
-                    Time
+                   Time
                   </TableHead>
                   <TableHead className="p-0">
-                    <Help label="Txn Fee" tooltipText="Tooltip text here" />
+                    <Help label="Txn Fee" tooltipText="A fee paid to miners for processing a transaction" />
                   </TableHead>
                 </TableRow>
               </TableHeader>
