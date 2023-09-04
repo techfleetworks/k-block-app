@@ -3,6 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
+import * as React from "react";
+
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -14,6 +22,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const NavbarLink = ({ href, text }) => (
   <NavigationMenu>
@@ -32,10 +41,22 @@ const NavbarLink = ({ href, text }) => (
 );
 
 const Navbar = () => {
-  // I wanted to apply the following colour change due to the request from the Design team, but it does not seem possible with how the code is set up.
-  // const [isActive, setIsActive] = useState(false);
-  // const buttonColor = isActive
-  // ? "text-primary-b-500" : "text-neutral-n-700";
+  const [isTabletAndMobile, setIsTabletAndMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 1024) {
+        setIsTabletAndMobile(true);
+      } else {
+        setIsTabletAndMobile(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
@@ -69,38 +90,88 @@ const Navbar = () => {
           </div> */}
         </div>
 
-        <div className="md:flex md:px-4 hidden">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
-                    <Link href="/txs">Transaction</Link>
-                  </div>
-                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
-                    <Link href="/blocks">Blocks</Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <NavbarLink href="/tokens" text="Tokens" />
-          <NavbarLink href="/nfts" text="NFTs" />
-          <NavbarLink href="/" text="Resources" />
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
-                    <Link href="/">Testnet</Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
+        {isTabletAndMobile ? (
+          <div className="inline-block hamburger-icon">
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <button className="text-neutral-n-700 text-4xl px-4 py-2 rounded-lg cursor-pointer">
+                  <HamburgerMenuIcon />
+                </button>
+              </HoverCardTrigger>
+              <HoverCardContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md w-fit md:mr-12 mr-2">
+                <Link
+                  href="/txs"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>Transactions</p>
+                </Link>
+                <Link
+                  href="/blocks"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>Blocks</p>
+                </Link>
+                <Link
+                  href="/tokens"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>Tokens</p>
+                </Link>
+                <Link
+                  href="/nfts"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>NFTs</p>
+                </Link>
+                <Link
+                  href="/"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>Resources</p>
+                </Link>
+                <Link
+                  href="/"
+                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
+                >
+                  <p>Testnet</p>
+                </Link>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
+        ) : (
+          <div className="md:flex md:px-4 hidden">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                    <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
+                      <Link href="/txs">Transaction</Link>
+                    </div>
+                    <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
+                      <Link href="/blocks">Blocks</Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <NavbarLink href="/tokens" text="Tokens" />
+            <NavbarLink href="/nfts" text="NFTs" />
+            <NavbarLink href="/" text="Resources" />
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
+                    <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
+                      <Link href="/">Testnet</Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        )}
       </nav>
     </header>
   );
