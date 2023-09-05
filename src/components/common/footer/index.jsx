@@ -26,7 +26,7 @@ const Footer = () => {
           by Tech Fleet community contributors
         </p>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center">
         <a
           className="text-neutral-n-500 text-xs font-medium"
           href="https://techfleet.org/"
