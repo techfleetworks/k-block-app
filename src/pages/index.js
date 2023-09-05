@@ -8,10 +8,12 @@ import {
   TotalTransactions,
   TransactionHistory,
 } from "@/components/common";
+import HomeNavbar from "@/components/common/navbar/home-navbar";
 
 export default function Home() {
   return (
     <div>
+      <HomeNavbar />
       <Searchbar />
       <div className="container">
         <InfoBar />

@@ -16,6 +16,13 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -59,51 +66,63 @@ export default function HomeNavbar() {
           </div>
           {isTabletAndMobile ? (
             <div className="inline-block hamburger-icon">
-              <HoverCard>
-                <HoverCardTrigger asChild>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
                   <button className="text-neutral-n-700 text-4xl px-4 py-2 rounded-lg cursor-pointer">
                     <HamburgerMenuIcon />
                   </button>
-                </HoverCardTrigger>
-                <HoverCardContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md w-fit md:mr-12 mr-2">
-                  <Link
-                    href="/txs"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>Transactions</p>
-                  </Link>
-                  <Link
-                    href="/blocks"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>Blocks</p>
-                  </Link>
-                  <Link
-                    href="/tokens"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>Tokens</p>
-                  </Link>
-                  <Link
-                    href="/nfts"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>NFTs</p>
-                  </Link>
-                  <Link
-                    href="/"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>Resources</p>
-                  </Link>
-                  <Link
-                    href="/"
-                    className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                  >
-                    <p>Testnet</p>
-                  </Link>
-                </HoverCardContent>
-              </HoverCard>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white py-2 flex flex-col gap-4 rounded-md md:mr-12 mr-2">
+                  <DropdownMenuItem>
+                    <Link
+                      href="/txs"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p className="font-serif">Transaction</p>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="/blocks"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p className="font-serif">Blocks</p>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="/tokens"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p>Tokens</p>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="/nfts"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p>NFTs</p>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="/"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p>Resources</p>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="/"
+                      className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                    >
+                      <p>Testnet</p>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           ) : (
             <div className="flex">

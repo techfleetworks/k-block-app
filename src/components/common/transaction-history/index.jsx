@@ -40,7 +40,7 @@ const TransactionHistory = () => {
   }
 
   return (
-    <div className="bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md overflow-x-auto md:overflow-auto">
+    <div className="bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md xl:w-40 overflow-x-auto md:overflow-auto">
       <header className="flex justify-between">
         <div>
           <h1 className="text-neutral-n-700 text-sm font-medium">
@@ -50,7 +50,7 @@ const TransactionHistory = () => {
             (measured in millions)
           </span>
         </div>
-        <div className="flex -ml-48">
+        <div className="flex">
           <button
             onClick={() => toggleActive("24H")}
             className={activeButton === "24H" ? activeColor : inActiveColor}
@@ -77,7 +77,7 @@ const TransactionHistory = () => {
           </button>
         </div>
       </header>
-      <div className="w-36 -ml-6">
+      <div className="xl:w-[34vw] w-[92vw] -ml-6 overflow-x-auto md:overflow-auto">
         <LineChart width={500} height={250} margin={{ top: 20 }} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
