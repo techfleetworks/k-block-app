@@ -37,28 +37,37 @@ const NftCollections = () => {
                     label="Collections"
                     tooltipText={
                       <>
-                        Rare digital assets designed by artist(s).
+                        A group of NFTs created under the same smart contract{" "}
                         <a className="underline" href="http://example.com/">
-                          Learn more.
+                          (Learn more)
                         </a>
                       </>
                     }
                   />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Items" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Items"
+                    tooltipText="The total number of NFTs in this collection"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Holders" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Holders"
+                    tooltipText="The number of unique NFT owners in this collection"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
                   <Help
                     label="Floor Price (KDA)"
-                    tooltipText="Tooltip text here"
+                    tooltipText="The lowest-listed price for an NFT in this collection"
                   />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Volume 24h" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Volume 24h"
+                    tooltipText="The total trades for this NFT collection in the last 24 hours"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
                   <Help label="Sales" tooltipText="Tooltip text here" />
