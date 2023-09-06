@@ -87,23 +87,38 @@ const LatestTransactions = () => {
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
-                <Help label="Status" tooltipText="The state of a transaction: failing, pending, or succeeding" />
+                <Help
+                  label="Status"
+                  tooltipText="The state of a transaction: failing, pending, or succeeding"
+                />
               </TableHead>
               <TableHead className="w-[200px]">
-                <Help label="Request Key" tooltipText="The code needed to complete a cross-chain transfer" />
+                <Help
+                  label="Request Key"
+                  tooltipText="The code needed to complete a cross-chain transfer"
+                />
               </TableHead>
               <TableHead>
-                <Help label="Amount" tooltipText="The value of a specific transaction" />
+                <Help
+                  label="Amount"
+                  tooltipText="The value of a specific transaction"
+                />
               </TableHead>
               <TableHead>
-              <Help label="Chain" tooltipText=
-                {
-                  <>
-                    This number specifies which chain in the Chainweb a block or transaction is on. {""}
-                    <a className="text-[#30B9F4]" href="https://youtu.be/hYvXxFbsN6I">Learn more
-                    </a>
-                  </>
-                }
+                <Help
+                  label="Chain"
+                  tooltipText={
+                    <>
+                      This number specifies which chain in the Chainweb a block
+                      or transaction is on. {""}
+                      <a
+                        className="text-[#30B9F4]"
+                        href="https://youtu.be/hYvXxFbsN6I"
+                      >
+                        Learn more
+                      </a>
+                    </>
+                  }
                 />
               </TableHead>
             </TableRow>
@@ -121,7 +136,9 @@ const LatestTransactions = () => {
                 </TableCell>
                 <TableCell className="p-6">
                   <p className="text-primary-b-500 truncate font-medium text-sm max-w-[15ch]">
-                    <a href="">{transaction.requestKey}</a>
+                    <Link href="/transaction-details">
+                      {transaction.requestKey}
+                    </Link>
                   </p>
                   <p className="text-neutral-n-500 text-xs ">
                     {transaction.time}

@@ -21,10 +21,11 @@ const TransactionDetails = () => {
                     label="Request Key"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        The string of numbers and letters to access a
+                        transaction.{" "}
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -56,9 +57,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -82,9 +83,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -98,9 +99,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -148,10 +149,14 @@ const TransactionDetails = () => {
                     <tbody>
                       <tr>
                         <td className="flex text-primary-b-500 cursor-pointer">
-                          k:b81799a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                          <Link href="/wallet-overview">
+                            k:b81799a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                          </Link>
                         </td>
                         <td className="flex text-primary-b-500 cursor-pointer">
-                          k:bf3822a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                          <Link href="/wallet-overview">
+                            k:bf3822a0028e30765af127d09b0c404aad09f7ae06da90f864992848959e66b7
+                          </Link>
                         </td>
                         <td className="flex">0.0092 KDA</td>
                       </tr>
@@ -174,9 +179,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -198,9 +203,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -214,9 +219,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -232,9 +237,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -250,9 +255,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />
@@ -266,9 +271,9 @@ const TransactionDetails = () => {
                     tooltipText={
                       <>
                         Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        <Link className="underline" href="http://example.com/">
                           Learn more.
-                        </a>
+                        </Link>
                       </>
                     }
                   />

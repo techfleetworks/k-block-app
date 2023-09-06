@@ -34,15 +34,20 @@ import KDA from "@/assets/kda.svg";
 import Image from "next/image";
 import { ChevronUpIcon } from "lucide-react";
 import QuestionMark from "@/assets/question-mark.svg";
+import Link from "next/link";
 
 const CurrentPrice = () => {
   return (
     <div className="bg-neutral-n-0 flex-1 p-5 rounded-xl drop-shadow-md">
       <div className="flex justify-between">
         <div className="flex gap-3 items-center">
-          <Image width={44} height={44} src={KDA} alt="KDA Logo" />
+          <Link href="/token-details">
+            <Image width={44} height={44} src={KDA} alt="KDA Logo" />
+          </Link>
           <div className="flex flex-col justify-start items-start">
-            <h4 className="text-sm text-neutral-n-700 font-medium">KDA</h4>
+            <h4 className="text-sm text-neutral-n-700 font-medium">
+              <Link href="/token-details">KDA</Link>
+            </h4>
             <p className="text-xl text-neutral-n-700 font-bold">$1.054</p>
           </div>
         </div>

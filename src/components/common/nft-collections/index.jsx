@@ -86,7 +86,7 @@ const NftCollections = () => {
                     height={44}
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections">Kawaii K9</Link>
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>

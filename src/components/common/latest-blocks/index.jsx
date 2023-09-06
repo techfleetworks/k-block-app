@@ -78,24 +78,39 @@ const LatestBlocks = () => {
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
-                <Help label="Status" tooltipText="The state of a transaction: failing, pending, or succeeding" />
-              </TableHead>
-              <TableHead>
-                <Help label="Height" tooltipText="The identifying number of a block or set of blocks" />
-              </TableHead>
-              <TableHead>
-                <Help label="Chain" tooltipText=
-                {
-                  <>
-                    This number specifies which chain in the Chainweb a block or transaction is on. {""}
-                    <a className="text-[#30B9F4] " href="https://youtu.be/hYvXxFbsN6I">Learn more
-                    </a>
-                  </>
-                }
+                <Help
+                  label="Status"
+                  tooltipText="The state of a transaction: failing, pending, or succeeding"
                 />
               </TableHead>
               <TableHead>
-                <Help label="Txns" tooltipText="The total transactions of a specific block" />
+                <Help
+                  label="Height"
+                  tooltipText="The identifying number of a block or set of blocks"
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Chain"
+                  tooltipText={
+                    <>
+                      This number specifies which chain in the Chainweb a block
+                      or transaction is on. {""}
+                      <a
+                        className="text-[#30B9F4] "
+                        href="https://youtu.be/hYvXxFbsN6I"
+                      >
+                        Learn more
+                      </a>
+                    </>
+                  }
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Txns"
+                  tooltipText="The total transactions of a specific block"
+                />
               </TableHead>
               <TableHead>Time</TableHead>
             </TableRow>
@@ -112,9 +127,12 @@ const LatestBlocks = () => {
                   />
                 </TableCell>
                 <TableCell className="p-6">
-                  <a href="" className="text-primary-b-500 text-sm font-medium">
+                  <Link
+                    href="/block-details"
+                    className="text-primary-b-500 text-sm font-medium"
+                  >
                     {block.height}
-                  </a>
+                  </Link>
                 </TableCell>
                 <TableCell className="p-6">
                   <p className="text-sm font-medium text-neutral-n-700">

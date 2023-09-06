@@ -59,6 +59,14 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [active, setIsActive] = React.useState("Home");
+  const activated = "text-primary-b-500 font-medium text-sm";
+  const deactivated = "text-neutral-n-700 font-medium text-sm";
+
+  function toggleActive(id) {
+    setIsActive(id);
+  }
+
   return (
     <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
       <nav className="flex justify-between items-center gap-4">
@@ -156,10 +164,20 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>
+                    <button>Blockchain</button>
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
                     <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
-                      <Link href="/txs">Transaction</Link>
+                      <Link
+                        href="/txs"
+                        onClick={() => toggleActive("txs")}
+                        className={
+                          active === "Transaction" ? activated : deactivated
+                        }
+                      >
+                        Transaction
+                      </Link>
                     </div>
                     <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                       <Link href="/blocks">Blocks</Link>
@@ -168,7 +186,12 @@ const Navbar = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <NavbarLink href="/tokens" text="Tokens" />
+            <NavbarLink
+              href="/tokens"
+              text="Tokens"
+              onClick={() => toggleActive("Tokens")}
+              className={active === "Tokens" ? activated : deactivated}
+            />
             <NavbarLink href="/nfts" text="NFTs" />
             <NavbarLink href="/" text="Resources" />
             <NavigationMenu>

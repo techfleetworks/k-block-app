@@ -77,8 +77,13 @@ const TransactionHistory = () => {
           </button>
         </div>
       </header>
-      <div className="xl:w-[34vw] w-[92vw] -ml-6 overflow-x-auto md:overflow-auto">
-        <LineChart width={500} height={250} margin={{ top: 20 }} data={data}>
+      <div className="xl:w-[33vw] overflow-x-auto md:overflow-auto">
+        <LineChart
+          width={465}
+          height={250}
+          margin={{ top: 20, left: -20 }}
+          data={data}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis type="number" domain="0, 250" />
