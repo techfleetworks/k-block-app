@@ -13,14 +13,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="Owner"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The wallet address of this NFT's current holder"              
               />
             </th>
             <td className="table-link">
@@ -31,14 +24,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="Creator"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The wallet address of this NFT's minter (the person who first created this NFT)"
               />
             </th>
             <td className="table-link">
@@ -49,14 +35,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="External Link"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The official website for an NFT collection"
               />
             </th>
             <td className="table-link">
@@ -89,14 +68,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="Royalties"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The percentage the creator of an NFT collection receives from each transaction"
               />
             </th>
             <td className="table-link">

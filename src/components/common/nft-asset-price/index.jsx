@@ -30,7 +30,7 @@ const NftAssetPrice = () => {
         Price History
       </h2>
       <LineChart width={600} height={400} margin={{ top: 20 }} data={data}>
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+        <Line type="monotone" dataKey="pv" stroke="#0078CC" dot={false} />
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" className="text-sm text-neutral-n-800" />
         <YAxis
