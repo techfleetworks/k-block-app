@@ -70,10 +70,10 @@ const NftCollections = () => {
                   />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Sales" tooltipText="Tooltip text here" />
+                  <Help label="Sales" tooltipText="The number of transactions in a collection's history" />
                 </TableHead>
                 <TableHead className="p-0">
-                  <Help label="Avg. Prices" tooltipText="Tooltip text here" />
+                  <Help label="Avg. Prices" tooltipText="Mean price, in KDA, of an NFT in a collection" />
                 </TableHead>
               </TableRow>
             </TableHeader>
