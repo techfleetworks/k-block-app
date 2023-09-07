@@ -211,10 +211,13 @@ const WalletTabs = () => {
                     />
                   </TableHead>
                   <TableHead className="pl-0 text-neutral-n-800">
-                   Time
+                    Time
                   </TableHead>
                   <TableHead className="p-0">
-                    <Help label="Txn Fee" tooltipText="A fee paid to miners for processing a transaction" />
+                    <Help
+                      label="Txn Fee"
+                      tooltipText="A fee paid to miners for processing a transaction"
+                    />
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -343,65 +346,25 @@ const WalletTabs = () => {
                   <TableHead className="pl-5">
                     <Help
                       label="Asset ID"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The unique identifying number for a particular NFT in a user's wallet"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
                     <Help
                       label="Collection"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="A group of NFTs under the same smart contract"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
                     <Help
                       label="Status"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="How a particular NFT is being utilized"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
                     <Help
                       label="Collection Floor Price"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The listed value of the lowest-cost NFT in a collection"
                     />
                   </TableHead>
                   <TableHead className="pl-0 text-neutral-n-800">

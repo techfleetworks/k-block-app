@@ -42,14 +42,7 @@ export const columns = [
       return (
         <Help
           label="Contract Address"
-          tooltipText={
-            <>
-              Tooltip text here.{" "}
-              <a className="underline" href="http://example.com/">
-                Learn more.
-              </a>
-            </>
-          }
+          tooltipText="A link to a particular cryptocurrency's smart contract"
         />
       );
     },
