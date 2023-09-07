@@ -8,7 +8,7 @@ export default function TokenDetails() {
     <>
       <Navbar />
       <div className="container md:px-12 px-3">
-        <h1 className="my-8 text-[32px] font-bold">Token Details</h1>
+        <h1 className="text-3xl font-bold my-7">Token Details</h1>
         <DetailOverview />
         <TokenTable />
       </div>

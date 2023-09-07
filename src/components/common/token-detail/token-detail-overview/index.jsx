@@ -1,10 +1,12 @@
 import React from "react";
+import KDABlock from "./kda";
+import PriceHistory from "./token-detail-history";
 
 export default function DetailOverview() {
   return (
-    <div>
-      <p>This is a block</p>
-      <p>This is a second block</p>
+    <div className="flex flex-wrap md:flex-nowrap">
+      <KDABlock />
+      <PriceHistory />
     </div>
   );
 }
