@@ -11,17 +11,35 @@ const PieChart = dynamic(() => (
 
 
 const data = [
-  { name: 'KDA', quantity: 28, price: 100000 },
-  { name: 'HYPE', quantity: 24, price: 60102 },
-  { name: 'HYPE', quantity: 18, price: 40000.89 },
-  { name: 'FLUX', quantity: 12, price: 1234.23 },
-  { name: 'HYPE', quantity: 11, price: 3219.33 },
-  { name: 'Others', quantity: 7, price: 173 }
+  { name: 'KDA', quantity: 28, price: 100000 , kda: 10000},
+  { name: 'HYPE', quantity: 24, price: 60102 , kda: 10000},
+  { name: 'HYPE', quantity: 18, price: 40000.89 , kda: 10000},
+  { name: 'FLUX', quantity: 12, price: 1234.23 , kda: 10000},
+  { name: 'HYPE', quantity: 11, price: 3219.33 , kda: 10000},
+  { name: 'Others', quantity: 7, price: 173 , kda: 10000}
 ];
 
 
-  const allprice = data.reduce((acc, val) => acc + val.price, 0)
-  const data1 = data.map((item) => ({ ...item, percent: 100 * item.price / allprice }))
+function formatNum(val) {
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(val);
+}
+
+
+function formatUSD(val) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  }).format(val);
+}
+
+
+const allprice = data.reduce((acc, val) => acc + val.quantity, 0)
+const data1 = data.map((item) => ({ ...item, percent: formatNum(100 * item.quantity / allprice) }))
 
 const COLORS = ['#007DB2', '#0078CC', '#9AECA4', '#C5E7F6', '#0E4C66', '#616E73'];
 
@@ -30,7 +48,6 @@ const COLORS = ['#007DB2', '#0078CC', '#9AECA4', '#C5E7F6', '#0E4C66', '#616E73'
 export default function PortfolioBreakdown() {
   const [activeIndex, setActiveIndex] = useState(null);
   const onMouseOver = useCallback((data, index) => {
-    console.log(index)
     setActiveIndex(index);
   }, []);
   const onMouseLeave = useCallback((data, index) => {
@@ -41,15 +58,20 @@ export default function PortfolioBreakdown() {
     const { payload } = props;
 
     return (
-      <ul>
-        {
-          payload.map((entry, index) =>
-          console.log(entry)
-          (
-            <li key={`item-${index}`}>{entry.value} {entry.percent}</li>
-          ))
-        }
-      </ul>
+      <div className="justify-center">
+        <div className="my-4 px-2">
+          <div className='grid  grid-cols-2	gap-x-10	'>
+            {data1.map((legend, index) => {
+              return (index <= data1.length &&
+                <div className="" key={`item-${index}`}>
+                  <div className="inline-block rounded-full h-3 w-3 items-center justify-center mr-2"
+                    style={{ backgroundColor: COLORS[index] }} />
+                  <div className="inline-block">{legend.percent}% {legend.name}</div>
+                </div>)
+            })}
+          </div>
+        </div>
+      </div>
     );
   }
 
@@ -67,7 +89,6 @@ export default function PortfolioBreakdown() {
       fill,
       percent
     } = props;
-
 
     return (
       <>
@@ -94,32 +115,26 @@ export default function PortfolioBreakdown() {
           y="35%"
           // dy={8}
           textAnchor="middle" >
-          {payload.name}
+          {formatUSD(payload.price)}
         </text>
-
       </>
     )
   };
 
 
   return (
-    <div className="bg-neutral-n-100  p-5 rounded-md w-800">
+    <div className="bg-neutral-n-100  p-5 rounded-md ">
       <h1>Portfolio Breakdown</h1>
-      <PieChart width={300} height={350}>
-        {/* <Legend
-          verticalAlign="bottom"
-         height={36}
-        /> */}
-        {/* iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style}  */}
+      {/* <div className='mt-4'> */}
+      <PieChart width={300} height={300} className='mt-7'>
         <Legend content={renderLegend} />
-
         <Pie
           activeIndex={activeIndex}
           data={data1}
           dataKey="quantity"
           nameKey="name"
           // cx="50%"
-          cy="40%"
+          // cy="30%"
           innerRadius={55}
           outerRadius={90}
           legendType="circle"
@@ -129,11 +144,12 @@ export default function PortfolioBreakdown() {
           onMouseLeave={onMouseLeave}
           activeShape={renderActiveShape}
         >
-          {data.map((entry, index) => (
+          {data1.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
       </PieChart>
+      {/* </div> */}
     </div>
   )
 }
