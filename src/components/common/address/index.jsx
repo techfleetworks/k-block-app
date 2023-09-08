@@ -1,6 +1,6 @@
 import React from "react";
 import copy from "@/assets/copy.svg";
-import qrcode from "@/assets/qrcode.svg";
+import qrcode from "@/assets/QR.svg";
 import Image from "next/image";
 
 const Address = () => {

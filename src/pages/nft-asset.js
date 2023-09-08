@@ -3,7 +3,7 @@ import SpaceApe from "@/assets/variation-apes128.png";
 import AngelApe from "@/assets/variation-apes2.png";
 import FunkyApe from "@/assets/variation-apes9.png";
 import Verified from "@/assets/verified.svg";
-import { NftAssetGrid } from "@/components/common";
+import { Navbar, NftAssetGrid } from "@/components/common";
 import Cards from "@/components/common/nft-asset-cards";
 import Tabs from "@/components/common/nft-asset-tabs/nft-asset-tabs";
 
@@ -32,7 +32,8 @@ export default function NftAsset() {
   ];
   return (
     <>
-      <div className="container">
+      <Navbar />
+      <div className="container md:px-12 px-3">
         <section>
           <NftAssetGrid />
         </section>

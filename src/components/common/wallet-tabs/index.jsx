@@ -10,7 +10,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Help from "@/components/common/help";
-import TransactionPending from "@/assets/transaction-type-pending-outgoing.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
 import TransactionPendingIncoming from "@/assets/transaction-type-pending-incoming.svg";
 import Kadena from "@/assets/kadena.svg";
 import Hypercent from "@/assets/hypercent.svg";
@@ -18,9 +18,8 @@ import HeartGlassesNft from "@/assets/heartglassesnft.svg";
 import KittyWarriorNft from "@/assets/kittywarriornft.svg";
 import Link from "next/link";
 
-
 import { DataTable } from "@/components/ui/table-container";
-import { columns } from "./columns"
+import { columns } from "./columns";
 
 const data = [
   {
@@ -34,7 +33,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Hypercent",
       nft: Hypercent,
@@ -45,7 +45,8 @@ const data = [
     quantity: 10492,
     price: 0.04,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Flux",
       nft: Kadena,
@@ -56,7 +57,8 @@ const data = [
     quantity: 10492,
     price: 0.39,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Kaddex",
       nft: Hypercent,
@@ -67,7 +69,8 @@ const data = [
     quantity: 10492,
     price: 0.01,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "ArKade",
       nft: Kadena,
@@ -78,7 +81,8 @@ const data = [
     quantity: 10492,
     price: 0.000138,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Timpi",
       nft: Hypercent,
@@ -89,7 +93,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "KDLaunch",
       nft: Kadena,
@@ -100,7 +105,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "KDSwap",
       nft: Hypercent,
@@ -111,7 +117,8 @@ const data = [
     quantity: 10492,
     price: 0.005,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Anedak",
       nft: Kadena,
@@ -122,7 +129,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }, {
+  },
+  {
     token_name: {
       name: "Babena",
       nft: Hypercent,
@@ -133,15 +141,8 @@ const data = [
     quantity: 10492,
     price: 0.57,
     value: 5836.23,
-  }
-
-
-
-
-]
-
-
-
+  },
+];
 
 const WalletTabs = () => {
   return (
@@ -156,32 +157,26 @@ const WalletTabs = () => {
 
         {/* Transactions Tab */}
         <TabsContent
-          className="leading-normal  rounded-tl-none"
+          className="leading-normal rounded-tl-none"
           value="transactions"
         >
-          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Transactions</h2>
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">
+            Transactions
+          </h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
                 <TableRow className="bg-neutral-n-100 text-neutral-n-800 hover:bg-neutral-n-100 py-3.5">
-                  <TableHead className="pl-5">Status</TableHead>
-                  <TableHead>
+                  <TableHead className="text-neutral-n-800 pl-5">
+                    Status
+                  </TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Txn Hash"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The unique identifier which validates a particular transaction on the blockchain"
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Method"
                       tooltipText={
@@ -197,42 +192,32 @@ const WalletTabs = () => {
                       }
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Block Height"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>{" "}
-                        </>
-                      }
+                      tooltipText="A specific location in the blockchain, measured by the number of blocks preceding it"
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Addresses"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The users involved in a trade"
                     />
                   </TableHead>
-                  <TableHead>Value</TableHead>
-                  <TableHead>Time</TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    <Help
+                      label="Value"
+                      tooltipText="The amount of the trade in terms of token and USD"
+                    />
+                  </TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    Time
+                  </TableHead>
                   <TableHead className="p-0">
-                    <Help label="Txn Fee" tooltipText="Tooltip text here" />
+                    <Help
+                      label="Txn Fee"
+                      tooltipText="A fee paid to miners for processing a transaction"
+                    />
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -343,93 +328,17 @@ const WalletTabs = () => {
         </TabsContent>
 
         {/* Tokens Tab */}
-        <TabsContent
-          className="leading-normal "
-          value="tokens"
-        >
-          <h2 className="font-semibold text-xl  text-neutral-n-700  ">Tokens Holdings</h2>
-          
-          
-          {/* <div className="rounded-xl border overflow-hidden mt-5"> */}
-          {/* <Table className="border-neutral-table-border">
-              <TableHeader>
-                <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-                  <TableHead>Token Name</TableHead>
-                  <TableHead>Symbols</TableHead>
-                  <TableHead className="pl-5">
-                    <Help
-                      label="Contract Address"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
-                    />
-                  </TableHead>
-                  <TableHead>Quantity</TableHead>
-                  <TableHead>Price</TableHead>
-                  <TableHead>Value</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
-                    <Image
-                      src={Kadena}
-                      width={32}
-                      height={32}
-                      alt="Kadena Token Logo"
-                    />
-                    <Link href="#">Kadena</Link>
-                  </TableCell>
-                  <TableCell className="table-text" >
-                    KDA
-                  </TableCell>
-                  <TableCell className="table-link">
-                    <Link href="#">coin</Link>
-                  </TableCell>
-                  <TableCell className="table-text">10,492</TableCell>
-                  <TableCell className="table-text">$0.57</TableCell>
-                  <TableCell className="table-text">$5,836.23</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="flex items-center gap-3 pl-5 pr-0 py-5 table-link">
-                    <Image
-                      src={Hypercent}
-                      width={32}
-                      height={32}
-                      alt="Hypercent Token Logo"
-                    />
-                    <Link href="#">Hypercent</Link>
-                  </TableCell>
-                  <TableCell className="table-text">HYPE</TableCell>
-                  <TableCell className="table-link">
-                    <Link href="#">hypercent.prod-hype-coin</Link>
-                  </TableCell>
-                  <TableCell className="table-text">10,492</TableCell>
-                  <TableCell className="table-text">$0.04</TableCell>
-                  <TableCell className="table-text">$5,836.23</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table> */}
+        <TabsContent className="leading-normal " value="tokens">
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">
+            Tokens Holdings
+          </h2>
 
-
-            
           <DataTable columns={columns} data={data} />
-
-
-          {/* </div> */}
         </TabsContent>
 
         {/* NFTs Tab*/}
         <TabsContent value="nfts">
-        <h2 className="font-semibold text-xl  text-neutral-n-700  ">Assets</h2>
+          <h2 className="font-semibold text-xl text-neutral-n-700  ">Assets</h2>
           <div className="rounded-xl border overflow-hidden mt-5">
             <Table className="border-neutral-table-border">
               <TableHeader>
@@ -437,68 +346,30 @@ const WalletTabs = () => {
                   <TableHead className="pl-5">
                     <Help
                       label="Asset ID"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The unique identifying number for a particular NFT in a user's wallet"
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Collection"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="A group of NFTs under the same smart contract"
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Status"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="How a particular NFT is being utilized"
                     />
                   </TableHead>
-                  <TableHead>
+                  <TableHead className="pl-0">
                     <Help
                       label="Collection Floor Price"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="The listed value of the lowest-cost NFT in a collection"
                     />
                   </TableHead>
-                  <TableHead>Acquired Since</TableHead>
+                  <TableHead className="pl-0 text-neutral-n-800">
+                    Acquired Since
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
