@@ -218,7 +218,7 @@ export default function Trending(props) {
                       <p className="table-text mb-1 px-4">
                         {item.volume ? item.volume : null}
                       </p>
-                      <p>
+                      <div>
                         {item.volumePositive ? (
                           <p className="text-semantic-g-500 text-xs font-normal leading-3 px-4">
                             {item.volumePositive}
@@ -228,7 +228,7 @@ export default function Trending(props) {
                             {item.volumeNegative}
                           </p>
                         )}
-                      </p>
+                      </div>
                     </div>
                   </TableCell>
                   <TableCell label="Traded On" className="px-4">
