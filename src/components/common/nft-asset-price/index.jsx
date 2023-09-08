@@ -1,3 +1,5 @@
+"use client";
+
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const NftAssetPrice = () => {
@@ -19,10 +21,12 @@ const NftAssetPrice = () => {
       pv: 30,
     },
     {
-      date: "Feb 1",
+      date: "Jan 30",
       pv: 50,
     },
   ];
+
+  const formatter = (value) => `$${value.toFixed(2)}`;
 
   return (
     <div className="bg-neutral-n-0 border-solid drop-shadow-md rounded-md p-7">
@@ -30,12 +34,21 @@ const NftAssetPrice = () => {
         Price History
       </h2>
       <LineChart width={600} height={400} margin={{ top: 20 }} data={data}>
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-        <CartesianGrid strokeDasharray="3 3" />
+        <Line
+          type="monotone"
+          dataKey="pv"
+          stroke="#0078CC"
+          strokeWidth={3}
+          dot={false}
+        />
+        <CartesianGrid vertical={false} stroke="#EEF4F7" />
         <XAxis dataKey="date" className="text-sm text-neutral-n-800" />
         <YAxis
           type="number"
-          domain="0, 50"
+          tickFormatter={formatter}
+          ticks={[0, 10.0, 20.0, 30.0, 40.0, 50.0]}
+          tickMargin={6}
+          domain={[0, "dataMax"]}
           className="text-sm text-neutral-n-800"
         />
       </LineChart>

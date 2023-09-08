@@ -6,10 +6,11 @@ import { Search } from "lucide-react";
 import * as React from "react";
 
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import {
   NavigationMenu,
@@ -58,6 +59,14 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [active, setIsActive] = React.useState("Home");
+  const activated = "text-primary-b-500 font-medium text-sm";
+  const deactivated = "text-neutral-n-700 font-medium text-sm";
+
+  function toggleActive(id) {
+    setIsActive(id);
+  }
+
   return (
     <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
       <nav className="flex justify-between items-center gap-4">
@@ -92,51 +101,63 @@ const Navbar = () => {
 
         {isTabletAndMobile ? (
           <div className="inline-block hamburger-icon">
-            <HoverCard>
-              <HoverCardTrigger asChild>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
                 <button className="text-neutral-n-700 text-4xl px-4 py-2 rounded-lg cursor-pointer">
                   <HamburgerMenuIcon />
                 </button>
-              </HoverCardTrigger>
-              <HoverCardContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md w-fit md:mr-12 mr-2">
-                <Link
-                  href="/txs"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>Transactions</p>
-                </Link>
-                <Link
-                  href="/blocks"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>Blocks</p>
-                </Link>
-                <Link
-                  href="/tokens"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>Tokens</p>
-                </Link>
-                <Link
-                  href="/nfts"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>NFTs</p>
-                </Link>
-                <Link
-                  href="/"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>Resources</p>
-                </Link>
-                <Link
-                  href="/"
-                  className="hover:bg-neutral-n-50 px-4 py-3 rounded-md"
-                >
-                  <p>Testnet</p>
-                </Link>
-              </HoverCardContent>
-            </HoverCard>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white py-2 flex flex-col gap-4 rounded-md md:mr-12 mr-2">
+                <DropdownMenuItem>
+                  <Link
+                    href="/txs"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>Transaction</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/blocks"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>Blocks</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/tokens"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>Tokens</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/nfts"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>NFTs</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>Resources</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
+                  >
+                    <span>Testnet</span>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         ) : (
           <div className="md:flex md:px-4 hidden">
@@ -146,7 +167,15 @@ const Navbar = () => {
                   <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
                     <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
-                      <Link href="/txs">Transaction</Link>
+                      <Link
+                        href="/txs"
+                        onClick={() => toggleActive("txs")}
+                        className={
+                          active === "Transaction" ? activated : deactivated
+                        }
+                      >
+                        Transaction
+                      </Link>
                     </div>
                     <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                       <Link href="/blocks">Blocks</Link>
@@ -155,7 +184,12 @@ const Navbar = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <NavbarLink href="/tokens" text="Tokens" />
+            <NavbarLink
+              href="/tokens"
+              text="Tokens"
+              onClick={() => toggleActive("Tokens")}
+              className={active === "Tokens" ? activated : deactivated}
+            />
             <NavbarLink href="/nfts" text="NFTs" />
             <NavbarLink href="/" text="Resources" />
             <NavigationMenu>

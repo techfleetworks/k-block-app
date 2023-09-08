@@ -15,13 +15,12 @@ import Bulls from "@/assets/bulls.svg";
 import Verified from "@/assets/verified.svg";
 import Komono from "@/assets/komono.svg";
 import Brawler_Bears from "@/assets/brawler-bears.svg";
-import Diamond from "@/assets/golden-diamond.svg";
+import Binance from "@/assets/binance.png";
 
 import UToken from "@/assets/orange-m-token.svg";
 import BlackUToken from "@/assets/black-u-token.svg";
 import BlackMEToken from "@/assets/black-me-token.svg";
 import Blue from "@/assets/blue-circle.svg";
-import Wolfies from "@/assets/kadena-wolfies.svg";
 
 import Link from "next/link";
 
@@ -73,7 +72,7 @@ export default function TopNFTCollections(props) {
       volumePositive: "+0.48%",
       volumeNegative: undefined,
       token1: BlackUToken,
-      token2: Diamond,
+      token2: Binance,
       token3: undefined,
       tradedOn: undefined,
       confidence: "Medium",

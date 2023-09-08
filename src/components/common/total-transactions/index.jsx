@@ -32,12 +32,13 @@ const InfoItem = ({ label, value, tooltipText }) => (
 import Image from "next/image";
 import React from "react";
 import QuestionMark from "@/assets/question-mark.svg";
+import Link from "next/link";
 
 const TotalTransactions = () => {
   return (
     <div className="bg-neutral-n-0 p-5 rounded-xl flex-1 drop-shadow-md">
       <h1 className="text-sm text-neutral-n-700 font-medium">
-        Total Transactions
+        <Link href="/txs">Total Transactions</Link>
       </h1>
       <p className="text-xl font-bold text-neutral-n-700">32647070</p>
       <div className="bg-neutral-n-100 mt-12 p-5 rounded-lg">

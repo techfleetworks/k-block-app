@@ -16,14 +16,7 @@ const NftAssetSales = () => {
             <th className="font-normal">
               <Help
                 label="Last Sold For:"
-                tooltipText={
-                  <>
-                    Tooltip text here.{' '}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The amount paid for the most recently sold NFT in this collection"
               />
             </th>
             <td>
@@ -36,14 +29,7 @@ const NftAssetSales = () => {
             <th className="font-normal">
               <Help
                 label="Minimum Price (24hr):"
-                tooltipText={
-                  <>
-                    Tooltip text here.{' '}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The lowest cost for an NFT in this collection (last 24 hours)"
               />
             </th>
             <td>
@@ -56,14 +42,7 @@ const NftAssetSales = () => {
             <th className="font-normal">
               <Help
                 label="Marketplaces"
-                tooltipText={
-                  <>
-                    Tooltip text here.{' '}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="The different platforms where this NFT collection can be traded"
               />
             </th>
             <td className="flex gap-2">

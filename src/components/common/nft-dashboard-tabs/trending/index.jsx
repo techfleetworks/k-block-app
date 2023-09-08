@@ -19,7 +19,7 @@ import BlackUToken from "@/assets/black-u-token.svg";
 import BlackMEToken from "@/assets/black-me-token.svg";
 import Blue from "@/assets/blue-circle.svg";
 import Wolfies from "@/assets/kadena-wolfies.svg";
-import Diamond from "@/assets/golden-diamond.svg";
+import Binance from "@/assets/binance.png";
 import Link from "next/link";
 
 export default function Trending(props) {
@@ -76,7 +76,7 @@ export default function Trending(props) {
       volumePositive: "+0.48%",
       volumeNegative: undefined,
       token1: BlackUToken,
-      token2: Diamond,
+      token2: Binance,
       token3: undefined,
       tradedOn: undefined,
       confidence: "Medium",
@@ -119,13 +119,13 @@ export default function Trending(props) {
               <TableHead>
                 <Help
                   label="Min Price (KDA)"
-                  tooltipText="Information is to be updated."
+                  tooltipText="The lowest listed price for an NFT in this collection."
                 />
               </TableHead>
               <TableHead>
                 <Help
                   label="Max Price (KDA)"
-                  tooltipText="Information is to be updated."
+                  tooltipText="The highest listed price for an NFT in this collection."
                 />
               </TableHead>
               <TableHead>
