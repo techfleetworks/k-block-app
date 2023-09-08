@@ -16,6 +16,7 @@ import TransactionPending from "@/assets/Pending-Outgoing.svg";
 import TransactionSuccess from "@/assets/Success.svg";
 import CircleBigCheck from "@/assets/circle-big-check.svg";
 import Link from "next/link";
+import NeighboringChains from "./neighbouring-chains";
 
 const BlockTabs = () => {
   return (
@@ -510,11 +511,7 @@ const BlockTabs = () => {
                 </tbody>
               </table>
             </div>
-
-            <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md grow">
-              <h2 className="text-xl font-bold">Neighboring chains</h2>
-              <p className="md-muted-table-text">Hover to see full hash.</p>
-            </div>
+            <NeighboringChains />
           </div>
         </TabsContent>
 
