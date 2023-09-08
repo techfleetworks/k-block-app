@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Cards({ title, data }) {
   return (
@@ -40,7 +40,7 @@ export default function Cards({ title, data }) {
 
       <Link
         className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-        href="/"
+        href="/nft-collections"
       >
         View Collection
       </Link>
