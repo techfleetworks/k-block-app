@@ -150,22 +150,34 @@ export default function Transactions(props) {
                 />
               </TableHead>
               <TableHead>
-                <Help label="Action" tooltipText="Tooltip text here" />
+                <Help
+                  label="Action"
+                  tooltipText="The status of recently-traded NFTs from this collection"
+                />
               </TableHead>
               <TableHead>
                 <Help
                   label="Price + Traded On"
-                  tooltipText="Tooltip text here"
+                  tooltipText="Cost, in KDA and USD, and the platform used to acquire this asset"
                 />
               </TableHead>
               <TableHead>
-                <Help label="From" tooltipText="Tooltip text here" />
+                <Help
+                  label="From"
+                  tooltipText="The address of the wallet that traded this asset"
+                />
               </TableHead>
               <TableHead>
-                <Help label="To" tooltipText="Tooltip text here" />
+                <Help
+                  label="To"
+                  tooltipText="The address of the wallet that received this asset"
+                />
               </TableHead>
               <TableHead>
-                <Help label="Txn Hash" tooltipText="Tooltip text here" />
+                <Help
+                  label="Txn Hash"
+                  tooltipText="The unique identifier which validates a particular transaction on the blockchain"
+                />
               </TableHead>
               <TableHead>
                 <Help label="Time" tooltipText="Tooltip text here" />

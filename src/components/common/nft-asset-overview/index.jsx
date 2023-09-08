@@ -13,7 +13,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="Owner"
-                tooltipText="The wallet address of this NFT's current holder"              
+                tooltipText="The wallet address of this NFT's current holder"
               />
             </th>
             <td className="table-link">
@@ -48,14 +48,7 @@ const NftAssetOverview = () => {
             <th className="font-normal">
               <Help
                 label="Token Contract Address:"
-                tooltipText={
-                  <>
-                    Tooltip text here.{" "}
-                    <a className="underline" href="http://example.com/">
-                      Learn more.
-                    </a>
-                  </>
-                }
+                tooltipText="URL linking to this token's smart contract"
               />
             </th>
             <td className="table-link">
