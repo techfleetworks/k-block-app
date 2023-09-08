@@ -164,9 +164,7 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>
-                    <button>Blockchain</button>
-                  </NavigationMenuTrigger>
+                  <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
                     <div className="hover:bg-neutral-n-50 px-4 py-3 rounded-md">
                       <Link

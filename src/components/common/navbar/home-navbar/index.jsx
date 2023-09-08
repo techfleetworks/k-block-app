@@ -78,7 +78,7 @@ export default function HomeNavbar() {
                       href="/txs"
                       className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
                     >
-                      <p className="font-serif">Transaction</p>
+                      Transaction
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
@@ -86,7 +86,7 @@ export default function HomeNavbar() {
                       href="/blocks"
                       className="text-sm hover:bg-neutral-n-50 px-4 py-3 rounded-md w-full"
                     >
-                      <p className="font-serif">Blocks</p>
+                      Blocks
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>

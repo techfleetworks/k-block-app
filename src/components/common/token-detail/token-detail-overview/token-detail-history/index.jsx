@@ -1,8 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import SocialChannels from "../social-channels";
 
 export default function PriceHistory() {
+  const [activeButton, setActiveButton] = useState("24H");
+  const activeColor =
+    "bg-primary-b-500 border border-neutral-n-250 text-xs text-neutral-n-0 px-2 py-2 rounded-sm";
+  const inActiveColor =
+    "bg-neutral-n-50 border border-neutral-n-250 text-xs text-n-800 px-2 py-2";
+
+  function toggleActive(id) {
+    setActiveButton(id);
+  }
+
   const canvasEl = useRef(null);
 
   const colors = {
@@ -42,16 +52,6 @@ export default function PriceHistory() {
     };
   });
 
-  const [activeButton, setActiveButton] = React.useState("24H");
-  const activeColor =
-    "bg-primary-b-500 border border-neutral-n-250 text-xs text-neutral-n-0 px-2 py-2 rounded-sm";
-  const inActiveColor =
-    "bg-neutral-n-50 border border-neutral-n-250 text-xs text-n-800 px-2 py-2";
-
-  function toggleActive(id) {
-    setActiveButton(id);
-  }
-
   return (
     <div className="block xl:ml-5 xl:mt-0 mt-5 xl:w-[46vw] w-[95vw] -z-50">
       <div className="bg-neutral-n-0 mb-5 rounded-xl grow drop-shadow-md">
@@ -90,7 +90,11 @@ export default function PriceHistory() {
         </header>
         <div className="px-5 xl:mb-5 pb-5">
           <div className="PriceHistory">
-            <canvas ref={canvasEl} height={100} className="overflow-auto" />
+            <canvas
+              ref={canvasEl}
+              height={100}
+              className="overflow-auto w-full"
+            />
           </div>
         </div>
       </div>
