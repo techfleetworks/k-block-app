@@ -45,7 +45,7 @@ export default function TokensTable() {
   ];
   return (
     <div className="bg-white p-5 rounded-xl">
-      <p className="text-neutral-n-700 text-base font-400 leading-5">
+      <p className="text-neutral-n-700 text-sm font-400 leading-5">
         Total 22,207 recognized tokens
       </p>
       <div className="pt-5">
