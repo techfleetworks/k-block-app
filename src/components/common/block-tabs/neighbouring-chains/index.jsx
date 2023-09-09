@@ -4,6 +4,7 @@ import Image from "next/image";
 import Lines from "@/assets/lines.svg";
 import Chain from "@/assets/chain.svg";
 import { Help } from "../..";
+import Link from "next/link";
 
 export default function NeighboringChains() {
   return (
@@ -33,13 +34,13 @@ export default function NeighboringChains() {
       />
       <div className="flex w-fit mt-52 mx-auto">
         <p className="text-semantic-b-300 text-xs font-normal leading-5 bg-semantic-b-100 px-4 py-1 rounded-lg ml-2 mr-8">
-          6mn...4Gx
+          <Link href="block-details">6mn...4Gx</Link>
         </p>
         <p className="text-semantic-b-300 text-xs font-normal leading-5 bg-semantic-b-100 px-4 py-1 rounded-lg mr-8">
-          t1ty...8t1t
+          <Link href="block-details">t1ty...8t1t</Link>
         </p>
         <p className="text-semantic-b-300 text-xs font-normal leading-5 bg-semantic-b-100 px-4 py-1 rounded-lg">
-          d3b3...sm01
+          <Link href="block-details">d3b3...sm01</Link>
         </p>
       </div>
       <div className="flex w-fit mx-auto mt-1">
@@ -49,7 +50,7 @@ export default function NeighboringChains() {
       </div>
       <div className="mt-9 bg-neutral-n-100 rounded-lg">
         <div className="flex">
-          <div className="flex mr-6">
+          <div className="flex mx-auto py-6">
             <p className="bg-semantic-g-300 w-6 h-6 rounded-lg mr-2"></p>
             <div>
               <div className="flex items-center">
@@ -63,7 +64,7 @@ export default function NeighboringChains() {
               </p>
             </div>
           </div>
-          <div className="flex">
+          <div className="flex mx-auto py-6">
             <p className="bg-primary-b-200 w-6 h-6 rounded-lg mr-2"></p>
             <div>
               <div className="flex items-center">
