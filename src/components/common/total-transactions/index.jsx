@@ -40,7 +40,9 @@ const TotalTransactions = () => {
       <h1 className="text-sm text-neutral-n-700 font-medium">
         <Link href="/txs">Total Transactions</Link>
       </h1>
-      <p className="text-xl font-bold text-neutral-n-700">32647070</p>
+      <p className="text-xl font-bold text-primary-b-500">
+        <Link href="/txs">32647070</Link>
+      </p>
       <div className="bg-neutral-n-100 mt-12 p-5 rounded-lg">
         <div>
           <div className="flex items-center">

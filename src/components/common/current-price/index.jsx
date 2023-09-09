@@ -45,10 +45,10 @@ const CurrentPrice = () => {
             <Image width={44} height={44} src={KDA} alt="KDA Logo" />
           </Link>
           <div className="flex flex-col justify-start items-start">
-            <h4 className="text-sm text-neutral-n-700 font-medium">
-              <Link href="/token-details">KDA</Link>
-            </h4>
-            <p className="text-xl text-neutral-n-700 font-bold">$1.054</p>
+            <h4 className="text-sm text-neutral-n-700 font-medium">KDA</h4>
+            <p className="text-xl text-primary-b-500 font-bold">
+              <Link href="/token-details">$1.054</Link>
+            </p>
           </div>
         </div>
         <div>
