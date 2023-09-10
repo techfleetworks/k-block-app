@@ -25,7 +25,7 @@ export default function DashboardCard(props) {
             <div className="flex items-center bg-semantic-g-50 rounded-md px-1">
               {props.up ? props.up : null}
               {props.percentage_positive && (
-                <p className="text-semantic-g-500 text-xs">
+                <p className="text-semantic-g-500 text-xs font-semibold leading-3">
                   {props.percentage_positive}
                 </p>
               )}
@@ -35,7 +35,7 @@ export default function DashboardCard(props) {
             <div className="flex items-center bg-semantic-r-50 rounded-md px-1">
               {props.down ? props.down : null}
               {props.percentage_negative && (
-                <p className="text-semantic-r-500 text-xs">
+                <p className="text-semantic-r-500 text-xs font-semibold leading-3">
                   {props.percentage_negative}
                 </p>
               )}

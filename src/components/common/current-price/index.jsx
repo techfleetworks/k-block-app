@@ -32,7 +32,7 @@ const InfoItem = ({ label, value, tooltipText }) => (
 import React from "react";
 import KDA from "@/assets/kda.svg";
 import Image from "next/image";
-import { ChevronUpIcon } from "lucide-react";
+import UpArrow from "@/assets/uparrow.svg";
 import QuestionMark from "@/assets/question-mark.svg";
 import Link from "next/link";
 
@@ -56,10 +56,14 @@ const CurrentPrice = () => {
             <p className=" text-xs font-medium text-neutral-n-500 self-end mb-2">
               Past 24 hr
             </p>
-            <div className="flex gap-2 justify-between rounded-lg bg-gradient-to-r from-[#E5FCE8] to-[#E4FAF6] items-center p-1">
-              <p className="text-semantic-g-500 text-sm font-semibold">
-                <ChevronUpIcon width={24} height={24} />
-              </p>
+            <div className="flex justify-between rounded-lg bg-gradient-to-r from-[#E5FCE8] to-[#E4FAF6] items-center p-1">
+              <Image
+                src={UpArrow}
+                width={24}
+                height={24}
+                alt="UpArrow"
+                className="text-semantic-g-500"
+              />
               <p className="text-semantic-g-500 text-sm font-semibold">4.29%</p>
             </div>
           </div>

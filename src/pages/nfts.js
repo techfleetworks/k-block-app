@@ -4,6 +4,8 @@ import DashboardCard from "@/components/common/dashboard-card";
 import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import UpArrow from "@/assets/uparrow.svg";
+import DownArrow from "@/assets/redarrow.svg";
 
 export default function NFTDashboard() {
   return (
@@ -24,9 +26,11 @@ export default function NFTDashboard() {
                 title="Volume 24H"
                 numbers="31,230,347"
                 down={
-                  <ChevronDownIcon
+                  <Image
+                    src={DownArrow}
                     width={24}
                     height={24}
+                    alt="UpArrow"
                     className="text-semantic-r-500"
                   />
                 }
@@ -36,9 +40,11 @@ export default function NFTDashboard() {
                 title="Active Addresses"
                 numbers="1,730,562"
                 up={
-                  <ChevronUpIcon
+                  <Image
+                    src={UpArrow}
                     width={24}
                     height={24}
+                    alt="UpArrow"
                     className="text-semantic-g-500"
                   />
                 }
