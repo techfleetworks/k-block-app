@@ -4,8 +4,8 @@ import DashboardCard from "@/components/common/dashboard-card";
 import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import UpArrow from "@/assets/uparrow.svg";
-import DownArrow from "@/assets/redarrow.svg";
+import UpArrow from "@/assets/chevron-up.svg";
+import DownArrow from "@/assets/chevron-down.svg";
 
 export default function NFTDashboard() {
   return (

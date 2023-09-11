@@ -32,7 +32,7 @@ const InfoItem = ({ label, value, tooltipText }) => (
 import React from "react";
 import KDA from "@/assets/kda.svg";
 import Image from "next/image";
-import UpArrow from "@/assets/uparrow.svg";
+import UpArrow from "@/assets/chevron-up.svg";
 import QuestionMark from "@/assets/question-mark.svg";
 import Link from "next/link";
 
