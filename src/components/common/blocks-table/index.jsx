@@ -11,6 +11,7 @@ import {
 import Help from "@/components/common/help";
 import Image from "next/image";
 import Link from "next/link";
+import BlocksPagination from "../blocks-pagination";
 
 export default function BlocksTable() {
   const data = [
@@ -162,6 +163,7 @@ export default function BlocksTable() {
           </TableBody>
         </Table>
       </div>
+      <BlocksPagination pageSize={10} />
     </div>
   );
 }
