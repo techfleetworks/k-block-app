@@ -52,7 +52,7 @@ export default function PriceHistory() {
   const formatter = (value) => `$${value.toFixed(2)}`;
 
   return (
-    <div className="block xl:ml-5 xl:mt-0 mt-5 xl:w-[46vw] w-[95vw] -z-50">
+    <div className="-z-50 flex-1 rounded-xl drop-shadow-md xl:w-[50vw]">
       <div className="bg-neutral-n-0 mb-5 rounded-xl grow drop-shadow-md">
         <header className="flex justify-between items-center p-5 mb-5">
           <div>
@@ -63,11 +63,11 @@ export default function PriceHistory() {
           <DateButtons />
         </header>
         <div className="px-5 xl:mb-5 pb-5">
-          <div className="xl:w-[43vw] overflow-x-auto md:overflow-auto">
-            <ResponsiveContainer width="100%" height={170}>
+          <div className="overflow-x-auto md:overflow-auto">
+            <ResponsiveContainer width="100%" height={155}>
               <LineChart
                 width={500}
-                height={170}
+                height={155}
                 margin={{ top: 5, left: 15 }}
                 data={data}
               >

@@ -10,7 +10,7 @@ import React from "react";
 
 export default function SocialChannels() {
   return (
-    <div className="bg-neutral-n-0 p-5 rounded-xl drop-shadow-md flex justify-between">
+    <div className="bg-neutral-n-0 p-5 rounded-xl drop-shadow-md flex flex-wrap md:flex-nowrap justify-between">
       <div className="flex">
         <p className="text-sm leading-5 font-medium">Website</p>
         <Link
@@ -20,7 +20,7 @@ export default function SocialChannels() {
           kaddex.kdx
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex md:mt-4">
         <p className="text-sm leading-5 font-medium mr-2">Social Channels</p>
         <DiscordLogoIcon width={24} height={24} className=" mx-1" />
         <GitHubLogoIcon width={24} height={24} className=" mx-1" />
