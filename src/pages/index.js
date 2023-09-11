@@ -7,11 +7,13 @@ import {
   Searchbar,
   TotalTransactions,
   TransactionHistory,
-} from '@/components/common';
+} from "@/components/common";
+import HomeNavbar from "@/components/common/navbar/home-navbar";
 
 export default function Home() {
   return (
-    <main>
+    <div>
+      <HomeNavbar />
       <Searchbar />
       <div className="container">
         <InfoBar />
@@ -26,6 +28,6 @@ export default function Home() {
         </div>
         <NftCollections />
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,63 +6,63 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Image from 'next/image';
-import Help from '@/components/common/help';
-import Link from 'next/link';
+} from "@/components/ui/table";
+import Image from "next/image";
+import Help from "@/components/common/help";
+import Link from "next/link";
 
-import QuestionMark from '@/assets/question-mark.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
+import QuestionMark from "@/assets/question-mark.svg";
+import TransactionError from "@/assets/Error.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
+import TransactionSuccess from "@/assets/Success.svg";
 
 const data = [
   {
     statusIcon: TransactionPending,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionPending,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionError,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   {
     statusIcon: TransactionSuccess,
-    requestKey: '0xa83abrdgnnt1234wrggesfgtg1297709eq725',
-    time: '21 secs ago',
-    amountKDA: '0.07 KDA',
-    amountUSD: '0.30 USD',
+    requestKey: "0xa83abrdgnnt1234wrggesfgtg1297709eq725",
+    time: "21 secs ago",
+    amountKDA: "0.07 KDA",
+    amountUSD: "0.30 USD",
     chain: 0,
   },
   // Add more data entries as needed
@@ -77,7 +77,7 @@ const LatestTransactions = () => {
         </h2>
         <Link
           className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-          href="/"
+          href="/txs"
         >
           View all transactions
         </Link>
@@ -87,16 +87,39 @@ const LatestTransactions = () => {
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
               <TableHead>
-                <Help label="Status" tooltipText="Some tooltip" />
+                <Help
+                  label="Status"
+                  tooltipText="The state of a transaction: failing, pending, or succeeding"
+                />
               </TableHead>
               <TableHead className="w-[200px]">
-                <Help label="Request Key" tooltipText="Some tooltip" />
+                <Help
+                  label="Request Key"
+                  tooltipText="The code needed to complete a cross-chain transfer"
+                />
               </TableHead>
               <TableHead>
-                <Help label="Amount" tooltipText="Some tooltip" />
+                <Help
+                  label="Amount"
+                  tooltipText="The value of a specific transaction"
+                />
               </TableHead>
               <TableHead>
-                <Help label="Chain" tooltipText="Some tooltip" />
+                <Help
+                  label="Chain"
+                  tooltipText={
+                    <>
+                      This number specifies which chain in the Chainweb a block
+                      or transaction is on. {""}
+                      <a
+                        className="text-[#30B9F4]"
+                        href="https://youtu.be/hYvXxFbsN6I"
+                      >
+                        Learn more
+                      </a>
+                    </>
+                  }
+                />
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -113,7 +136,9 @@ const LatestTransactions = () => {
                 </TableCell>
                 <TableCell className="p-6">
                   <p className="text-primary-b-500 truncate font-medium text-sm max-w-[15ch]">
-                    <a href="">{transaction.requestKey}</a>
+                    <Link href="/transaction-details">
+                      {transaction.requestKey}
+                    </Link>
                   </p>
                   <p className="text-neutral-n-500 text-xs ">
                     {transaction.time}

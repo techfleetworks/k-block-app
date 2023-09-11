@@ -18,9 +18,7 @@ const NftCollections = () => {
     <div className="px-3 md:px-12">
       <div className="bg-neutral-n-0 text-neutral-n-700 p-5 border-solid drop-shadow-md rounded-xl">
         <div className="flex flex-wrap justify-between pb-5">
-          <h2 className="text-xl font-semibold">
-            Top NFT Collections
-          </h2>
+          <h2 className="text-xl font-semibold">Top NFT Collections</h2>
           <Link
             className="text-primary-b-500 border border-primary-b-500 text-sm font-medium px-4 py-1 rounded-md border-solid"
             href="/nfts"
@@ -39,34 +37,49 @@ const NftCollections = () => {
                     label="Collections"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
+                        A group of NFTs created under the same smart contract{" "}
                         <a className="underline" href="http://example.com/">
-                          Learn more.
+                          (Learn more)
                         </a>
                       </>
                     }
                   />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Items" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Items"
+                    tooltipText="The total number of NFTs in this collection"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Holders" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Holders"
+                    tooltipText="The number of unique NFT owners in this collection"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
                   <Help
                     label="Floor Price (KDA)"
-                    tooltipText="Tooltip text here"
+                    tooltipText="The lowest-listed price for an NFT in this collection"
                   />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Volume 24h" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Volume 24h"
+                    tooltipText="The total trades for this NFT collection in the last 24 hours"
+                  />
                 </TableHead>
                 <TableHead className="pl-0">
-                  <Help label="Sales" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Sales"
+                    tooltipText="The number of transactions in a collection's history"
+                  />
                 </TableHead>
                 <TableHead className="p-0">
-                  <Help label="Avg. Prices" tooltipText="Tooltip text here" />
+                  <Help
+                    label="Avg. Prices"
+                    tooltipText="Mean price, in KDA, of an NFT in a collection"
+                  />
                 </TableHead>
               </TableRow>
             </TableHeader>
@@ -79,7 +92,9 @@ const NftCollections = () => {
                     height={44}
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>
@@ -96,7 +111,9 @@ const NftCollections = () => {
                     height="2.75rem"
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>{" "}
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>
@@ -113,7 +130,9 @@ const NftCollections = () => {
                     height="2.75rem"
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>{" "}
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>
@@ -130,7 +149,9 @@ const NftCollections = () => {
                     height="2.75rem"
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>{" "}
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>
@@ -147,7 +168,9 @@ const NftCollections = () => {
                     height="2.75rem"
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>{" "}
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>
@@ -164,7 +187,9 @@ const NftCollections = () => {
                     height="2.75rem"
                     alt="NFT placeholder image"
                   />
-                  Kawaii K9
+                  <Link href="/nft-collections" className="table-link">
+                    Kawaii K9
+                  </Link>{" "}
                 </TableCell>
                 <TableCell>12000</TableCell>
                 <TableCell>129</TableCell>

@@ -60,7 +60,7 @@ const NftAssetGrid = () => {
         <NftAssetOverview />
         <NftAssetAttributes />
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap xl:-mt-32 lg:-mt-72">
         <NftAssetDescription />
         <NftAssetSales />
       </div>

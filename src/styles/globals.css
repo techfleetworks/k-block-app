@@ -30,6 +30,7 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
 @layer base {
   :root {
     /* Primary Colors */
+    --primary-b-900: hsla(240, 15%, 16%, 1);
     --primary-b-600: hsla(198, 76%, 23%, 1);
     --primary-b-500: hsla(198, 76%, 31%, 1);
     --primary-b-400: hsla(198, 100%, 35%, 1);
@@ -45,10 +46,14 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
 
     --semantic-r-500: hsla(7, 72%, 46%, 1);
     --semantic-r-100: hsla(0, 66%, 92%, 1);
+    --semantic-r-50: hsla(0, 100%, 98%, 1);
 
+    --semantic-b-900: hsl(240, 14%, 15%, 1);
     --semantic-b-300: hsla(205, 100%, 40%, 1);
     --semantic-b-100: hsla(198, 56%, 92%, 1);
+    --semantic-b-50: hsla(193, 26%, 93%, 0.8);
 
+    --semantic-y-700: hsla(40, 99%, 38%, 1);
     --semantic-y-500: hsla(40, 100%, 50%, 1);
     --semantic-y-100: hsla(46, 100%, 93%, 1);
 
@@ -57,8 +62,10 @@ div.overflow-y-scroll::-webkit-scrollbar-thumb {
     --neutral-n-800: hsla(199, 16%, 20%, 1);
     --neutral-n-700: hsla(201, 12%, 27%, 1);
     --neutral-n-500: hsla(197, 8%, 42%, 1);
+    --neutral-n-450: hsla(199, 6%, 49%, 1);
     --neutral-n-400: hsla(197, 8%, 58%, 1);
     --neutral-n-300: hsla(208, 17%, 80%, 1);
+    --neutral-n-250: hsla(200, 18%, 90%, 1);
     --neutral-n-200: hsla(200, 36%, 95%, 1);
     --neutral-n-100: hsla(204, 33%, 97%, 1);
     --neutral-n-50: hsl(180, 11%, 96%, 1);

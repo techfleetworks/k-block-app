@@ -1,6 +1,6 @@
 import React from "react";
 import copy from "@/assets/copy.svg";
-import qrcode from "@/assets/qrcode.svg";
+import qrcode from "@/assets/QR.svg";
 import Image from "next/image";
 
 const Address = () => {
@@ -10,7 +10,7 @@ const Address = () => {
       </h4>
       <p className="text-xl font-bold py-2">0x18612b...ebb13</p>
       <div className="flex">
-        <Image width={24} height={24} src={copy} alt="copy icon" className="border neutral-n-300 rounded-md p-1 mr-2" />
+        <Image width={24} height={24} src={copy} alt="copy icon" className=" mr-2" />
         <Image width={24} height={24} src={qrcode} alt="QR code icon" />
       </div>
       <div className="bg-neutral-n-100 mt-5 mb-2 py-2 px-4 rounded-md space-y-2">

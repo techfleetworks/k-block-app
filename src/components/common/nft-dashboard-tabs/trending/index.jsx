@@ -18,57 +18,68 @@ import UToken from "@/assets/orange-m-token.svg";
 import BlackUToken from "@/assets/black-u-token.svg";
 import BlackMEToken from "@/assets/black-me-token.svg";
 import Blue from "@/assets/blue-circle.svg";
+import Wolfies from "@/assets/kadena-wolfies.svg";
+import Binance from "@/assets/binance.png";
 import Link from "next/link";
 
 export default function Trending(props) {
   const data = [
     {
-      name: "Kawai",
+      name: "Kawaii K-9s",
       img: Kawaii,
       img2: Verified,
-      img3: UToken,
-      img4: BlackUToken,
-      img5: BlackMEToken,
-      items: "9780",
+      supply: "9780",
       holders: "978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.203 KDA",
+      maxPriceChange: "1.30 USD",
       volume: "10,000 KDA",
-      volumeChange: "+0.48%",
-      tradedOn: "+ 3 more",
+      volumePositive: "+0.48%",
+      volumeNegative: undefined,
+      token1: UToken,
+      token2: BlackUToken,
+      token3: BlackMEToken,
+      tradedOn: "+ 2 more",
       confidence: "High",
     },
     {
       name: "Boxing Badger",
       img: Boxing,
       img2: undefined,
-      img3: UToken,
-      img4: BlackUToken,
-      img5: BlackMEToken,
-      items: "8,109,780",
+      supply: "8,109,780",
       holders: "10,978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.07 KDA",
+      maxPriceChange: "0.30 USD",
       volume: "10,000 KDA",
-      volumeChange: "+0.48%",
-      tradedOn: "+ 2 more",
+      volumePositive: undefined,
+      volumeNegative: "-0.56%",
+      token1: BlackMEToken,
+      token2: Blue,
+      token3: undefined,
+      tradedOn: undefined,
       confidence: "Low",
     },
     {
-      name: "John The Great",
-      img: Boxing,
+      name: "Large Kadena Wolfies",
+      img: Wolfies,
       img2: Verified,
-      img3: UToken,
-      img4: BlackUToken,
-      img5: BlackMEToken,
-      items: "8,109,780",
-      holders: "10,978",
-      floorPrice: "0.07 KDA",
-      floorPriceChange: "0.30 USD",
+      supply: "9780",
+      holders: "978",
+      minPrice: "0.07 KDA",
+      minPriceChange: "0.30 USD",
+      maxPrice: "0.203 KDA",
+      maxPriceChange: "1.30 USD",
       volume: "10,000 KDA",
-      volumeChange: "+0.48%",
-      tradedOn: "+ 2 more",
-      confidence: "Low",
+      volumePositive: "+0.48%",
+      volumeNegative: undefined,
+      token1: BlackUToken,
+      token2: Binance,
+      token3: undefined,
+      tradedOn: undefined,
+      confidence: "Medium",
     },
   ];
   return (
@@ -85,34 +96,65 @@ export default function Trending(props) {
                   label="Collections"
                   tooltipText={
                     <>
-                      Tooltip text here.{" "}
-                      <a className="underline" href="http://example.com/">
+                      Rare digital assets designed by artist(s).
+                      {/* <a className="underline" href="http://example.com/">
                         Learn more.
-                      </a>
+                      </a> */}
                     </>
                   }
                 />
               </TableHead>
               <TableHead>
-                <Help label="Items" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
-                <Help label="Holders" tooltipText="Tooltip text here" />
-              </TableHead>
-              <TableHead>
                 <Help
-                  label="Floor Price (KDA)"
-                  tooltipText="Tooltip text here"
+                  label="Supply"
+                  tooltipText="The total number of NFTs in this collection."
                 />
               </TableHead>
               <TableHead>
-                <Help label="Volume 24H" tooltipText="Tooltip text here" />
+                <Help
+                  label="Holders"
+                  tooltipText="The number of unique NFT owners in this collection."
+                />
               </TableHead>
               <TableHead>
-                <Help label="Traded On" tooltipText="Tooltip text here" />
+                <Help
+                  label="Min Price (KDA)"
+                  tooltipText="The lowest listed price for an NFT in this collection."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Max Price (KDA)"
+                  tooltipText="The highest listed price for an NFT in this collection."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Volume 24H"
+                  tooltipText="The total trades for this NFT collection in the given period of time."
+                />
+              </TableHead>
+              <TableHead>
+                <Help
+                  label="Traded On"
+                  tooltipText="The platform where the NFTs are being traded on."
+                />
               </TableHead>
               <TableHead className="p-0">
-                <Help label="Confidence" tooltipText="Tooltip text here" />
+                <Help
+                  label="Confidence"
+                  tooltipText={
+                    <>
+                      A NFTs trustworthiness score.
+                      <Link
+                        className="underline pl-1"
+                        href="http://example.com/"
+                      >
+                        Learn more.
+                      </Link>
+                    </>
+                  }
+                />
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -131,7 +173,7 @@ export default function Trending(props) {
                       />
                     )}
                     <div className="flex items-center">
-                      <Link href="/nft-asset">
+                      <Link href="/nft-collections">
                         <p className="table-link">{item.name}</p>
                       </Link>
                       {item.img2 !== undefined && (
@@ -146,18 +188,28 @@ export default function Trending(props) {
                     </div>
                   </TableCell>
                   <TableCell label="Items" className="table-text px-4">
-                    9780
+                    {item.supply}
                   </TableCell>
                   <TableCell label="Holders" className="table-text px-4">
-                    978
+                    {item.holders}
                   </TableCell>
-                  <TableCell label="Floor Price">
+                  <TableCell label="Min Price 24H">
                     <div className="block px-4">
                       <p className="table-text mb-1">
-                        {item.floorPrice ? item.floorPrice : null}
+                        {item.minPrice ? item.minPrice : null}
                       </p>
                       <p className="sm-muted-table-text">
-                        {item.floorPriceChange ? item.floorPriceChange : null}
+                        {item.minPriceChange ? item.minPriceChange : null}
+                      </p>
+                    </div>
+                  </TableCell>
+                  <TableCell label="Max Price 24H">
+                    <div className="block px-4">
+                      <p className="table-text mb-1">
+                        {item.maxPrice ? item.maxPrice : null}
+                      </p>
+                      <p className="sm-muted-table-text">
+                        {item.maxPriceChange ? item.maxPriceChange : null}
                       </p>
                     </div>
                   </TableCell>
@@ -166,35 +218,47 @@ export default function Trending(props) {
                       <p className="table-text mb-1 px-4">
                         {item.volume ? item.volume : null}
                       </p>
-                      <p className="text-semantic-g-500 text-xs font-normal leading-3 px-4">
-                        {item.volumeChange ? item.volumeChange : null}
-                      </p>
+                      <div>
+                        {item.volumePositive ? (
+                          <p className="text-semantic-g-500 text-xs font-normal leading-3 px-4">
+                            {item.volumePositive}
+                          </p>
+                        ) : (
+                          <p className="text-semantic-r-500 text-xs font-normal leading-3 px-4">
+                            {item.volumeNegative}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </TableCell>
                   <TableCell label="Traded On" className="px-4">
-                    <div className="flex flex-wrap xl:flex:no-wrap lg:flex-nowrap items-center justify-center xl:justify-start">
-                      <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
-                        <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
+                    <div className="flex flex-wrap justify-center items-center xl:justify-start">
+                      <div className="flex flex-wrap justify-center">
+                        {item.token1 !== undefined && (
                           <Image
-                            src={item.img3}
+                            src={item.token1}
                             alt="Orange Token"
                             width={32}
                             height={32}
                           />
+                        )}
+                        {item.token2 !== undefined && (
                           <Image
-                            src={item.img4}
+                            src={item.token2}
                             alt="Black Token"
                             width={32}
                             height={32}
                           />
-                        </div>
+                        )}
+                      </div>
+                      {item.token3 !== undefined && (
                         <Image
-                          src={item.img5}
+                          src={item.token3}
                           alt="Me Token"
                           width={32}
                           height={32}
                         />
-                      </div>
+                      )}
                       <p className="sm-muted-table-text ml-1 mt-1">
                         {item.tradedOn ? item.tradedOn : null}
                       </p>
@@ -206,7 +270,9 @@ export default function Trending(props) {
                       item.confidence === "High"
                         ? "text-semantic-g-500 text-sm font-medium leading-[18px]"
                         : item.confidence === "Low"
-                        ? "text-[red] text-sm font-medium leading-[18px]"
+                        ? "text-semantic-r-500 text-sm font-medium leading-[18px]"
+                        : item.confidence === "Medium"
+                        ? "text-semantic-y-700 text-sm font-medium leading-[18px]"
                         : null
                     }
                   >

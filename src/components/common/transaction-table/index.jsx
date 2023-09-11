@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Table,
@@ -7,57 +7,57 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Help from '@/components/common/help';
-import Image from 'next/image';
+} from "@/components/ui/table";
+import Help from "@/components/common/help";
+import Image from "next/image";
 
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import Link from 'next/link';
+import TransactionSuccess from "@/assets/Success.svg";
+import TransactionError from "@/assets/Error.svg";
+import Link from "next/link";
 
 export default function TransactionsTable() {
   const data = [
     {
       img: TransactionSuccess,
-      key_name: 'xPON...69Z7o',
-      button_name: 'Approve',
-      block: '394400',
-      chain: '12',
-      address1: 'k:0x18...bb13',
-      address2: 'k:565a...6101',
-      value1: '0.02 KDA',
-      value2: '0.30 USD',
-      time: '1 second ago',
-      txn1: '0.02 KDA',
-      txn2: '0.30 USD',
+      key_name: "xPON...69Z7o",
+      button_name: "Approve",
+      block: "394400",
+      chain: "12",
+      address1: "k:0x18...bb13",
+      address2: "k:565a...6101",
+      value1: "0.02 KDA",
+      value2: "0.30 USD",
+      time: "1 second ago",
+      txn1: "0.02 KDA",
+      txn2: "0.30 USD",
     },
     {
       img: TransactionError,
-      key_name: 'xPON...69Z7o',
-      button_name: 'Approve',
-      block: '394400',
-      chain: '12',
-      address1: 'k:0x18...bb13',
-      address2: 'k:565a...6101',
-      value1: '0.02 KDA',
-      value2: '0.30 USD',
-      time: '1 second ago',
-      txn1: '0.02 KDA',
-      txn2: '0.30 USD',
+      key_name: "xPON...69Z7o",
+      button_name: "Approve",
+      block: "394400",
+      chain: "12",
+      address1: "k:0x18...bb13",
+      address2: "k:565a...6101",
+      value1: "0.02 KDA",
+      value2: "0.30 USD",
+      time: "1 second ago",
+      txn1: "0.02 KDA",
+      txn2: "0.30 USD",
     },
     {
       img: TransactionError,
-      key_name: 'xPON...69Z7o',
-      button_name: 'Approve',
-      block: '394400',
-      chain: '12',
-      address1: 'k:0x18...bb13',
-      address2: 'k:565a...6101',
-      value1: '0.02 KDA',
-      value2: '0.30 USD',
-      time: '1 second ago',
-      txn1: '0.02 KDA',
-      txn2: '0.30 USD',
+      key_name: "xPON...69Z7o",
+      button_name: "Approve",
+      block: "394400",
+      chain: "12",
+      address1: "k:0x18...bb13",
+      address2: "k:565a...6101",
+      value1: "0.02 KDA",
+      value2: "0.30 USD",
+      time: "1 second ago",
+      txn1: "0.02 KDA",
+      txn2: "0.30 USD",
     },
   ];
   return (
@@ -65,13 +65,13 @@ export default function TransactionsTable() {
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
-            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-              <TableHead className="py-5">
+            <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
+              <TableHead className="py-3.5 pl-6">
                 <Help
                   label="Status"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -108,7 +108,7 @@ export default function TransactionsTable() {
           <TableBody>
             {data.map((item) => {
               return (
-                <TableRow key={item.name} className="items-center bg-white">
+                <TableRow key={item.key_name} className="items-center bg-white">
                   <TableCell className="flex items-center xl:px-9 px-6 py-4">
                     {item.img !== undefined && (
                       <Image
@@ -148,7 +148,10 @@ export default function TransactionsTable() {
                     <div className="flex items-center">
                       <p className="sm-muted-table-text pl-2">From</p>
                       {item.address1 !== undefined && (
-                        <Link href="#" className="text-primary-b-500">
+                        <Link
+                          href="/wallet-overview"
+                          className="text-primary-b-500"
+                        >
                           {item.address1}
                         </Link>
                       )}
@@ -156,7 +159,10 @@ export default function TransactionsTable() {
                     <div className="flex items-center">
                       <p className="sm-muted-table-text pl-2">To</p>
                       {item.address2 !== undefined && (
-                        <Link href="#" className="text-primary-b-500 px-1">
+                        <Link
+                          href="/wallet-overview"
+                          className="text-primary-b-500 px-1"
+                        >
                           {item.address2}
                         </Link>
                       )}

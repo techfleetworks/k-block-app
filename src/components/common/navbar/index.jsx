@@ -1,102 +1,75 @@
-import Logo from '@/assets/logo.svg';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
-import Sun from '@/assets/sun.svg';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from '@/components/ui/navigation-menu';
-import Image from 'next/image';
-import Link from 'next/link';
-
-const NavbarLink = ({ href, text }) => (
-  <NavigationMenu>
-    <NavigationMenuList>
-      <NavigationMenuItem>
-        <Link href={href} legacyBehavior passHref>
-          <NavigationMenuLink
-            className={`${navigationMenuTriggerStyle()} text-sm font-medium`}
-          >
-            {text}
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  </NavigationMenu>
-);
+import * as React from "react";
+import Tablet from "./responsiveness/tablet";
+import Desktop from "./responsiveness/desktop";
+import Mobile from "./responsiveness/smartphone";
 
 const Navbar = () => {
+  const [isDesktop, setIsDesktop] = React.useState(true);
+  const [isTablet, setIsTablet] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 1024) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+
+      if (window.innerWidth < 1024 && window.innerWidth > 670) {
+        setIsTablet(true);
+      } else {
+        setIsTablet(false);
+      }
+
+      if (window.innerWidth < 670) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className="md:px-12 py-4 bg-neutral-n-0 px-3">
       <nav className="flex justify-between items-center gap-4">
-        <div className="flex justify-between items-center gap-5">
-          <Link href="/">
-            <div className="flex gap-4 items-center ">
-              <Image src={Logo} width={140} height={140} alt="logo" />
+        {isDesktop && <Desktop />}
+        {isTablet && (
+          <div className="items-center">
+            <Tablet />
+            <div className="relative lg:flex items-center border border-neutral-n-250 rounded-lg flex-grow flex-shrink mt-2 w-[90vw]">
+              <Input
+                type="text"
+                id="search"
+                placeholder="Search by Address / Request Key / Block / Token"
+                className="text-neutral-n-400 text-xs rounded-lg border-none h-8"
+              />
+              <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-neutral-n-450 py-2 w-[45px] h-8" />
             </div>
-          </Link>
-          <Badge
-            variant="outline"
-            className="rounded-md px-3 py-2 flex w-fit gap-1 bg-neutral-n-50"
-          >
-            <span className="text-neutral-n-500"> KDA: </span>
-            <span className="text-primary-b-500"> $0.563824 </span>
-            <span className="text-semantic-r-500">(-0.12%)</span>
-            {/* <span className="text-neutral-n-500"> | MC: $135.15 M</span> */}
-          </Badge>
-        </div>
-        <div className="relative lg:flex items-center hidden border border-neutral-n-200 rounded-lg flex-grow flex-shrink">
-          <Input
-            type="text"
-            id="search"
-            placeholder="Search by Address / Request Key / Account / Block / Token"
-            className="text-neutral-n-400 text-xs rounded-lg border-none h-8"
-          />
-          <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-primary-b-500 py-2 w-[45px] h-8" />
-          {/* <div className="bg-white p-2 shadow-sm rounded-md ml-2 cursor-pointer">
-            <Image src={Sun} width={20} height={20} alt="sun" />
-          </div> */}
-        </div>
-
-        <div className="md:flex md:gap-9 hidden">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Blockchain</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
-                    <Link href="/transactions">Transaction</Link>
-                  </div>
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
-                    <Link href="/blocks">Blocks</Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <NavbarLink href="/tokens" text="Tokens" />
-          <NavbarLink href="/nfts" text="NFTs" />
-          <NavbarLink href="/" text="Resources" />
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Mainnet</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white py-2 px-4 flex flex-col gap-4 rounded-md">
-                  <div className="hover:bg-neutral-n-200 p-2 rounded-md">
-                    <Link href="/">Testnet</Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
+          </div>
+        )}
+        {isMobile && (
+          <div className="items-center">
+            <Mobile />
+            <div className="relative lg:flex items-center border border-neutral-n-250 rounded-lg flex-grow flex-shrink mt-2 w-[95vw]">
+              <Input
+                type="text"
+                id="search"
+                placeholder="Search by Address / Request Key / Block / Token"
+                className="text-neutral-n-400 text-xs rounded-lg border-none h-8"
+              />
+              <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-neutral-n-450 py-2 w-[45px] h-8" />
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

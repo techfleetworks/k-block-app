@@ -1,0 +1,8 @@
+<svg width="242" height="210" viewBox="0 0 242 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Lines">
+<path id="Vector" d="M113 104.75C113.414 104.75 113.75 104.414 113.75 104C113.75 103.586 113.414 103.25 113 103.25V104.75ZM0.25 110V209H1.75V110H0.25ZM7 104.75H113V103.25H7V104.75ZM1.75 110C1.75 107.101 4.10051 104.75 7 104.75V103.25C3.27208 103.25 0.25 106.272 0.25 110H1.75Z" fill="#8C999E"/>
+<path id="Vector_2" d="M129 104C129 104 191.313 104 235.015 104C238.328 104 241 106.686 241 110V209" stroke="#8C999E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Frame 13 --&#62; Frame 8" d="M121 209L121 117" stroke="#8C999E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Frame 13 --&#62; Frame 9" d="M120.25 91C120.25 91.4142 120.586 91.75 121 91.75C121.414 91.75 121.75 91.4142 121.75 91L120.25 91ZM121.75 91L121.75 3.27835e-08L120.25 -3.27835e-08L120.25 91L121.75 91Z" fill="#8C999E"/>
+</g>
+</svg>

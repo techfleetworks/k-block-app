@@ -1,6 +1,6 @@
-import React from 'react';
-import Kadena from '@/assets/kadena.svg';
-import Hypercent from '@/assets/hypercent.svg';
+import React from "react";
+import Kadena from "@/assets/kadena.svg";
+import Hypercent from "@/assets/hypercent.svg";
 import {
   Table,
   TableBody,
@@ -8,44 +8,44 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Help from '@/components/common/help';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "@/components/ui/table";
+import Help from "@/components/common/help";
+import Image from "next/image";
+import Link from "next/link";
 import {
   CaretDownIcon,
   TriangleDownIcon,
   TriangleUpIcon,
-} from '@radix-ui/react-icons';
+} from "@radix-ui/react-icons";
 
 export default function TokensTable() {
   const data = [
     {
       img: Kadena,
-      name: 'Kadena',
-      symbol: 'KDA',
-      price: '$0.57',
-      change24: '-1.88%',
-      change7: '-0.88%',
-      quantity: '10,492',
-      market: '$349,900.96',
-      value: '$5,836.23',
+      name: "Kadena",
+      symbol: "KDA",
+      price: "$0.57",
+      change24: "-1.88%",
+      change7: "-0.88%",
+      quantity: "10,492",
+      market: "$349,900.96",
+      value: "$5,836.23",
     },
     {
       img: Hypercent,
-      name: 'Hypercent',
-      symbol: 'HYPE',
-      price: '$0.04',
-      change24: '-1.88%',
-      change7: '-4.22%',
-      quantity: '10,492',
-      market: '$349,900.96',
-      value: '$5,836.23',
+      name: "Hypercent",
+      symbol: "HYPE",
+      price: "$0.04",
+      change24: "-1.88%",
+      change7: "-4.22%",
+      quantity: "10,492",
+      market: "$349,900.96",
+      value: "$5,836.23",
     },
   ];
   return (
     <div className="bg-white p-5 rounded-xl">
-      <p className="text-neutral-n-700 text-base font-400 leading-5">
+      <p className="text-neutral-n-700 text-sm font-400 leading-5">
         Total 22,207 recognized tokens
       </p>
       <div className="pt-5">
@@ -85,7 +85,7 @@ export default function TokensTable() {
                     label="Market Cap"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -118,7 +118,7 @@ export default function TokensTable() {
                         )}
                         {item.name !== undefined && (
                           <Link
-                            href=""
+                            href="/token-details"
                             className="table-text text-primary-b-500 pl-3"
                           >
                             {item.name}

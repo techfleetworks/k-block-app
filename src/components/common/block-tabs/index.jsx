@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,15 +6,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Image from 'next/image';
-import Help from '@/components/common/help';
-import copy from '@/assets/copy.svg';
-import TransactionError from '@/assets/transaction-type-error.svg';
-import TransactionPending from '@/assets/transaction-type-pending-outgoing.svg';
-import TransactionSuccess from '@/assets/transaction-type-success.svg';
-import CircleBigCheck from '@/assets/circle-big-check.svg';
+} from "@/components/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+import Help from "@/components/common/help";
+import copy from "@/assets/copy.svg";
+import TransactionError from "@/assets/Error.svg";
+import TransactionPending from "@/assets/Pending-Outgoing.svg";
+import TransactionSuccess from "@/assets/Success.svg";
+import CircleBigCheck from "@/assets/circle-big-check.svg";
+import Link from "next/link";
+import NeighboringChains from "./neighbouring-chains";
 
 const BlockTabs = () => {
   return (
@@ -26,10 +28,10 @@ const BlockTabs = () => {
           <TabsTrigger value="transactions">Transactions</TabsTrigger>
         </TabsList>
         <TabsContent
-          className=" leading-normal rounded-tl-none p-0 bg-neutral-n-50 overflow-hidden drop-shadow-none border-none "
+          className=" leading-normal rounded-tl-none p-0 bg-neutral-n-50 overflow-hidden drop-shadow-none border-none"
           value="block-details"
         >
-          <table className="w-full text-left text-sm text-neutral-n-800 font-normal  bg-neutral-n-0 p-5 border-separate   rounded-b-xl  drop-shadow-md ">
+          <table className="w-full text-left text-sm text-neutral-n-800 font-normal  bg-neutral-n-0 p-5 border-separate  rounded-b-xl  drop-shadow-md">
             <tbody className="space-y-6">
               <tr className="flex space-x-20">
                 <th className="font-normal  w-[180px] ">
@@ -37,7 +39,7 @@ const BlockTabs = () => {
                     label="Block Height"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -55,7 +57,7 @@ const BlockTabs = () => {
                     label="Chain"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -71,7 +73,7 @@ const BlockTabs = () => {
                     label="Gas"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -87,7 +89,7 @@ const BlockTabs = () => {
                     label="Transactions"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -105,7 +107,7 @@ const BlockTabs = () => {
                     label="Creation Time"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -121,7 +123,7 @@ const BlockTabs = () => {
                     label="Epoch Start"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -137,7 +139,7 @@ const BlockTabs = () => {
                     label="PoW Hash"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -162,7 +164,7 @@ const BlockTabs = () => {
                     label="Target"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -187,7 +189,7 @@ const BlockTabs = () => {
                     label="Nonce"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -212,7 +214,7 @@ const BlockTabs = () => {
                     label="Block Hash"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -237,7 +239,7 @@ const BlockTabs = () => {
                     label="Weight"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -262,7 +264,7 @@ const BlockTabs = () => {
                     label="Flags"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -278,7 +280,7 @@ const BlockTabs = () => {
                     label="Chainweb Version"
                     tooltipText={
                       <>
-                        Tooltip text here.{' '}
+                        Tooltip text here.{" "}
                         <a className="underline" href="http://example.com/">
                           Learn more.
                         </a>
@@ -290,7 +292,7 @@ const BlockTabs = () => {
               </tr>
             </tbody>
           </table>
-          <div className="flex mt-6 w-full gap-7 justify-start">
+          <div className="flex flex-wrap xl:flex-nowrap mt-6 w-full gap-7 justify-start">
             <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md ">
               <h2 className="text-xl font-bold">Block Payload</h2>
               <table className=" mt-5 text-left text-sm text-neutral-n-800 font-normal">
@@ -301,7 +303,7 @@ const BlockTabs = () => {
                         label="Miner"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -315,7 +317,7 @@ const BlockTabs = () => {
                           <tr>
                             <th className="md-muted-table-text">Account:</th>
                             <td className="flex">
-                              {' '}
+                              {" "}
                               c50b9acb49ca25f5930....8e6436f39a40ac2dc4f3
                               <Image
                                 width={16}
@@ -349,7 +351,7 @@ const BlockTabs = () => {
                         label="Request Key"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -374,7 +376,7 @@ const BlockTabs = () => {
                         label="Reward"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -390,7 +392,7 @@ const BlockTabs = () => {
                         label="Transactions ID"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -406,7 +408,7 @@ const BlockTabs = () => {
                         label="Transactions Hash"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -422,7 +424,7 @@ const BlockTabs = () => {
                         label="Output Hash"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -438,7 +440,7 @@ const BlockTabs = () => {
                         label="Payload Hash"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -454,7 +456,7 @@ const BlockTabs = () => {
                         label="Result"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -480,7 +482,7 @@ const BlockTabs = () => {
                         label="Logs"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -496,7 +498,7 @@ const BlockTabs = () => {
                         label="Metadata"
                         tooltipText={
                           <>
-                            Tooltip text here.{' '}
+                            Tooltip text here.{" "}
                             <a className="underline" href="http://example.com/">
                               Learn more.
                             </a>
@@ -509,11 +511,7 @@ const BlockTabs = () => {
                 </tbody>
               </table>
             </div>
-
-            <div className=" bg-neutral-n-0 p-5  rounded-xl  drop-shadow-md grow">
-              <h2 className="text-xl font-bold">Neighboring chains</h2>
-              <p className="md-muted-table-text">Hover to see full hash.</p>
-            </div>
+            <NeighboringChains />
           </div>
         </TabsContent>
 
@@ -531,7 +529,7 @@ const BlockTabs = () => {
                       label="Request Key"
                       tooltipText={
                         <>
-                          Tooltip text here.{' '}
+                          Tooltip text here.{" "}
                           <a className="underline" href="http://example.com/">
                             Learn more.
                           </a>
@@ -544,7 +542,7 @@ const BlockTabs = () => {
                       label="Method"
                       tooltipText={
                         <>
-                          Tooltip text here.{' '}
+                          Tooltip text here.{" "}
                           <a className="underline" href="http://example.com/">
                             Learn more.
                           </a>
@@ -557,7 +555,7 @@ const BlockTabs = () => {
                       label="Addresses"
                       tooltipText={
                         <>
-                          Tooltip text here.{' '}
+                          Tooltip text here.{" "}
                           <a className="underline" href="http://example.com/">
                             Learn more.
                           </a>
@@ -571,7 +569,7 @@ const BlockTabs = () => {
                       label="Time"
                       tooltipText={
                         <>
-                          Tooltip text here.{' '}
+                          Tooltip text here.{" "}
                           <a className="underline" href="http://example.com/">
                             Learn more.
                           </a>
@@ -595,7 +593,7 @@ const BlockTabs = () => {
                     />
                   </TableCell>
                   <TableCell className="table-link">
-                    <a href="#">kl9OW...72kxw</a>
+                    <Link href="/transaction-details">kl9OW...72kxw</Link>
                   </TableCell>
                   <TableCell>
                     <span className="text-xs font-normal text-neutral-n-800 border border-solid border-neutral-table-border px-4 py-[0.63rem] rounded-[6.25rem]">
@@ -605,13 +603,15 @@ const BlockTabs = () => {
                   <TableCell>
                     <p>
                       <span className="md-muted-table-text">From </span>
-                      <span className="table-text">k:0x18...bb13</span>
+                      <span className="table-text">
+                        <Link href="/wallet-overview">k:0x18...bb13</Link>
+                      </span>
                     </p>
                     <p>
                       <span className="md-muted-table-text">To </span>
-                      <a href="#" className="table-link">
+                      <Link href="/wallet-overview" className="table-link">
                         k:565a...6101
-                      </a>
+                      </Link>
                     </p>
                   </TableCell>
                   <TableCell>
