@@ -108,7 +108,7 @@ export default function TransactionsTable() {
           <TableBody>
             {data.map((item) => {
               return (
-                <TableRow key={item.name} className="items-center bg-white">
+                <TableRow key={item.key_name} className="items-center bg-white">
                   <TableCell className="flex items-center xl:px-9 px-6 py-4">
                     {item.img !== undefined && (
                       <Image

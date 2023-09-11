@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Table,
@@ -7,28 +7,28 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import Help from '@/components/common/help';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "@/components/ui/table";
+import Help from "@/components/common/help";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function BlocksTable() {
   const data = [
     {
-      height: '394400',
-      chain: '12',
-      txns: '2',
-      Bhash: 'kl90W...72kxb',
-      Phash: 'kl90W...72kxw',
-      time: '1 second ago',
+      height: "394400",
+      chain: "12",
+      txns: "2",
+      Bhash: "kl90W...72kxb",
+      Phash: "kl90W...72kxw",
+      time: "1 second ago",
     },
     {
-      height: '394400',
-      chain: '12',
-      txns: '2',
-      Bhash: 'kl90W...72kxb',
-      Phash: 'kl90W...72kxw',
-      time: '1 second ago',
+      height: "394400",
+      chain: "12",
+      txns: "2",
+      Bhash: "kl90W...72kxb",
+      Phash: "kl90W...72kxw",
+      time: "1 second ago",
     },
   ];
   return (
@@ -42,7 +42,7 @@ export default function BlocksTable() {
                   label="Block Height"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -55,7 +55,7 @@ export default function BlocksTable() {
                   label="Chain"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -68,7 +68,7 @@ export default function BlocksTable() {
                   label="Txns"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -81,7 +81,7 @@ export default function BlocksTable() {
                   label="Block Hash"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -94,7 +94,7 @@ export default function BlocksTable() {
                   label="Parent Hash"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -107,7 +107,7 @@ export default function BlocksTable() {
                   label="Time"
                   tooltipText={
                     <>
-                      Tooltip text here.{' '}
+                      Tooltip text here.{" "}
                       <a className="underline" href="http://example.com/">
                         Learn more.
                       </a>
@@ -120,7 +120,7 @@ export default function BlocksTable() {
           <TableBody>
             {data.map((item) => {
               return (
-                <TableRow key={item.name} className="items-center bg-white">
+                <TableRow key={item.key_name} className="items-center bg-white">
                   <TableCell className="pl-14 py-5">
                     {item.height !== undefined && (
                       <Link
