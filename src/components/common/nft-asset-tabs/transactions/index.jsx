@@ -3,134 +3,48 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import CustomPagination from "@/components/ui/table-custompagination";
 import Help from "@/components/common/help";
 import Image from "next/image";
 import SurprisedApe from "@/assets/surprised-ape.svg";
 import Arkade from "@/assets/arkade.svg";
 import Link from "next/link";
 
-export default function Transactions(props) {
-  const data = [
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Sale",
-      priceTradedOn: "7.2 KDA",
-      priceTradedOnUSD: "4.10 USD",
-      from: "k:a44d...5afc",
-      to: "k:6d87fd...bb89",
-      txnHash: "k:0x186...dbb13",
-      time: "2 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      assetIDNr: "6",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "k:0x186...ebb13",
-      to: "k:a44d...5afc",
-      txnHash: "k:0x186...ebb13",
-      time: "6 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Sale",
-      priceTradedOn: "7.2 KDA",
-      priceTradedOnUSD: "4.10 USD",
-      from: "k:7858...57a0",
-      to: "k:0x186...ebb13",
-      txnHash: "k:0x186...bbb13",
-      time: "6 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "radio0...bank",
-      to: "k:7858...57a0",
-      txnHash: "k:0x186...l2b13",
-      time: "8 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "k:0x186...ebb13",
-      to: "radio0...bank",
-      txnHash: "k:0x186...obb13",
-      time: "8 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "k:6d87f...vbb89",
-      to: "k:0x186...ebb13",
-      txnHash: "O-qwN_...vW7E",
-      time: "12 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Sale",
-      priceTradedOn: "7.2 KDA",
-      priceTradedOnUSD: "4.10 USD",
-      from: "k:97b8e...2db09",
-      to: "k:6d87f...vbb89",
-      txnHash: "O-qwN_...eqW7E",
-      time: "1 day ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Sale",
-      priceTradedOn: "7.2 KDA",
-      priceTradedOnUSD: "4.10 USD",
-      from: "k:71b1g...7b78a",
-      to: "k:97b8e...2db09",
-      txnHash: "q2L0-B...sMMo",
-      time: "2 days ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "k:e7f7c...4e9f3",
-      to: "k:71b1g...7b78a",
-      txnHash: "Sssgx...TtCrk",
-      time: "2 hours ago",
-    },
-    {
-      assetID: SurprisedApe,
-      assetIDNr: "6",
-      action: "Transfer",
-      priceTradedOn: undefined,
-      priceTradedOnUSD: undefined,
-      from: "k:09sdx...2e231",
-      to: "k:e7f7c...4e9f3",
-      txnHash: "R7O3W...h3yhE",
-      time: "2 hours ago",
-    },
-  ];
+export default function Transactions({
+  title,
+  pageSize,
+  pageIndex,
+  onPageChange,
+  onPageSizeChange,
+  data,
+}) {
+  const pageCount = Math.ceil(data.length / pageSize);
+  //Function to handle pagination
+  const handlePageChange = (event) => {
+    console.log("Current Page Index:", pageIndex);
+    console.log("Page Count:", pageCount);
+
+    if (event === "prev" && pageIndex > 0) {
+      onPageChange(pageIndex - 1);
+    } else if (event === "next" && pageIndex < pageCount - 1) {
+      onPageChange(pageIndex + 1);
+    }
+  };
+
+  // Slice data based on pageSize and pageIndex
+  const startIndex = pageIndex * pageSize;
+  const endIndex = startIndex + pageSize;
+  const slicedData = data.slice(startIndex, endIndex);
+
   return (
     <div>
       <h2 className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none mb-5">
-        {props.title}
+        {title}
       </h2>
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
@@ -185,7 +99,7 @@ export default function Transactions(props) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((item, index) => {
+            {slicedData.map((item, index) => {
               return (
                 <TableRow key={index}>
                   <TableCell className="flex items-center gap-3 p-4">
@@ -259,6 +173,7 @@ export default function Transactions(props) {
               );
             })}
           </TableBody>
+          <TableFooter></TableFooter>
         </Table>
       </div>
     </div>
