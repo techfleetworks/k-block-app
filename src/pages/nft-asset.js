@@ -6,6 +6,7 @@ import Verified from "@/assets/verified.svg";
 import { Navbar, NftAssetGrid } from "@/components/common";
 import Cards from "@/components/common/nft-asset-cards";
 import Tabs from "@/components/common/nft-asset-tabs/nft-asset-tabs";
+import Link from "next/link";
 
 export default function NftAsset() {
   const data = [
@@ -30,6 +31,8 @@ export default function NftAsset() {
       img2: Verified,
     },
   ];
+
+  const title = "More from Variation Apes"; // Title for the cards component
   return (
     <>
       <Navbar />
@@ -44,7 +47,18 @@ export default function NftAsset() {
         </section>
         <section className="my-12">
           <div className="flex flex-col items-center mx-auto">
-            <Cards title="More from Variation Apes" data={data} />
+            <h2 className="text-neutral-n-700 text-[1.25rem] font-bold mb-6">
+              {title}
+            </h2>
+            <Cards data={data} />
+            <div className="mt-8">
+              <Link
+                className="text-primary-b-500 border border-primary-b-500 text-sm font-medium px-4 py-2 rounded-md"
+                href="/nft-collections"
+              >
+                View Collection
+              </Link>
+            </div>
           </div>
         </section>
       </div>

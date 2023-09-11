@@ -2,15 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Cards({ title, data }) {
+export default function Cards({ data }) {
   return (
     <>
-      <div className="header flex justify-between">
-        <h2 className="text-neutral-n-700 text-[1.25rem] font-bold mb-6">
-          {title}
-        </h2>
-      </div>
-
       <div>
         <div className="card-body flex gap-6 flex-wrap">
           {data.map((item, index) => (
@@ -44,14 +38,6 @@ export default function Cards({ title, data }) {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-8">
-        <Link
-          className="text-primary-b-500 border border-primary-b-500 text-sm font-medium leading-none px-4 py-2 rounded-md border-solid"
-          href="/nft-collections"
-        >
-          View Collection
-        </Link>
       </div>
     </>
   );
