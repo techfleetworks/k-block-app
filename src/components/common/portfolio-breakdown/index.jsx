@@ -11,12 +11,12 @@ const PieChart = dynamic(() => (
 
 
 const data = [
-  { name: 'KDA', quantity: 28, price: 100000 , kda: 10000},
-  { name: 'HYPE', quantity: 24, price: 60102 , kda: 10000},
-  { name: 'HYPE', quantity: 18, price: 40000.89 , kda: 10000},
-  { name: 'FLUX', quantity: 12, price: 1234.23 , kda: 10000},
-  { name: 'HYPE', quantity: 11, price: 3219.33 , kda: 10000},
-  { name: 'Others', quantity: 7, price: 173 , kda: 10000}
+  { name: 'KDA', quantity: 28, price: 100000, kda: 10000 },
+  { name: 'HYPE', quantity: 24, price: 60102, kda: 2000 },
+  { name: 'HYPE', quantity: 18, price: 40000.89, kda: 100500 },
+  { name: 'FLUX', quantity: 12, price: 1234.23, kda: 10000 },
+  { name: 'HYPE', quantity: 11, price: 3219.33, kda: 10000 },
+  { name: 'Others', quantity: 7, price: 173, kda: 10000 }
 ];
 
 
@@ -60,7 +60,7 @@ export default function PortfolioBreakdown() {
     return (
       <div className="justify-center">
         <div className="my-4 px-2">
-          <div className='grid  grid-cols-2	gap-x-10	'>
+          <div className='grid  grid-cols-2	gap-x-10	text-xs'>
             {data1.map((legend, index) => {
               return (index <= data1.length &&
                 <div className="" key={`item-${index}`}>
@@ -84,12 +84,9 @@ export default function PortfolioBreakdown() {
       outerRadius,
       startAngle,
       endAngle,
-      midAngle,
       payload,
       fill,
-      percent
     } = props;
-
     return (
       <>
         <Sector
@@ -113,9 +110,11 @@ export default function PortfolioBreakdown() {
         <text
           x="50%"
           y="35%"
-          // dy={8}
-          textAnchor="middle" >
-          {formatUSD(payload.price)}
+          dy={16}
+           >
+          <tspan  textAnchor="middle" x="50%" dy="-10"  fontSize="14" fill="##15151D"
+> {formatUSD(payload.price)}</tspan>
+          <tspan textAnchor="middle" x="50%" dy="20" fontSize="12" fill="#616E73"> {formatNum(payload.kda)} KDA</tspan>
         </text>
       </>
     )
@@ -126,7 +125,7 @@ export default function PortfolioBreakdown() {
     <div className="bg-neutral-n-100  p-5 rounded-md ">
       <h1>Portfolio Breakdown</h1>
       {/* <div className='mt-4'> */}
-      <PieChart width={300} height={300} className='mt-7'>
+      <PieChart width={250} height={310} className='mt-7'>
         <Legend content={renderLegend} />
         <Pie
           activeIndex={activeIndex}
@@ -134,7 +133,7 @@ export default function PortfolioBreakdown() {
           dataKey="quantity"
           nameKey="name"
           // cx="50%"
-          // cy="30%"
+          cy="45%"
           innerRadius={55}
           outerRadius={90}
           legendType="circle"
