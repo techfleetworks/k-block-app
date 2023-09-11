@@ -18,7 +18,7 @@ export default function NftAsset() {
     {
       img: DeathApe,
       assetID: "Variation Apes #100",
-      img2: Verified,
+      img2: undefined,
     },
     {
       img: SpaceApe,

@@ -26,13 +26,15 @@ export default function Cards({ data }) {
                   <p className="text-base text-primary-b-500 ">
                     {item.assetID}
                   </p>
-                  <Image
-                    src={item.img2}
-                    alt="Verified"
-                    width={20}
-                    height={20}
-                    className="ml-1"
-                  />
+                  {item.img2 && (
+                    <Image
+                      src={item.img2}
+                      alt="Verified"
+                      width={20}
+                      height={20}
+                      className="ml-1"
+                    />
+                  )}
                 </div>
               </div>
             </div>
