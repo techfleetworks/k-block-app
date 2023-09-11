@@ -18,21 +18,33 @@ export default function BoardTabs(props) {
       </TabsList>
       <TabsContent value="transactions" className="rounded-tl-none">
         <Trending title="Trending NFT Collections" />
-        <BoardTabsPagination pageSize={10} />
+        <BoardTabsPagination
+          pageSize={10}
+          pageIndex={0}
+          pageCount={1}
+          onPageChange={1}
+          onPageSizeChange={1}
+        />
         {/* <p className="my-10">Pagination needs to go here</p> */}
       </TabsContent>
       <TabsContent value="tokens">
         <Upcoming title="Upcoming Collections" />
-        <BoardTabsPagination pageSize={10} />
+        <BoardTabsPagination
+          pageSize={10}
+          pageIndex={0}
+          pageCount={1}
+          onPageChange={1}
+          onPageSizeChange={1}
+        />
       </TabsContent>
       <TabsContent value="nfts">
         <TopNFTCollections title="Top NFT Collections" />
         <BoardTabsPagination
           pageSize={10}
           pageIndex={0}
-          pageCount={10}
-          onPageChange={null}
-          onPageSizeChange={null}
+          pageCount={1}
+          onPageChange={1}
+          onPageSizeChange={1}
         />
       </TabsContent>
     </Tabs>

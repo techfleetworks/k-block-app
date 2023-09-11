@@ -180,9 +180,9 @@ export default function TokensTable() {
       <TokensPagination
         pageSize={10}
         pageIndex={0}
-        pageCount={10}
-        onPageChange={null}
-        onPageSizeChange={null}
+        pageCount={1}
+        onPageChange={1}
+        onPageSizeChange={1}
       />
     </div>
   );

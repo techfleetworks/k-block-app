@@ -33,7 +33,7 @@ export default function BlocksTable() {
     },
   ];
   return (
-    <div className="bg-white p-5 rounded-xl">
+    <div className="bg-neutral-n-0 p-5 rounded-xl">
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
@@ -121,7 +121,10 @@ export default function BlocksTable() {
           <TableBody>
             {data.map((item) => {
               return (
-                <TableRow key={item.key_name} className="items-center bg-white">
+                <TableRow
+                  key={item.key_name}
+                  className="items-center bg-neutral-n-0"
+                >
                   <TableCell className="pl-14 py-5">
                     {item.height !== undefined && (
                       <Link
@@ -163,7 +166,13 @@ export default function BlocksTable() {
           </TableBody>
         </Table>
       </div>
-      <BlocksPagination pageSize={10} />
+      <BlocksPagination
+        pageSize={10}
+        pageIndex={0}
+        pageCount={1}
+        onPageChange={1}
+        onPageSizeChange={1}
+      />
     </div>
   );
 }
