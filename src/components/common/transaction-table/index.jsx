@@ -34,7 +34,7 @@ export default function TransactionsTable() {
     },
     {
       img: TransactionError,
-      key_name: "xPON...69Z7o",
+      key_name: "kl90W...72kxw",
       button_name: "Approve",
       block: "394400",
       chain: "12",
@@ -48,7 +48,7 @@ export default function TransactionsTable() {
     },
     {
       img: TransactionError,
-      key_name: "xPON...69Z7o",
+      key_name: "FTodZ...w9Glc",
       button_name: "Approve",
       block: "394400",
       chain: "12",
