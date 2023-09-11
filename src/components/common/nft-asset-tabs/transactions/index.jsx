@@ -136,7 +136,7 @@ export default function Transactions(props) {
         <Table className="border-neutral-table-border">
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100 py-3.5">
-              <TableHead className="py-4 h-[44px]">
+              <TableHead className="pl-5">
                 <Help
                   label="Asset ID"
                   tooltipText={
@@ -149,37 +149,37 @@ export default function Transactions(props) {
                   }
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help
                   label="Action"
                   tooltipText="The status of recently-traded NFTs from this collection"
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help
                   label="Price + Traded On"
                   tooltipText="Cost, in KDA and USD, and the platform used to acquire this asset"
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help
                   label="From"
                   tooltipText="The address of the wallet that traded this asset"
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help
                   label="To"
                   tooltipText="The address of the wallet that received this asset"
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help
                   label="Txn Hash"
                   tooltipText="The unique identifier which validates a particular transaction on the blockchain"
                 />
               </TableHead>
-              <TableHead>
+              <TableHead className="pl-0">
                 <Help label="Time" tooltipText="Tooltip text here" />
               </TableHead>
             </TableRow>

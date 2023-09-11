@@ -43,7 +43,7 @@ export default function NftAsset() {
           </div>
         </section>
         <section className="my-12">
-          <div className="flex flex-col items-center gap-8 mx-auto">
+          <div className="flex flex-col items-center mx-auto">
             <Cards title="More from Variation Apes" data={data} />
           </div>
         </section>
