@@ -232,35 +232,33 @@ export default function Trending(props) {
                     </div>
                   </TableCell>
                   <TableCell label="Traded On" className="px-4">
-                    <div className="flex flex-wrap xl:flex:no-wrap lg:flex-nowrap items-center justify-center xl:justify-start">
-                      <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
-                        <div className="xl:flex lg:flex flex-wrap xl:flex-nowrap lg:flex-nowrap">
-                          {item.token1 !== undefined && (
-                            <Image
-                              src={item.token1}
-                              alt="Orange Token"
-                              width={32}
-                              height={32}
-                            />
-                          )}
-                          {item.token2 !== undefined && (
-                            <Image
-                              src={item.token2}
-                              alt="Black Token"
-                              width={32}
-                              height={32}
-                            />
-                          )}
-                        </div>
-                        {item.token3 !== undefined && (
+                    <div className="flex flex-wrap justify-center items-center xl:justify-start">
+                      <div className="flex flex-wrap justify-center">
+                        {item.token1 !== undefined && (
                           <Image
-                            src={item.token3}
-                            alt="Me Token"
+                            src={item.token1}
+                            alt="Orange Token"
+                            width={32}
+                            height={32}
+                          />
+                        )}
+                        {item.token2 !== undefined && (
+                          <Image
+                            src={item.token2}
+                            alt="Black Token"
                             width={32}
                             height={32}
                           />
                         )}
                       </div>
+                      {item.token3 !== undefined && (
+                        <Image
+                          src={item.token3}
+                          alt="Me Token"
+                          width={32}
+                          height={32}
+                        />
+                      )}
                       <p className="sm-muted-table-text ml-1 mt-1">
                         {item.tradedOn ? item.tradedOn : null}
                       </p>
