@@ -1,6 +1,11 @@
-"use client";
-
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 const NftAssetPrice = () => {
   const data = [
@@ -33,25 +38,36 @@ const NftAssetPrice = () => {
       <h2 className="text-neutral-n-800 text-xl font-bold leading-6 pb-5">
         Price History
       </h2>
-      <LineChart width={600} height={400} margin={{ top: 20 }} data={data}>
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#0078CC"
-          strokeWidth={3}
-          dot={false}
-        />
-        <CartesianGrid vertical={false} stroke="#EEF4F7" />
-        <XAxis dataKey="date" className="text-sm text-neutral-n-800" />
-        <YAxis
-          type="number"
-          tickFormatter={formatter}
-          ticks={[0, 10.0, 20.0, 30.0, 40.0, 50.0]}
-          tickMargin={6}
-          domain={[0, "dataMax"]}
-          className="text-sm text-neutral-n-800"
-        />
-      </LineChart>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart width={600} height={300} margin={{ top: 20 }} data={data}>
+          <CartesianGrid vertical={false} stroke="#EEF4F7" className="z-10" />
+          <Line
+            type="monotone"
+            dataKey="pv"
+            stroke="#0078CC"
+            strokeWidth={3}
+            dot={false}
+          />
+          <XAxis
+            dataKey="date"
+            axisLine={false}
+            tickLine={false}
+            tickMargin={10}
+            padding={{ left: 50, right: 30 }}
+            className="text-xs text-neutral-n-800"
+          />
+          <YAxis
+            type="number"
+            tickFormatter={formatter}
+            ticks={[0, 10.0, 20.0, 30.0, 40.0, 50.0]}
+            axisLine={false}
+            tickLine={false}
+            tickMargin={10}
+            domain={[0, "dataMax"]}
+            className="text-xs text-neutral-n-800"
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
