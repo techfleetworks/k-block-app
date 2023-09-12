@@ -278,6 +278,29 @@ export default function NftAssetTabs(props) {
       txnHash: 'q2L0-B...sMMo',
       time: '2 days ago',
     },
+    {
+      assetID: SurprisedApe,
+      assetIDNr: "6",
+      action: "Sale",
+      priceTradedOn: "7.2 KDA",
+      priceTradedOnUSD: "4.10 USD",
+      from: "k:a44d...5afc",
+      to: "k:6d87fd...bb89",
+      txnHash: "k:0x186...dbb13",
+      time: "2 hours ago",
+    },
+    {
+      assetID: SurprisedApe,
+      assetIDNr: "6",
+      action: "Transfer",
+      assetIDNr: "6",
+      priceTradedOn: undefined,
+      priceTradedOnUSD: undefined,
+      from: "k:0x186...ebb13",
+      to: "k:a44d...5afc",
+      txnHash: "k:0x186...ebb13",
+      time: "6 hours ago",
+    },
   ];
   const pageCount = Math.ceil(data.length / table.pageSize);
 
@@ -319,8 +342,11 @@ export default function NftAssetTabs(props) {
         />
       </TabsContent>
       <TabsContent value="metadata">
-        <Metadata title="Metadata" />
-        {/* <DataTablePagination /> */}
+        <Metadata
+          title="Metadata"
+          subtitle="Retrieved from token’s URI:"
+          subtitleLink="https://variationapes.com/collection/6.json"
+        />
       </TabsContent>
     </Tabs>
   );

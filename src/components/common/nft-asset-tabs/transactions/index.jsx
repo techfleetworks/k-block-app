@@ -8,10 +8,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import CustomPagination from "@/components/ui/table-custompagination";
+
 import Help from "@/components/common/help";
 import Image from "next/image";
-import SurprisedApe from "@/assets/surprised-ape.svg";
+
 import Arkade from "@/assets/arkade.svg";
 import Link from "next/link";
 
