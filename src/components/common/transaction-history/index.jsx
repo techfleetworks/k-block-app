@@ -67,11 +67,11 @@ const TransactionHistory = () => {
         <DateButtons />
       </header>
       <div className="xl:w-[33vw] overflow-x-auto md:overflow-auto">
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={230}>
           <LineChart
             width={500}
-            height={300}
-            margin={{ top: 20, left: 15 }}
+            height={230}
+            margin={{ top: 10, left: 15 }}
             data={data}
           >
             <CartesianGrid vertical={false} stroke="#EEF4F7" className="z-10" />
