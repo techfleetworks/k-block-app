@@ -11,6 +11,7 @@ import {
 } from "recharts";
 
 export default function NFTCollectionAnalytics(props) {
+
   // Add dynamic data for each chart in the analytics tab (Volume, Floor Price, and Active Addresses)
   const volumeData = [
     {
@@ -82,6 +83,7 @@ export default function NFTCollectionAnalytics(props) {
   ];
 
   return (
+    
     // Double check with UXW about tooltip copy for these charts
     <div>
       <div className="flex flex-wrap justify-between">
