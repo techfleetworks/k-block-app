@@ -142,6 +142,18 @@ const data = [
     price: 0.57,
     value: 5836.23,
   },
+  {
+    token_name: {
+      name: "Timpi",
+      nft: Hypercent,
+      alt: "Timpi Token Logo",
+    },
+    symbol: "TMP",
+    contactAddress: "free.timpi",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  },
 ];
 
 const WalletTabs = () => {
