@@ -1,5 +1,8 @@
 import React from "react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import Image from "next/image";
+import Copy from "@/assets/copy.svg";
+import QR2 from "@/assets/QR (2).svg";
 
 export default function Metadata(props) {
   const codeSnippet = `{
@@ -83,21 +86,32 @@ export default function Metadata(props) {
         <h2 className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none mb-5">
           {props.title}
         </h2>
-        <h2 className="leading-normal rounded-tl-none mb-5">
-          <span className="text-default">{props.subtitle}</span>{" "}
-          <span className="text-primary-b-500">{props.subtitleLink}</span>
-        </h2>
+        <div className="inline-flex items-center">
+          <h2 className="leading-normal rounded-tl-none mb-5">
+            <span className="text-default">{props.subtitle}</span>{" "}
+            <span className="text-primary-b-500">{props.subtitleLink}</span>
+          </h2>
+          <div className="ml-2 flex items-center space-x-2">
+            <span className="text-neutral-b-500 text-sm leading-5 font-normal">
+              <Image src={Copy} alt="Copy" width={20} height={20} />
+            </span>
+
+            <span className="text-neutral-b-500 text-sm leading-5 font-normal">
+              <Image src={QR2} alt="QR2" width={20} height={20} />
+            </span>
+          </div>
+        </div>
         <div className="rounded-xl border overflow-y-scroll h-[733px]">
           <Table className="border-neutral-table-border">
             <TableBody>
               {codeLines.map((line, index) => (
                 <div key={index} className="flex">
                   <div className="w-16 bg-primary-b-100 flex justify-center items-end">
-                    <p className="text-neutral-n-800 text-xs font-normal ">
+                    <p className="text-neutral-n-800 text-xs font-normal">
                       {index + 1}
                     </p>
                   </div>
-                  <div className="flex-1 bg-primary-b-100 items-end">
+                  <div className="flex-1 bg-neutral-n-100 items-end">
                     <pre className="text-neutral-n-500 text-xs font-normal pl-0 pr-[31px] pl-4  ">
                       {line}
                     </pre>
