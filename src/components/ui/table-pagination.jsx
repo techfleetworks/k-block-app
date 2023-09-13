@@ -22,16 +22,16 @@ export function DataTablePagination({ table }) {
 
 
   return (
-    <div className="flex items-center justify-between px-2 mt-5">
+    <div className=" px-2 mt-5">
       {/* <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div> */}
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
 
 
         <div className="flex items-center space-x-2">
-          <p className="text-sm font-medium">Items per page</p>
+          <p className="text-sm  text-neutral-n-500 font-normal">Items per page</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={value => {
@@ -49,7 +49,7 @@ export function DataTablePagination({ table }) {
               ))}
             </SelectContent>
           </Select>
-          <p className="text-sm font-medium">{table.getPaginationRowModel().rows[0].index + 1}-{(table.getPaginationRowModel().rows[table.getPaginationRowModel().rows.length - 1].index) + 1} of {table.getPrePaginationRowModel().flatRows?.length} items</p>
+          <p className="text-sm  text-neutral-n-500 font-normal">{table.getPaginationRowModel().rows[0].index + 1}-{(table.getPaginationRowModel().rows[table.getPaginationRowModel().rows.length - 1].index) + 1} of {table.getPrePaginationRowModel().flatRows?.length} items</p>
         </div>
 
 
@@ -63,9 +63,9 @@ export function DataTablePagination({ table }) {
           >
             <span className="sr-only">Go to previous page</span>
             <Image src={LeftArrow} alt="Left Arrow" width={20} height={20} />
-            <p className="text-neutral-n-500">Previous</p>
+            <p className="text-sm  text-neutral-n-500 font-normal">Previous</p>
           </Button>
-          <div className="flex w-[100px] items-center justify-center text-sm font-medium">{table.getState().pagination.pageIndex + 1}{" of "}
+          <div className="flex w-[100px] items-center justify-center text-sm  text-neutral-n-500 font-normal">{table.getState().pagination.pageIndex + 1}{" of "}
             {table.getPageCount()}</div>
           <Button
             variant="ghost"
@@ -74,7 +74,7 @@ export function DataTablePagination({ table }) {
             disabled={!table.getCanNextPage()}
           >
             <span className="sr-only">Go to next page</span>
-            <p className="text-primary-b-500">Next</p>
+            <p className="text-sm  text-primary-b-500 font-normal">Next</p>
             <Image src={RightArrow} alt="Rigth Arrow" width={20} height={20} />
           </Button>
         </div>
