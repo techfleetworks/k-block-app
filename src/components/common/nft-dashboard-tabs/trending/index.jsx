@@ -22,6 +22,7 @@ import Blue from "@/assets/blue-circle.svg";
 import Wolfies from "@/assets/kadena-wolfies.svg";
 import Binance from "@/assets/binance.png";
 import Link from "next/link";
+import HelpImage from "../../help-image";
 
 export default function Trending(props) {
   const data = [
@@ -236,16 +237,18 @@ export default function Trending(props) {
                     <div className="flex flex-wrap justify-center items-center xl:justify-start">
                       <div className="flex flex-wrap justify-center">
                         {item.token1 !== undefined && (
-                          <Image
-                            src={item.token1}
-                            alt="Orange Token"
-                            width={32}
-                            height={32}
-                          />
+                            <HelpImage
+                              src={item.token1}
+                              tooltipText="Orange Token"
+                              alt="Orange Token"
+                              width={32}
+                              height={32}
+                            />
                         )}
                         {item.token2 !== undefined && (
-                          <Image
+                          <HelpImage
                             src={item.token2}
+                            tooltipText="Black Token"
                             alt="Black Token"
                             width={32}
                             height={32}
@@ -253,8 +256,9 @@ export default function Trending(props) {
                         )}
                       </div>
                       {item.token3 !== undefined && (
-                        <Image
+                        <HelpImage
                           src={item.token3}
+                          tooltipText="Me Token"
                           alt="Me Token"
                           width={32}
                           height={32}
@@ -271,10 +275,10 @@ export default function Trending(props) {
                       item.confidence === "High"
                         ? "text-semantic-g-500 text-sm font-medium leading-[18px]"
                         : item.confidence === "Low"
-                        ? "text-semantic-r-500 text-sm font-medium leading-[18px]"
-                        : item.confidence === "Medium"
-                        ? "text-semantic-y-700 text-sm font-medium leading-[18px]"
-                        : null
+                          ? "text-semantic-r-500 text-sm font-medium leading-[18px]"
+                          : item.confidence === "Medium"
+                            ? "text-semantic-y-700 text-sm font-medium leading-[18px]"
+                            : null
                     }
                   >
                     {item.confidence ? item.confidence : null}

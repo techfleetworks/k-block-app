@@ -10,7 +10,7 @@ const NftAssetOverview = () => {
       <table className="w-full text-left text-sm text-neutral-n-800 pt-5 border-separate rounded-b-xl drop-shadow-md ">
         <tbody className="space-y-6">
           <tr className="flex justify-between">
-            <th className="font-normal">
+            <th className="font-normal w-[150px]">
               <Help
                 label="Owner"
                 tooltipText="The wallet address of this NFT's current holder"
