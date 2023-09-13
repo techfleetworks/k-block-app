@@ -11,11 +11,19 @@ import {
 } from "recharts";
 
 
+function formatUSD(val) {
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+    style: "currency",
+    currency: "USD",
+  }).format(val);
+}
 
 export default function WalletValue() {
- 
- 
-  const volumeData = [
+
+
+  const valueData = [
     {
       date: "Dec 20",
       pv: 200,
@@ -34,53 +42,64 @@ export default function WalletValue() {
     },
     {
       date: "Jan 30",
-      pv: 90000,
+      pv: 100000,
     },
   ];
 
- 
+  const formatter = (value) => formatUSD(value);
+
   return (
- 
- <div className="bg-neutral-n-100  p-5 rounded-md w-fit">
-    <h1>Wallet Value</h1>
-    <ResponsiveContainer width="100%" height={300}>
-            <LineChart
-              width={600}
-              height={300}
-              margin={{ top: 20 }}
-              data={volumeData}
-            >
-              <CartesianGrid
-                vertical={false}
-                stroke="#EEF4F7"
-                className="z-10"
-              />
-              <Line
-                type="monotone"
-                dataKey="pv"
-                stroke="#0078CC"
-                strokeWidth={3}
-                dot={false}
-              />
-              <XAxis
-                dataKey="date"
-                axisLine={false}
-                tickLine={false}
-                tickMargin={10}
-                padding={{ left: 50, right: 30 }}
-                className="text-xs text-neutral-n-500"
-              />
-              <YAxis
-                type="number"
-                ticks={[0, 1000, 2000, 3000, 4000, 5000]}
-                axisLine={false}
-                tickLine={false}
-                tickMargin={10}
-                domain={[0, "dataMax"]}
-                className="text-xs text-neutral-n-500"
-              />
-            </LineChart>
-          </ResponsiveContainer>
+
+    <div className="bg-neutral-n-100  p-5 rounded-md">
+      <div className="flex flex-wrap justify-between">
+        <h2 className="leading-normal text-neutral-n-700 text-sm font-medium mb-2">
+          Wallet Value
+        </h2>
+        <DateButtons />
       </div>
+      {/* <ResponsiveContainer > */}
+      <LineChart
+        width={600}
+        height={300}
+        // margin={{ top: 20 }}
+        data={valueData}
+      >
+        <CartesianGrid
+          vertical={false}
+          stroke="#EEF4F7"
+          className="z-10"
+        />
+        <Line
+          type="monotone"
+          dataKey="pv"
+          stroke="#0078CC"
+          strokeWidth={3}
+          dot={false}
+        />
+        <XAxis
+          dataKey="date"
+          axisLine={false}
+          tickLine={false}
+          tickMargin={10}
+          padding={{ left: 50, right: 30 }}
+          className="text-xs text-neutral-n-500"
+        />
+        <YAxis
+          type="number"
+          // ticks={[0, 20000, 40000, 60000, 80000, 100000]}
+          tick={{ fontSize: '12px' }}
+          tickCount={6}
+          tickFormatter={formatter}
+          axisLine={false}
+          tickLine={false}
+          tickMargin={10}
+          domain={[0, dataMax => Math.ceil(Number(dataMax) / 10000) * 10000]}
+          // unit='  MW'
+          className="text-xs text-neutral-n-500"
+          width={65}
+        />
+      </LineChart>
+      {/* </ResponsiveContainer> */}
+    </div>
   )
 }

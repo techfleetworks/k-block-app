@@ -123,7 +123,7 @@ export default function PortfolioBreakdown() {
 
   return (
     <div className="bg-neutral-n-100  p-5 rounded-md ">
-      <h1>Portfolio Breakdown</h1>
+      <h1 className='leading-normal text-neutral-n-700 text-sm font-medium'>Portfolio Breakdown</h1>
       {/* <div className='mt-4'> */}
       <PieChart width={250} height={310} className='mt-7'>
         <Legend content={renderLegend} />
