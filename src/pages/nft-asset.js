@@ -46,7 +46,7 @@ export default function NftAsset() {
           </div>
         </section>
         <section className="my-12">
-          <div className="flex flex-col items-center mx-auto">
+          <div className="flex flex-col items-center">
             <h2 className="text-neutral-n-700 text-[1.25rem] font-bold mb-6">
               {title}
             </h2>
