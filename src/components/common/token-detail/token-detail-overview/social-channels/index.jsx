@@ -20,7 +20,7 @@ export default function SocialChannels() {
           kaddex.kdx
         </Link>
       </div>
-      <div className="flex md:mt-4">
+      <div className="flex md:mt-4 xl:mt-0">
         <p className="text-sm leading-5 font-medium mr-2">Social Channels</p>
         <DiscordLogoIcon width={24} height={24} className=" mx-1" />
         <GitHubLogoIcon width={24} height={24} className=" mx-1" />
