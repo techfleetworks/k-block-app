@@ -1,16 +1,17 @@
-import Help from '@/components/common/help';
-import Image from 'next/image';
-import Hypercent from '@/assets/hypercent.svg';
-import Arkade from '@/assets/arkade.svg';
-import Link from 'next/link';
+import Help from "@/components/common/help";
+import Image from "next/image";
+import Hypercent from "@/assets/hypercent.svg";
+import Arkade from "@/assets/arkade.svg";
 
-const NftAssetSales = () => {
+const NftAssetSales = ({ className }) => {
   return (
-    <div className="bg-neutral-n-0 p-5 border-solid drop-shadow-md rounded-md mt-6 w-full">
+    <div
+      className={`bg-neutral-n-0 p-5 border-solid drop-shadow-md rounded-md mt-6 w-full ${className}`}
+    >
       <h2 className="text-neutral-n-800 text-xl font-bold leading-6">
         Sales Information
       </h2>
-      <table className="w-full text-left text-sm text-neutral-n-800 pt-5 border-separate rounded-b-xl drop-shadow-md ">
+      <table className="w-full text-left text-sm text-neutral-n-800 pt-5 border-separate rounded-xl drop-shadow-md ">
         <tbody className="space-y-6">
           <tr className="flex justify-between">
             <th className="font-normal">
