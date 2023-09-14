@@ -66,7 +66,7 @@ const TransactionHistory = () => {
         </div>
         <DateButtons />
       </header>
-      <div className="xl:w-[33vw] overflow-x-auto md:overflow-auto">
+      <div className="xl:w-[32vw]">
         <ResponsiveContainer width="100%" height={230}>
           <LineChart
             width={500}
@@ -87,7 +87,7 @@ const TransactionHistory = () => {
               axisLine={false}
               tickLine={false}
               tickMargin={10}
-              padding={{ left: 50, right: 30 }}
+              padding={{ left: 20, right: 20 }}
               className="text-xs text-neutral-n-800"
             />
             <YAxis
