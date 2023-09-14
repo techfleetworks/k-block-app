@@ -54,7 +54,7 @@ export default function KDABlock() {
         <div>
           <InfoItem
             label="Contract:"
-            tooltipText="is there any information for this?"
+            tooltipText="The entity which sets the terms of the crypto trade"
             className="text-neutral-n-700 text-sm font-normal leading-5 mb-2"
           />
           <a
@@ -88,7 +88,7 @@ export default function KDABlock() {
           <div className="flex items-center justify-between">
             <InfoItem
               label="Trading Volume (24H):"
-              tooltipText="is there any information for this?"
+              tooltipText="The value of all crypto trades in the last 24 hours"
               className="text-neutral-n-700 text-xs font-normal leading-5"
             />
             <p className="text-neutral-n-800 text-xs font-medium leading-5">
@@ -111,7 +111,7 @@ export default function KDABlock() {
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Circulating Supply:"
-                tooltipText="is there any information for this?"
+                tooltipText="This is how much Kadena is available for trading"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">
@@ -125,7 +125,7 @@ export default function KDABlock() {
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Trading Volume (24H):"
-                tooltipText="is there any information for this?"
+                tooltipText="The value of all crypto trades in the last 24 hours"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">
@@ -149,7 +149,7 @@ export default function KDABlock() {
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Circulating Supply:"
-                tooltipText="is there any information for this?"
+                tooltipText="This is how much Kadena is available for trading"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">

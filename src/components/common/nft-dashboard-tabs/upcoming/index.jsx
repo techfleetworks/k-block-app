@@ -179,7 +179,7 @@ const UpcomingTable = () => {
               <TableHead className="py-4 h-[44px]">
                 <Help
                   label="Collections"
-                  tooltipText="Rare digital assets designed by artist(s)."
+                  tooltipText="A group of NFTs created under the same smart contract"
                 />
               </TableHead>
               <TableHead>
@@ -200,7 +200,7 @@ const UpcomingTable = () => {
               <TableHead>
                 <Help
                   label="Starts On"
-                  tooltipText="Date when the NFT will be launched."
+                  tooltipText="The date a collection is scheduled to begin minting"
                 />
               </TableHead>
               <TableHead>

@@ -139,7 +139,7 @@ export default function Trending(props) {
               <TableHead>
                 <Help
                   label="Traded On"
-                  tooltipText="The platform where the NFTs are being traded on."
+                  tooltipText="The NFT marketplaces where a particular collection can be found"
                 />
               </TableHead>
               <TableHead className="p-0">
@@ -237,13 +237,13 @@ export default function Trending(props) {
                     <div className="flex flex-wrap justify-center items-center xl:justify-start">
                       <div className="flex flex-wrap justify-center">
                         {item.token1 !== undefined && (
-                            <HelpImage
-                              src={item.token1}
-                              tooltipText="Orange Token"
-                              alt="Orange Token"
-                              width={32}
-                              height={32}
-                            />
+                          <HelpImage
+                            src={item.token1}
+                            tooltipText="Orange Token"
+                            alt="Orange Token"
+                            width={32}
+                            height={32}
+                          />
                         )}
                         {item.token2 !== undefined && (
                           <HelpImage
@@ -275,10 +275,10 @@ export default function Trending(props) {
                       item.confidence === "High"
                         ? "text-semantic-g-500 text-sm font-medium leading-[18px]"
                         : item.confidence === "Low"
-                          ? "text-semantic-r-500 text-sm font-medium leading-[18px]"
-                          : item.confidence === "Medium"
-                            ? "text-semantic-y-700 text-sm font-medium leading-[18px]"
-                            : null
+                        ? "text-semantic-r-500 text-sm font-medium leading-[18px]"
+                        : item.confidence === "Medium"
+                        ? "text-semantic-y-700 text-sm font-medium leading-[18px]"
+                        : null
                     }
                   >
                     {item.confidence ? item.confidence : null}

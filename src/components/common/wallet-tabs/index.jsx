@@ -191,17 +191,7 @@ const WalletTabs = () => {
                   <TableHead className="pl-0">
                     <Help
                       label="Method"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="A specific function or operation that determines what action the sender intends to perform within the smart contract"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
