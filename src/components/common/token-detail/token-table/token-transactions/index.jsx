@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/table";
 import Help from "@/components/common/help";
 import Link from "next/link";
-import Pagination from "./token-transaction-pagination";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TokenTransactions() {
   const data = [
@@ -173,13 +173,7 @@ export default function TokenTransactions() {
           </Table>
         </div>
       </div>
-      <Pagination
-        pageSize={10}
-        pageIndex={0}
-        pageCount={1}
-        onPageChange={1}
-        onPageSizeChange={1}
-      />
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import TokenPagination from "./token-holder-pagination";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TokenHolders() {
   const data = [
@@ -126,13 +126,7 @@ export default function TokenHolders() {
           </Table>
         </div>
       </div>
-      <TokenPagination
-        pageSize={10}
-        pageIndex={0}
-        pageCount={1}
-        onPageChange={1}
-        onPageSizeChange={1}
-      />
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }
