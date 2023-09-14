@@ -35,16 +35,16 @@ const InfoItem = ({ label, value, tooltipText }) => (
 
 export default function InfoTablet() {
   return (
-    <div className="px-3 md:px-12 my-7">
-      <div className="flex">
-        <div className="bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg mr-3 p-5 w-[47vw]">
+    <div className="lg:hidden flex flex-wrap px-3 md:px-12 my-7">
+      <div className="flex justify-start gap-8 flex-grow flex-wrap">
+        <div className="bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg mr-3 p-5 flex-grow">
           <InfoItem
             label="Average Gas Fee"
             value="$0.0005"
             tooltipText="The cost of making a transaction"
           />
         </div>
-        <div className="bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg p-5 w-[47vw]">
+        <div className=" flex-grow bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg p-5 ">
           <InfoItem
             label="Active Miners"
             value="50"
@@ -58,16 +58,14 @@ export default function InfoTablet() {
             }
           />
         </div>
-      </div>
-      <div className="flex mt-3">
-        <div className="justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg mr-3 p-5 w-[47vw]">
+        <div className=" flex-grow bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg mr-3 p-5 ">
           <InfoItem
             label="Total Difficulty"
             value="5.6 Eh"
             tooltipText="How hard it is for miners to add new blocks to the chain. Varies based on how many people are mining."
           />
         </div>
-        <div className="justify-between bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg p-5 w-[47vw]">
+        <div className=" flex-grow bg-neutral-n-0 drop-shadow-[4px_4px_10px_rgba(195, 204, 212, 0.25)] rounded-lg p-5 ">
           <InfoItem
             label="Est. Network Hash Rate"
             value="181.2 PH/S"
