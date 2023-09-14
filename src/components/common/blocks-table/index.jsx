@@ -9,9 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Help from "@/components/common/help";
-import Image from "next/image";
 import Link from "next/link";
-import BlocksPagination from "../blocks-pagination";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function BlocksTable() {
   const data = [
@@ -166,13 +165,7 @@ export default function BlocksTable() {
           </TableBody>
         </Table>
       </div>
-      <BlocksPagination
-        pageSize={10}
-        pageIndex={0}
-        pageCount={1}
-        onPageChange={1}
-        onPageSizeChange={1}
-      />
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

@@ -14,7 +14,7 @@ import Image from "next/image";
 import TransactionSuccess from "@/assets/Success.svg";
 import TransactionError from "@/assets/Error.svg";
 import Link from "next/link";
-import TransactionsPagination from "../transactions-pagination";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TransactionsTable() {
   const data = [
@@ -210,13 +210,7 @@ export default function TransactionsTable() {
           </TableBody>
         </Table>
       </div>
-      <TransactionsPagination
-        pageSize={10}
-        pageIndex={0}
-        pageCount={1}
-        onPageChange={1}
-        onPageSizeChange={1}
-      />
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

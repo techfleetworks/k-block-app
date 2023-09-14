@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Trending from "./trending";
 import Upcoming from "./upcoming";
 import TopNFTCollections from "./top-nft-collection";
-import BoardTabsPagination from "./board-tabs-pagination";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 // I could not find a better way to tag the pagination only in one place but to use it multiple times.
 
@@ -18,34 +18,15 @@ export default function BoardTabs(props) {
       </TabsList>
       <TabsContent value="transactions" className="rounded-tl-none">
         <Trending title="Trending NFT Collections" />
-        <BoardTabsPagination
-          pageSize={10}
-          pageIndex={0}
-          pageCount={1}
-          onPageChange={1}
-          onPageSizeChange={1}
-        />
-        {/* <p className="my-10">Pagination needs to go here</p> */}
+        <CustomPagination pageIndex={1} pageCount={25} />
       </TabsContent>
       <TabsContent value="tokens">
         <Upcoming title="Upcoming Collections" />
-        <BoardTabsPagination
-          pageSize={10}
-          pageIndex={0}
-          pageCount={1}
-          onPageChange={1}
-          onPageSizeChange={1}
-        />
+        <CustomPagination pageIndex={1} pageCount={25} />
       </TabsContent>
       <TabsContent value="nfts">
         <TopNFTCollections title="Top NFT Collections" />
-        <BoardTabsPagination
-          pageSize={10}
-          pageIndex={0}
-          pageCount={1}
-          onPageChange={1}
-          onPageSizeChange={1}
-        />
+        <CustomPagination pageIndex={1} pageCount={25} />
       </TabsContent>
     </Tabs>
   );
