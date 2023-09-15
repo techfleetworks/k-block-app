@@ -72,12 +72,7 @@ const BlockTabs = () => {
                   <Help
                     label="Gas"
                     tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
+                      <>Cost to perform a transaction on the network</>
                     }
                   />
                 </th>
@@ -89,10 +84,8 @@ const BlockTabs = () => {
                     label="Transactions"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
+                        List of all transactions (transfers of information)
+                        within a block
                       </>
                     }
                   />
@@ -107,8 +100,11 @@ const BlockTabs = () => {
                     label="Creation Time"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        Time when the block was first mined
+                        <a
+                          className="underline pl-1"
+                          href="http://example.com/"
+                        >
                           Learn more.
                         </a>
                       </>
@@ -123,8 +119,11 @@ const BlockTabs = () => {
                     label="Epoch Start"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        The start of a period when mining difficulty is adjusted
+                        <a
+                          className="underline text-primary-b-500 pl-1"
+                          href="http://example.com/"
+                        >
                           Learn more.
                         </a>
                       </>
@@ -139,8 +138,11 @@ const BlockTabs = () => {
                     label="PoW Hash"
                     tooltipText={
                       <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
+                        The hash produced when blocks are validated
+                        <a
+                          className="underline text-primary-b-500 pl-1"
+                          href="http://example.com/"
+                        >
                           Learn more.
                         </a>
                       </>
@@ -187,39 +189,19 @@ const BlockTabs = () => {
                 <th className="font-normal w-[180px] ">
                   <Help
                     label="Nonce"
-                    tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
-                    }
+                    tooltipText='Short for "number used once," this is the part of the block that miners are trying to solve'
                   />
                 </th>
                 <td className="flex">
                   2e89aac2002360c7
-                  <Image
-                    width={16}
-                    height={16}
-                    src={copy}
-                    alt="copy icon"
-                    className="ml-2"
-                  />
+                  <Image width={16} height={16} src={copy} alt="copy icon" />
                 </td>
               </tr>
               <tr className="flex space-x-20">
                 <th className="font-normal w-[180px] ">
                   <Help
                     label="Block Hash"
-                    tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
-                    }
+                    tooltipText="A token's transition between addresses on the blockchain"
                   />
                 </th>
                 <td className="flex">
@@ -237,14 +219,7 @@ const BlockTabs = () => {
                 <th className="font-normal w-[180px] ">
                   <Help
                     label="Weight"
-                    tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
-                    }
+                    tooltipText="The power of a validator to increase the blockchain or validate transactions"
                   />
                 </th>
                 <td className="flex">
@@ -262,14 +237,7 @@ const BlockTabs = () => {
                 <th className="font-normal w-[180px] ">
                   <Help
                     label="Flags"
-                    tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
-                    }
+                    tooltipText="The optional markers to distinguish transactions"
                   />
                 </th>
                 <td>0x00000000</td>
@@ -278,14 +246,7 @@ const BlockTabs = () => {
                 <th className="font-normal w-[180px] ">
                   <Help
                     label="Chainweb Version"
-                    tooltipText={
-                      <>
-                        Tooltip text here.{" "}
-                        <a className="underline" href="http://example.com/">
-                          Learn more.
-                        </a>
-                      </>
-                    }
+                    tooltipText="The combined POW blockchains that perform vehicle transfers"
                   />
                 </th>
                 <td>Mainnet01</td>
@@ -301,14 +262,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Miner"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="The report of user/account mining activity"
                       />
                     </th>
                     <td>
@@ -349,14 +303,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Request Key"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="The string of numbers and letters to access a transaction"
                       />
                     </th>
                     <td className="flex">
@@ -374,14 +321,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Reward"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="The KDA you get for mining a block"
                       />
                     </th>
                     <td>50 KDA | $100</td>
@@ -390,14 +330,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Transactions ID"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="The identifying number of a specific transaction"
                       />
                     </th>
                     <td>3505831</td>
@@ -422,14 +355,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Output Hash"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="The unique identifier of a completed transaction"
                       />
                     </th>
                     <td>DbINEOp-8wY0354u100u3j6s5qswouxBd9H8-T7Bo_4</td>
@@ -438,14 +364,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Payload Hash"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="Encrypted transaction data"
                       />
                     </th>
                     <td>mhy2eQd4U47zI_54bQVydaHnZUAM0CeOFY_kKsxitoY</td>
@@ -480,14 +399,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Logs"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="A record that describes an event within a smart contract"
                       />
                     </th>
                     <td>SrOBMA0NQJrlQUAyni9rnkUW83-xORzxAbf9nLiQaUQ</td>
@@ -496,14 +408,7 @@ const BlockTabs = () => {
                     <th className="font-normal  w-[180px] ">
                       <Help
                         label="Metadata"
-                        tooltipText={
-                          <>
-                            Tooltip text here.{" "}
-                            <a className="underline" href="http://example.com/">
-                              Learn more.
-                            </a>
-                          </>
-                        }
+                        tooltipText="A transaction's info beyond its financial value"
                       />
                     </th>
                     <td>None</td>

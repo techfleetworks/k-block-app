@@ -1,7 +1,7 @@
 import Banner from "@/assets/banner.png";
 import { Navbar } from "@/components/common";
 import DashboardCard from "@/components/common/dashboard-card";
-import Tabs from "@/components/common/nft-dashboard-tabs/board-tabs";
+import Tabs from "@/components/common/nft-dashboard-tabs";
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import UpArrow from "@/assets/chevron-up.svg";

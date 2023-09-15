@@ -9,50 +9,40 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 import Help from "@/components/common/help";
-
-import TransactionError from "@/assets/Error.svg";
-import TransactionPending from "@/assets/Pending-Outgoing.svg";
-import TransactionSuccess from "@/assets/Success.svg";
 import Link from "next/link";
 
 const data = [
   {
-    statusIcon: TransactionSuccess,
     height: 394402,
     chain: 12,
     transaction: 7,
     time: "12 sec ago",
   },
   {
-    statusIcon: TransactionPending,
     height: 394402,
     chain: 12,
     transaction: 7,
     time: "124 sec ago",
   },
   {
-    statusIcon: TransactionError,
     height: 394402,
     chain: 12,
     transaction: 7,
     time: "112 sec ago",
   },
   {
-    statusIcon: TransactionSuccess,
     height: 394402,
     chain: 12,
     transaction: 7,
     time: "12 sec ago",
   },
   {
-    statusIcon: TransactionPending,
     height: 394402,
     chain: 12,
     transaction: 7,
     time: "124 sec ago",
   },
   {
-    statusIcon: TransactionError,
     height: 394402,
     chain: 12,
     transaction: 7,
@@ -77,12 +67,6 @@ const LatestBlocks = () => {
         <Table className="border-neutral-table-border">
           <TableHeader>
             <TableRow className="bg-neutral-n-100 hover:bg-neutral-n-100">
-              <TableHead>
-                <Help
-                  label="Status"
-                  tooltipText="The state of a transaction: failing, pending, or succeeding"
-                />
-              </TableHead>
               <TableHead>
                 <Help
                   label="Height"
@@ -118,14 +102,6 @@ const LatestBlocks = () => {
           <TableBody>
             {data.map((block, index) => (
               <TableRow key={index}>
-                <TableCell className="p-6">
-                  <Image
-                    src={block.statusIcon}
-                    width={32}
-                    height={32}
-                    alt="Transaction Type"
-                  />
-                </TableCell>
                 <TableCell className="p-6">
                   <Link
                     href="/block-details"

@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
 import Help from "@/components/common/help";
 import Image from "next/image";
 
@@ -21,6 +22,7 @@ import Blue from "@/assets/blue-circle.svg";
 import Wolfies from "@/assets/kadena-wolfies.svg";
 import Binance from "@/assets/binance.png";
 import Link from "next/link";
+import HelpImage from "../../help-image";
 
 export default function Trending(props) {
   const data = [
@@ -137,7 +139,7 @@ export default function Trending(props) {
               <TableHead>
                 <Help
                   label="Traded On"
-                  tooltipText="The platform where the NFTs are being traded on."
+                  tooltipText="The NFT marketplaces where a particular collection can be found"
                 />
               </TableHead>
               <TableHead className="p-0">
@@ -235,16 +237,18 @@ export default function Trending(props) {
                     <div className="flex flex-wrap justify-center items-center xl:justify-start">
                       <div className="flex flex-wrap justify-center">
                         {item.token1 !== undefined && (
-                          <Image
+                          <HelpImage
                             src={item.token1}
+                            tooltipText="Orange Token"
                             alt="Orange Token"
                             width={32}
                             height={32}
                           />
                         )}
                         {item.token2 !== undefined && (
-                          <Image
+                          <HelpImage
                             src={item.token2}
+                            tooltipText="Black Token"
                             alt="Black Token"
                             width={32}
                             height={32}
@@ -252,8 +256,9 @@ export default function Trending(props) {
                         )}
                       </div>
                       {item.token3 !== undefined && (
-                        <Image
+                        <HelpImage
                           src={item.token3}
+                          tooltipText="Me Token"
                           alt="Me Token"
                           width={32}
                           height={32}

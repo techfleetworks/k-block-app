@@ -10,7 +10,7 @@ export default function TokenDetails() {
       <div className="container md:px-12 px-3">
         <h1 className="text-3xl font-bold my-7">Token Details</h1>
         <DetailOverview />
-        <TokenTable />
+        <TokenTable category1="Transaction" category2="Token Holders" />
       </div>
     </>
   );

@@ -14,6 +14,7 @@ import Image from "next/image";
 import TransactionSuccess from "@/assets/Success.svg";
 import TransactionError from "@/assets/Error.svg";
 import Link from "next/link";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TransactionsTable() {
   const data = [
@@ -33,7 +34,7 @@ export default function TransactionsTable() {
     },
     {
       img: TransactionError,
-      key_name: "xPON...69Z7o",
+      key_name: "kl90W...72kxw",
       button_name: "Approve",
       block: "394400",
       chain: "12",
@@ -47,7 +48,7 @@ export default function TransactionsTable() {
     },
     {
       img: TransactionError,
-      key_name: "xPON...69Z7o",
+      key_name: "FTodZ...w9Glc",
       button_name: "Approve",
       block: "394400",
       chain: "12",
@@ -209,6 +210,7 @@ export default function TransactionsTable() {
           </TableBody>
         </Table>
       </div>
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

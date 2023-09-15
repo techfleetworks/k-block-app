@@ -17,6 +17,7 @@ import {
   TriangleDownIcon,
   TriangleUpIcon,
 } from "@radix-ui/react-icons";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TokensTable() {
   const data = [
@@ -176,6 +177,7 @@ export default function TokensTable() {
           </Table>
         </div>
       </div>
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

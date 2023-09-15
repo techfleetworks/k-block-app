@@ -40,7 +40,7 @@ import React from "react";
 
 export default function KDABlock() {
   return (
-    <div className="bg-neutral-n-0 flex-1 p-5 rounded-xl drop-shadow-md w-[46vw]">
+    <div className="bg-neutral-n-0 flex-1 p-5 rounded-xl drop-shadow-md xl:mr-5 mb-5 sm:justify-between">
       <div className="flex justify-between">
         <div className="flex items-center">
           <Link href="/token-details">
@@ -54,7 +54,7 @@ export default function KDABlock() {
         <div>
           <InfoItem
             label="Contract:"
-            tooltipText="is there any information for this?"
+            tooltipText="The entity which sets the terms of the crypto trade"
             className="text-neutral-n-700 text-sm font-normal leading-5 mb-2"
           />
           <a
@@ -83,19 +83,17 @@ export default function KDABlock() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between">
-        <div className="bg-neutral-n-100 mt-7 p-5 rounded-xl">
-          <div>
-            <div className="flex items-center justify-between">
-              <InfoItem
-                label="Trading Volume (24H):"
-                tooltipText="is there any information for this?"
-                className="text-neutral-n-700 text-xs font-normal leading-5"
-              />
-              <p className="text-neutral-n-800 text-xs font-medium leading-5">
-                $216,029,292
-              </p>
-            </div>
+      <div className="flex flex-wrap md:flex-nowrap md:justify-between">
+        <div className="bg-neutral-n-100 mt-7 p-5 rounded-xl mx-auto">
+          <div className="flex items-center justify-between">
+            <InfoItem
+              label="Trading Volume (24H):"
+              tooltipText="The value of all crypto trades in the last 24 hours"
+              className="text-neutral-n-700 text-xs font-normal leading-5"
+            />
+            <p className="text-neutral-n-800 text-xs font-medium leading-5">
+              $216,029,292
+            </p>
           </div>
           <div className="mt-8">
             <div className="flex items-center justify-between">
@@ -113,7 +111,7 @@ export default function KDABlock() {
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Circulating Supply:"
-                tooltipText="is there any information for this?"
+                tooltipText="This is how much Kadena is available for trading"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">
@@ -122,12 +120,12 @@ export default function KDABlock() {
             </div>
           </div>
         </div>
-        <div className="bg-neutral-n-100 mt-7 ml-5 p-5 rounded-xl">
+        <div className="bg-neutral-n-100 mt-7 md:ml-5 p-5 rounded-xl mx-auto">
           <div>
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Trading Volume (24H):"
-                tooltipText="is there any information for this?"
+                tooltipText="The value of all crypto trades in the last 24 hours"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">
@@ -151,7 +149,7 @@ export default function KDABlock() {
             <div className="flex items-center justify-between">
               <InfoItem
                 label="Circulating Supply:"
-                tooltipText="is there any information for this?"
+                tooltipText="This is how much Kadena is available for trading"
                 className="text-neutral-n-700 text-xs font-normal leading-5"
               />
               <p className="text-neutral-n-800 text-xs font-medium leading-5">

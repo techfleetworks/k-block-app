@@ -15,6 +15,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import TrendingNFTTable from "./trending-nft-table";
 import CardBoard from "./card-collection";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function TrendingNFTAssets(props) {
   const [isGrid, setIsGrid] = useState(true);
@@ -61,6 +62,7 @@ export default function TrendingNFTAssets(props) {
         </div>
       </div>
       {isGrid ? <CardBoard /> : <TrendingNFTTable />}
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

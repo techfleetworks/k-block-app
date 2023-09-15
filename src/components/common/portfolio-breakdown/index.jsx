@@ -38,8 +38,10 @@ function formatUSD(val) {
 }
 
 
-const allprice = data.reduce((acc, val) => acc + val.quantity, 0)
-const data1 = data.map((item) => ({ ...item, percent: formatNum(100 * item.quantity / allprice) }))
+const allQuantity = data.reduce((acc, val) => acc + val.quantity, 0)
+const allPrice = data.reduce((acc, val) => acc + val.price, 0)
+const allKda = data.reduce((acc, val) => acc + val.kda, 0)
+const data1 = data.map((item) => ({ ...item, percent: formatNum(100 * item.quantity / allQuantity) }))
 
 const COLORS = ['#007DB2', '#0078CC', '#9AECA4', '#C5E7F6', '#0E4C66', '#616E73'];
 
@@ -47,12 +49,16 @@ const COLORS = ['#007DB2', '#0078CC', '#9AECA4', '#C5E7F6', '#0E4C66', '#616E73'
 
 export default function PortfolioBreakdown() {
   const [activeIndex, setActiveIndex] = useState(null);
+
   const onMouseOver = useCallback((data, index) => {
     setActiveIndex(index);
   }, []);
+
   const onMouseLeave = useCallback((data, index) => {
     setActiveIndex(null);
   }, []);
+
+
 
   const renderLegend = (props) => {
     const { payload } = props;
@@ -111,9 +117,9 @@ export default function PortfolioBreakdown() {
           x="50%"
           y="35%"
           dy={16}
-           >
-          <tspan  textAnchor="middle" x="50%" dy="-10"  fontSize="14" fill="##15151D"
-> {formatUSD(payload.price)}</tspan>
+        >
+          <tspan textAnchor="middle" x="50%" dy="-10" fontSize="14" fill="##15151D"
+          > {formatUSD(payload.price)}</tspan>
           <tspan textAnchor="middle" x="50%" dy="20" fontSize="12" fill="#616E73"> {formatNum(payload.kda)} KDA</tspan>
         </text>
       </>
@@ -121,9 +127,11 @@ export default function PortfolioBreakdown() {
   };
 
 
+
+
   return (
     <div className="bg-neutral-n-100  p-5 rounded-md ">
-      <h1>Portfolio Breakdown</h1>
+      <h1 className='leading-normal text-neutral-n-700 text-sm font-medium'>Portfolio Breakdown</h1>
       {/* <div className='mt-4'> */}
       <PieChart width={250} height={310} className='mt-7'>
         <Legend content={renderLegend} />

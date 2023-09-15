@@ -83,9 +83,6 @@ export default function Metadata(props) {
   return (
     <>
       <div>
-        <h2 className="leading-normal text-neutral-n-700 text-xl font-semibold rounded-tl-none mb-5">
-          {props.title}
-        </h2>
         <div className="flex justify-between items-center">
           <h2 className="leading-normal rounded-tl-none mb-5">
             <span className="text-default">{props.subtitle}</span>{" "}
@@ -112,7 +109,7 @@ export default function Metadata(props) {
                     </p>
                   </div>
                   <div className="flex-1 bg-neutral-n-100 items-end">
-                    <pre className="text-neutral-n-500 text-xs font-normal pl-0 pr-[31px] pl-4">
+                    <pre className="text-neutral-n-500 text-xs font-normal pr-[31px] pl-4">
                       {line}
                     </pre>
                   </div>
@@ -125,15 +122,3 @@ export default function Metadata(props) {
     </>
   );
 }
-
-/**
- * <div className="ml-2 flex items-center space-x-2">
-            <span className="text-neutral-b-500 text-sm leading-5 font-normal">
-              <Image src={Copy} alt="Copy" width={20} height={20} />
-            </span>
-
-            <span className="text-neutral-b-500 text-sm leading-5 font-normal">
-              <Image src={QR2} alt="QR2" width={20} height={20} />
-            </span>
-          </div>
- */

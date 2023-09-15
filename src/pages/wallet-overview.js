@@ -16,7 +16,7 @@ export default function WalletOverview() {
         </h2>
         <div className="flex flex-wrap gap-7 justify-start sm:justify-between  px-3 md:px-12">
           <Address />
-          <div className="flex flex-wrap gap-6 bg-neutral-n-0 p-5 rounded-xl grow drop-shadow-md">
+          <div className="flex flex-wrap gap-6 bg-neutral-n-0 p-5 rounded-xl   drop-shadow-md">
             <PortfolioBreakdown />
             <WalletValue />
           </div>

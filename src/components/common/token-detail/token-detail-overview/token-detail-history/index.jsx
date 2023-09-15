@@ -1,131 +1,109 @@
-import DateButtons from "@/components/ui/date-buttons";
 import SocialChannels from "../social-channels";
-import React, { useEffect, useRef } from "react";
+import DateButtons from "@/components/ui/date-buttons";
+import React from "react";
 
-// import Chart from "chart.js/auto";
 import {
-  CartesianGrid,
-  Legend,
-  Line,
   LineChart,
-  Tooltip,
+  Line,
+  CartesianGrid,
   XAxis,
   YAxis,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function PriceHistory() {
-  // const canvasEl = useRef(null);
-  // const colors = {
-  //   blue: {
-  //     default: "rgba(0, 120, 204, 1)",
-  //   },
-  // };
-
-  // useEffect(() => {
-  //   const ctx = canvasEl.current.getContext("2d");
-
-  //   const weight = [
-  //     0.27, 0.24, 0.35, 0.28, 0.5, 0.6, 0.52, 0.6, 0.48, 0.75, 1.0,
-  //   ];
-
-  //   const labels = ["", "12pm", "", "6pm", "", "12am", "", "6am", "", ""];
-  //   const data = {
-  //     labels: labels,
-  //     datasets: [
-  //       {
-  //         label: "measured in $",
-  //         data: weight,
-  //         fill: false,
-  //         borderColor: colors.blue.default,
-  //         lineTension: 0.2,
-  //       },
-  //     ],
-  //   };
-  //   const config = {
-  //     type: "line",
-  //     data: data,
-  //   };
-  //   const myLineChart = new Chart(ctx, config);
-
-  //   return function cleanup() {
-  //     myLineChart.destroy();
-  //   };
-  // });
-
   const data = [
     {
-      number: 0,
-      Change: 0.27,
+      pv: 0.27,
     },
     {
-      name: "12pm",
-      Change: 0.24,
-      number: 0.25,
+      date: "12pm",
+      pv: 0.24,
     },
     {
-      Change: 0.35,
+      pv: 0.27,
     },
     {
-      name: "6pm",
-      Change: 0.28,
+      date: "6pm",
+      pv: 0.26,
     },
     {
-      Change: 0.5,
+      pv: 0.5,
     },
     {
-      name: "12am",
-      Change: 0.6,
+      pv: 0.55,
     },
     {
-      Change: 0.52,
+      date: "12am",
+      pv: 0.62,
     },
     {
-      name: "6am",
-      Change: 0.6,
+      pv: 0.53,
     },
     {
-      number: 1,
-      Change: 0.48,
+      pv: 0.51,
+    },
+    {
+      date: "6am",
+      pv: 0.6,
     },
   ];
 
+  const formatter = (value) => `$${value.toFixed(2)}`;
+
   return (
-    <div className="block xl:ml-5 xl:mt-0 mt-5 xl:w-[46vw] w-[95vw] -z-50">
+    <div className="-z-50 flex-1 rounded-xl drop-shadow-md xl:w-[50vw]">
       <div className="bg-neutral-n-0 mb-5 rounded-xl grow drop-shadow-md">
         <header className="flex justify-between items-center p-5 mb-5">
           <div>
             <h1 className="text-neutral-n-700 text-sm font-medium">
               Price History
             </h1>
-            <span className="text-neutral-n-700 text-xs font-base">
-              (measured in $)
-            </span>
           </div>
           <DateButtons />
         </header>
         <div className="px-5 xl:mb-5 pb-5">
-          <div className="xl:w-[43vw] overflow-x-auto md:overflow-auto">
-            <LineChart
-              width={620}
-              height={250}
-              margin={{ top: 20, left: -20 }}
-              data={data}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis dataKey="number" />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="Change" stroke="#8884d8" />
-            </LineChart>
+          <div className="overflow-x-auto md:overflow-auto">
+            <ResponsiveContainer width="100%" height={155}>
+              <LineChart
+                width={500}
+                height={155}
+                margin={{ top: 5, left: 15 }}
+                data={data}
+              >
+                <CartesianGrid
+                  vertical={false}
+                  stroke="#EEF4F7"
+                  className="z-10"
+                />
+                <Line
+                  type="monotone"
+                  dataKey="pv"
+                  stroke="#0078CC"
+                  strokeWidth={3}
+                  dot={false}
+                />
+                <XAxis
+                  dataKey="date"
+                  axisLine={false}
+                  tickLine={false}
+                  tickMargin={10}
+                  padding={{ left: 50, right: 30 }}
+                  className="text-xs text-neutral-n-800"
+                />
+                <YAxis
+                  type="number"
+                  tickFormatter={formatter}
+                  ticks={[0, 0.25, 0.5, 0.75, 1.0]}
+                  axisLine={false}
+                  tickLine={false}
+                  tickMargin={10}
+                  domain={[0, "dataMax"]}
+                  className="text-xs text-neutral-n-800"
+                />
+              </LineChart>
+            </ResponsiveContainer>
           </div>
-          {/* <div className="PriceHistory">
-            <canvas
-              ref={canvasEl}
-              height={100}
-              className="overflow-auto w-full"
-            />
-          </div> */}
         </div>
       </div>
       <SocialChannels />

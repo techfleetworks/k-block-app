@@ -4,7 +4,7 @@ import PriceHistory from "./token-detail-history";
 
 export default function DetailOverview() {
   return (
-    <div className="flex flex-wrap md:flex-nowrap">
+    <div className="xl:flex flex-wrap xl:flex-nowrap">
       <KDABlock />
       <PriceHistory />
     </div>

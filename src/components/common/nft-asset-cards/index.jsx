@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Cards({ data }) {
   return (
     <>
       <div>
-        <div className="card-body flex gap-6 flex-wrap">
+        <div className="card-body flex gap-6 flex-wrap justify-center">
           {data.map((item, index) => (
             <div
               key={index}

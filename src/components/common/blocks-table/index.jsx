@@ -9,8 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Help from "@/components/common/help";
-import Image from "next/image";
 import Link from "next/link";
+import CustomPagination from "@/components/ui/table-custompagination";
 
 export default function BlocksTable() {
   const data = [
@@ -32,7 +32,7 @@ export default function BlocksTable() {
     },
   ];
   return (
-    <div className="bg-white p-5 rounded-xl">
+    <div className="bg-neutral-n-0 p-5 rounded-xl">
       <div className="rounded-xl border overflow-hidden">
         <Table className="border-neutral-table-border">
           <TableHeader>
@@ -120,7 +120,10 @@ export default function BlocksTable() {
           <TableBody>
             {data.map((item) => {
               return (
-                <TableRow key={item.key_name} className="items-center bg-white">
+                <TableRow
+                  key={item.key_name}
+                  className="items-center bg-neutral-n-0"
+                >
                   <TableCell className="pl-14 py-5">
                     {item.height !== undefined && (
                       <Link
@@ -162,6 +165,7 @@ export default function BlocksTable() {
           </TableBody>
         </Table>
       </div>
+      <CustomPagination pageIndex={1} pageCount={25} />
     </div>
   );
 }

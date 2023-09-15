@@ -142,6 +142,18 @@ const data = [
     price: 0.57,
     value: 5836.23,
   },
+  {
+    token_name: {
+      name: "Timpi",
+      nft: Hypercent,
+      alt: "Timpi Token Logo",
+    },
+    symbol: "TMP",
+    contactAddress: "free.timpi",
+    quantity: 10492,
+    price: 0.57,
+    value: 5836.23,
+  },
 ];
 
 const WalletTabs = () => {
@@ -179,17 +191,7 @@ const WalletTabs = () => {
                   <TableHead className="pl-0">
                     <Help
                       label="Method"
-                      tooltipText={
-                        <>
-                          Tooltip text here.{" "}
-                          <Link
-                            className="underline"
-                            href="http://example.com/"
-                          >
-                            Learn more.
-                          </Link>
-                        </>
-                      }
+                      tooltipText="A specific function or operation that determines what action the sender intends to perform within the smart contract"
                     />
                   </TableHead>
                   <TableHead className="pl-0">
